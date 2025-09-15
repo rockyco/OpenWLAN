@@ -1,0 +1,2 @@
+% M1 control output: startOffset
+6.900000000000000e+01

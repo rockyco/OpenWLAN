@@ -1,0 +1,41 @@
+{
+  "phase": 5,
+  "framework_version": "2.0.7",
+  "timestamp": "2026-02-03T18:06:52+11:00",
+  "total_modules": 5,
+  "float_modules": 1,
+  "double_modules": 0,
+  "csim_passed": true,
+  "modules": {
+    "debug_fir": {
+      "file": "module0_prefilter/debug_fir.cpp",
+      "has_dataflow": false,
+      "has_fsm": false
+    },
+    "module0_prefilter": {
+      "file": "module0_prefilter/module0_prefilter.cpp",
+      "has_dataflow": false,
+      "has_fsm": false
+    },
+    "module1_packet_detect": {
+      "file": "module1_packet_detect/module1_packet_detect.cpp",
+      "has_dataflow": false,
+      "has_fsm": false
+    },
+    "module2_coarse_cfo": {
+      "file": "module2_coarse_cfo/module2_coarse_cfo.cpp",
+      "has_dataflow": false,
+      "has_fsm": true
+    },
+    "module3_fine_sync": {
+      "file": "module3_fine_sync/module3_fine_sync.cpp",
+      "has_dataflow": false,
+      "has_fsm": false
+    },
+    "module4_fine_cfo_apply": {
+      "file": "module4_fine_cfo_apply/module4_fine_cfo_apply.cpp",
+      "has_dataflow": false,
+      "has_fsm": true
+    }
+  }
+}

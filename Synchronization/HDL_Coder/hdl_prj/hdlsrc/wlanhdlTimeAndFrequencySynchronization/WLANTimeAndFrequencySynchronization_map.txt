@@ -1,0 +1,134 @@
+WLANTimeAndFrequencySynchronization_tc --> WLANTimeAndFrequencySynchronization_tc
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction/DTConverter --> DTConverter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction/NCO/WaveformGen/SinLookUpTableGen --> SinLookUpTableGen
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction/NCO/WaveformGen/CosLookUpTableGen --> CosLookUpTableGen
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction/NCO/WaveformGen --> WaveformGen
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction/NCO --> NCO
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Correction --> Coarse_CFO_Correction
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Averager --> Averager
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/SimpleDualPortRAM_generic --> SimpleDualPortRAM_generic
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Correlator --> Correlator
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Sample FreqOff --> Sample_FreqOff
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block2
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/HDL_CMA_core/Quadrant_Correction --> Quadrant_Correction
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block3
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block4
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block5
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block6
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block7
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block8
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block9
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block10
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block11
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block12
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block13
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block14
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block15
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block16
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block17
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block18
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block19
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block20
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block21
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block22
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block23
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block24
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block25
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block26
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/Complex to Magnitude-Angle --> CordicKernelMag_block27
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/HDL_CMA_core/CordicKernelMag --> CordicKernelMag_block28
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation/HDL_CMA_core/Quadrant_Mapper --> Quadrant_Mapper
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction/Coarse CFO Estimation --> Coarse_CFO_Estimation
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse CFO Estimation and Correction --> Coarse_CFO_Estimation_and_Correction
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator/MagnitudeSquared --> MagnitudeSquared
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator/MovingSum/Synchronous Enabled 128 Sample Delay  --> Synchronous_Enabled_128_Sample_Delay
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator/MovingSum --> MovingSum
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator/delayedCorrelation/DTadjust --> DTadjust
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator/delayedCorrelation --> delayedCorrelation
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Correlator --> Correlator_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared/MagnitudeSquared/DTadjust --> DTadjust_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared/MagnitudeSquared --> MagnitudeSquared_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared/MagnitudeSquared1 --> MagnitudeSquared1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared/MovingSum/Synchronous Enabled 16 Sample Delay  --> Synchronous_Enabled_16_Sample_Delay
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared/MovingSum --> MovingSum_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/magnitudeSquared --> magnitudeSquared_block1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/streamSynchronizer/StreamSyncronizer --> StreamSyncronizer
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator/streamSynchronizer --> streamSynchronizer
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Energy Calculator --> Energy_Calculator
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Peak Detector/considerFirstPeak --> considerFirstPeak
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Peak Detector/MATLAB Function1 --> MATLAB_Function1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Peak Detector/searchStartOfFrame --> searchStartOfFrame
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Peak Detector --> Peak_Detector
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Stream Synchronizer/StreamSyncronizer --> StreamSyncronizer_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync/Stream Synchronizer --> Stream_Synchronizer
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Coarse Time Sync --> Coarse_Time_Sync
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Correction/NCO/WaveformGen/SinLookUpTableGen --> SinLookUpTableGen_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Correction/NCO/WaveformGen/CosLookUpTableGen --> CosLookUpTableGen_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Correction/NCO/WaveformGen --> WaveformGen_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Correction/NCO --> NCO_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Correction --> Fine_CFO_Correction
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Averager --> Averager_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Correlator --> Correlator_block1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/HDL_CMA_core/Quadrant_Mapper --> Quadrant_Mapper_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/HDL_CMA_core/CordicKernelMag --> CordicKernelMag_block29
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block30
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block31
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block32
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block33
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block34
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block35
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block36
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block37
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block38
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block39
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block40
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block41
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block42
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block43
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block44
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block45
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block46
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block47
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block48
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block49
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block50
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block51
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block52
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block53
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block54
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block55
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block56
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/HDL_CMA_core/Quadrant_Correction --> Quadrant_Correction_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block57
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation/Complex to Magnitude-Angle1 --> CordicKernelMag_block58
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction/Fine CFO Estimation --> Fine_CFO_Estimation
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine CFO Estimation and Correction --> Fine_CFO_Estimation_and_Correction
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/MagnitudeSquared --> MagnitudeSquared_block2
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/FirRdyLogic --> FirRdyLogic
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/Addressable_Delay_Line/SimpleDualPortRAM_generic --> SimpleDualPortRAM_generic_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/Addressable_Delay_Line --> Addressable_Delay_Line
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/FilterTapSystolic --> FilterTapSystolic
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/Addressable_Delay_Line --> Addressable_Delay_Line_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/FilterTapSystolic --> FilterTapSystolic_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/Addressable_Delay_Line --> Addressable_Delay_Line_block1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1/FilterTapSystolic --> FilterTapSystolic_block1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/C1 --> C1
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter --> corrFilter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator --> Correlator_block2
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Peak Searcher/maxPeakSearcher/extractLTFs --> extractLTFs
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Peak Searcher/maxPeakSearcher/maxPeakSearcher --> maxPeakSearcher
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Peak Searcher/maxPeakSearcher --> maxPeakSearcher_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Peak Searcher/peakDetector --> peakDetector
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Peak Searcher --> Peak_Searcher
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync --> Fine_Time_Sync
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/Discrete FIR Filter/Filter/FilterCoef --> FilterCoef
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/Discrete FIR Filter/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> FilterTapSystolicPreAddWvlIn
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/Discrete FIR Filter/Filter/subFilter --> subFilter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/Discrete FIR Filter/Filter --> Filter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/Discrete FIR Filter --> Discrete_FIR_Filter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter/DTConverter --> DTConverter_block
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Rx Filter --> Rx_Filter
+wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization --> WLANTimeAndFrequencySynchronization

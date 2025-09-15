@@ -1,0 +1,66 @@
+# MATLAB temporary files
+*.asv
+*.m~
+*.mat
+*.autosave
+
+# Simulink cache files
+slprj/
+*.slxc
+
+# MATLAB code generation files
+codegen/
+*.mexw64
+*.mexa64
+*.mexmaci64
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build directories
+build/
+dist/
+
+# HLS C++ source files (core IP - not public)
+*.cpp
+*.hpp
+*.h
+*.inc
+
+# HLS tool-generated project directories
+**/module0_prefilter/module0_prefilter/
+**/module1_packet_detect/module1_packet_detect/
+**/module2_coarse_cfo/module2_coarse_cfo/
+**/module3_fine_sync/module3_fine_sync/
+**/module4_fine_cfo_apply/module4_fine_cfo_apply/
+**/system_wlanSync_integrated/system_top/
+
+# HLS build logs and artifacts
+logs/
+debug_*
+*.o
+*.bc
+*.d
+*.sdb
+*.exe
+
+# Vivado/HDL Coder generated projects (A2H_Coder only)
+Synchronization/A2H_Coder/**/hdl_prj/
+Synchronization/A2H_Coder/**/hdlsrc/
+
+# HDL_Coder directory is fully public - override global ignores
+!Synchronization/HDL_Coder/
+!Synchronization/HDL_Coder/**
+
+# Firebase
+firebase-debug.log

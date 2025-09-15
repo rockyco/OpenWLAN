@@ -1,0 +1,23 @@
+{
+  "phase": 2,
+  "framework_version": "2.0.7",
+  "timestamp": "2026-02-03T06:57:03+11:00",
+  "test_vectors_dir": "test_vectors",
+  "total_edges": 11,
+  "generated_files": 11,
+  "coverage_percent": 100,
+  "files": [
+      {"file": "filter_coeffs.txt", "samples": 51},
+      {"file": "lltf_fir_coeffs.txt", "samples": 160},
+      {"file": "m0_output.txt", "samples": 26105},
+      {"file": "m1_data_out.txt", "samples": 26105},
+      {"file": "m1_startOffset.txt", "samples": 1},
+      {"file": "m2_coarseFreqOff.txt", "samples": 1},
+      {"file": "m2_search_buffer.txt", "samples": 640},
+      {"file": "m3_fineOffset.txt", "samples": 1},
+      {"file": "m4_corrected_out.txt", "samples": 26030},
+      {"file": "m4_fineFreqOff.txt", "samples": 1},
+      {"file": "system_input.txt", "samples": 26155},
+      {"file": "system_params.txt", "samples": 14}
+  ]
+}

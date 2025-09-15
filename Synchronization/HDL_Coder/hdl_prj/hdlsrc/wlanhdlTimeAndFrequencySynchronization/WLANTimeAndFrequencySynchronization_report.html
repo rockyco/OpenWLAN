@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="https://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<title>HDL Check Report for 'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="file:///opt/MATLAB/R2025a/toolbox/hdlcoder/hdlcommon/js_css/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="file:///opt/MATLAB/R2025a/toolbox/hdlcoder/hdlcommon/js_css/docscripts.js"></script>
+        
+        <link href="html/pages/ice_960.css" rel="stylesheet" type="text/css">
+        <link href="html/pages/HDLsite5.css" rel="stylesheet" type="text/css">
+        <link href="html/pages/ice_doc_center.css" rel="stylesheet" type="text/css">
+        <link href="html/pages/ice_doc_center_installed.css" rel="stylesheet" type="text/css">
+        <link href="html/pages/ice_doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+        <script type="text/javascript">
+            if (navigator.appName != "ICEbrowser") {
+            var cssStyleSheets = $("link").filter(function(){
+            var href = $(this).attr('href');
+            return href.indexOf("ice_doc_center_print.css") == -1});
+            var hrefElements = $.map(cssStyleSheets, function(elem) {
+            var href = $(elem).attr('href');
+            var hrefArray = href.split("/");
+            hrefArray[hrefArray.length - 1] = hrefArray[hrefArray.length - 1].replace("ice_", "");
+            return {
+            href: hrefArray.join("/"),
+            media: $(elem).attr('media')
+            };
+            });
+            cssStyleSheets.remove();
+            for (var i = 0; i < hrefElements.length; i++) {
+            if ($.browser.msie && $.browser.version <= 8) {
+            document.createStyleSheet(hrefElements[i].href);
+            } else {
+            var link = $('<link rel="stylesheet" href=' + hrefElements[i].href + ' type="text/css" />');
+            if (hrefElements[i].media) {
+            link.attr('media', hrefElements[i].media);
+            }
+            $('head').append(link);
+            }
+            }
+            }
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div class="container_192">
+<div class="grid_192">
+ <div class="page_container"><div class="content_frame">
+<h1>HDL Code Generation Check Report for 'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization'
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'open_system(\'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization\');'})" >open model 'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization'</a><BR>
+Generated on 2026-02-04 22:38:48</h1>
+<H2>HDL check for 'wlanhdlTimeAndFrequencySynchronization' complete with 0 errors, 9 warnings, and 7 messages.</H2><BR>
+<H3>The following table describes blocks for which errors, warnings or messages were reported.</H3><BR>
+<TABLE style="border: 2px solid; border-collapse: collapse;">
+<TR><TD style="border: 2px solid; border-collapse: collapse;"> <B>Simulink Blocks and resources</B> </TD><TD style="border: 2px solid; border-collapse: collapse;"> <B>Level</B> </TD><TD style="border: 2px solid; border-collapse: collapse;"> <B>Description</B> </TD></TR><TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:validate:ScalarizePortsVerilogCheck" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">When 'TargetLanguage' is 'Verilog', HDL Coder flattens the vector signals to scalars by default. 'ScalarizePorts' setting does not have any effect.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:validate:DistributedPipeliningBetterWithTDB" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse"><a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'configset.internal.open(\'wlanhdlTimeAndFrequencySynchronization\',\'UseSynthesisEstimatesForDistributedPipelining\')'})" >'UseSynthesisEstimatesForDistributedPipelining'</a> is enabled, but <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'configset.internal.open(\'wlanhdlTimeAndFrequencySynchronization\',\'TimingDatabaseDirectory\')'})" >'TimingDatabaseDirectory'</a> is unspecified. HDL Coder will use a shipping timing database for synthesis estimates, which may lead to suboptimal pipeline distribution. Consider characterizing the device with <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'helpview(fullfile(docroot, \'hdlcoder\', \'helptargets.map\'),\'genhdltdb\')'})" >'genhdltdb'</a> for best results.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:validate:ScriptParamError" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Script parameter HDLCompileInit must use 1 '%s' symbols. See documentation for this parameter.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:validate:ScriptParamError" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Script parameter HDLSimCmd must use 2 '%s' symbols. See documentation for this parameter.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:validate:ScriptParamError" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Script parameter HDLSimViewWaveCmd must use 1 '%s' symbols. See documentation for this parameter.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:makehdl:genericspeednotcharacterized" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">SynthesisToolSpeedValue -1I not characterized for Family Zynq. Using default value, SynthesisToolSpeedValue=1, for adaptive pipelining.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="HDLShared:hdlshared:cpespeednotcharacterized" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">SynthesisToolSpeedValue -1I not characterized for Family zynq. Using default value, SynthesisToolSpeedValue=-1, for Critical Path Estimation. Consider characterizing this device configuration using 'genhdltdb'. <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'helpview(fullfile(docroot, \'hdlcoder\', \'helptargets.map\'),\'genhdltdb\')'})" >More information</a>.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:makehdl:warn_CPEUncharacterizedComp" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Unable to use synthesis timing estimates for certain blocks in the model for 'DistributedPipelining' using 'UseSynthesisEstimatesForDistributedPipelining'. These uncharacterized blocks can result in the critical path being larger than expected. Consider disabling <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'configset.internal.open(\'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization\', \'UseSynthesisEstimatesForDistributedPipelining\')'})" >'UseSynthesisEstimatesForDistributedPipelining'</a> if the resulting critical path is too large. Run the generated highlighting script <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks\')'})" >'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks'</a> for details on the uncharacterized blocks.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:makehdl:warn_CPEUncharacterizedComp" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Warning</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Unable to use synthesis timing estimates for certain blocks in the model for 'DistributedPipelining' using 'UseSynthesisEstimatesForDistributedPipelining'. These uncharacterized blocks can result in the critical path being larger than expected. Consider disabling <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'configset.internal.open(\'wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization\', \'UseSynthesisEstimatesForDistributedPipelining\')'})" >'UseSynthesisEstimatesForDistributedPipelining'</a> if the resulting critical path is too large. Run the generated highlighting script <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks\')'})" >'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks'</a> for details on the uncharacterized blocks.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="dsp:hdl:Upsample:validateBlock:icnotused" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');hilite_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 87 76 65 78 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 70 105 110 101 32 84 105 109 101 32 83 121 110 99 47 67 111 114 114 101 108 97 116 111 114 47 99 111 114 114 70 105 108 116 101 114 47 85 112 115 97 109 112 108 101]))'})" >wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/Upsample</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">The initial condition is not used when the model is in single-tasking mode. Multi-tasking mode is not supported for HDL.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="dsp:hdl:Upsample:validateBlock:icnotused" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');hilite_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 87 76 65 78 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 70 105 110 101 32 84 105 109 101 32 83 121 110 99 47 67 111 114 114 101 108 97 116 111 114 47 99 111 114 114 70 105 108 116 101 114 47 85 112 115 97 109 112 108 101 49]))'})" >wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/Upsample1</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">The initial condition is not used when the model is in single-tasking mode. Multi-tasking mode is not supported for HDL.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="dsp:hdl:Upsample:validateBlock:icnotused" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');hilite_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 87 76 65 78 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110 47 70 105 110 101 32 84 105 109 101 32 83 121 110 99 47 67 111 114 114 101 108 97 116 111 114 47 99 111 114 114 70 105 108 116 101 114 47 85 112 115 97 109 112 108 101 50]))'})" >wlanhdlTimeAndFrequencySynchronization/WLANTimeAndFrequencySynchronization/Fine Time Sync/Correlator/corrFilter/Upsample2</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">The initial condition is not used when the model is in single-tasking mode. Multi-tasking mode is not supported for HDL.</TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:hdldisp:GeneratingCRPHiliteScript" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightClockRatePipelining\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightClockRatePipelining.m</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Clock-rate pipelining obstacles can be diagnosed by running this script: <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightClockRatePipelining\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightClockRatePipelining.m</a></TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:hdldisp:GeneratingDistributedPipeliningBarriersHiliteScript" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightDistributedPipeliningBarriers\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightDistributedPipeliningBarriers.m</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">To highlight blocks that obstruct distributed pipelining, click the following MATLAB script: <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightDistributedPipeliningBarriers\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightDistributedPipeliningBarriers.m</a></TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:hdldisp:GeneratingBlocksWithNoCharacterizationHighlightScript" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks.m</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Blocks that are not characterized for Critical Path Estimation: <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks\')'})" >hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightCriticalPathEstimationOffendingBlocks.m</a></TD>
+</TR>
+<TR><TD style="border: 2px solid; border-collapse: collapse;">
+<a alt="hdlcoder:hdldisp:GeneratingDCEHighlightingScript" href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite(get_param(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]),\'object\'),\'none\');open_system(char([119 108 97 110 104 100 108 84 105 109 101 65 110 100 70 114 101 113 117 101 110 99 121 83 121 110 99 104 114 111 110 105 122 97 116 105 111 110]))'})" >wlanhdlTimeAndFrequencySynchronization</a>
+</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Message</TD>
+<TD style="border: 2px solid; border-collapse: collapse">Unused logic removed during HDL code generation. To highlight the logic removed, click the following MATLAB script: <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'run(\'hdl_prj/hdlsrc/wlanhdlTimeAndFrequencySynchronization/highlightRemovedDeadBlocks.m\')'})" >highlightRemovedDeadBlocks.m</a></TD>
+</TR>
+</TABLE>
+<BR><BR> </div></div></div></div>
+                    <div class="grid_192">
+                        <div class="footer_container">
+                            <div class="footer">
+                                
+                                <div class="copyright">&copy; 1994-2026 The MathWorks, Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+
+        <script type="text/javascript">
+
+$(document).ready( setTimeout( function () {
+                   $(".expandAllLink").trigger('click');
+            }, 50 ) );
+
+        </script>
+        
+<script>function postParentWindowMessage(message) {window.parent.postMessage(message, "*");}</script>
+</body>
+</html>

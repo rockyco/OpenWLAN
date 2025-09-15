@@ -1,0 +1,125 @@
+{
+  "project": "wlanSync",
+  "framework_version": "4.0.0",
+  "discovery_date": "2026-02-03T06:43:45+11:00",
+  "total_modules": 5,
+  "active_modules": 5,
+  "modules": {
+    "module0_prefilter": {
+      "path": "module0_prefilter",
+      "phase_status": {
+        "1": "COMPLETE",
+        "2": "COMPLETE",
+        "3": "COMPLETE",
+        "4": "COMPLETE",
+        "5": "COMPLETE",
+        "6": "COMPLETE",
+        "7": "COMPLETE"
+      },
+      "last_updated": "2026-02-04T11:55:02+11:00",
+      "metrics": {
+        "dsp": 42,
+        "lut": 4438,
+        "ff": 5708,
+        "bram": 0,
+        "ii": 1,
+        "latency": 0
+      }
+    },
+    "module1_packet_detect": {
+      "path": "module1_packet_detect",
+      "phase_status": {
+        "1": "COMPLETE",
+        "2": "COMPLETE",
+        "3": "COMPLETE",
+        "4": "COMPLETE",
+        "5": "COMPLETE",
+        "6": "COMPLETE",
+        "7": "COMPLETE"
+      },
+      "last_updated": "2026-02-03T19:28:37+11:00",
+      "metrics": {
+        "dsp": 20,
+        "lut": 1945,
+        "ff": 1970,
+        "bram": 64,
+        "ii": 1,
+        "latency": 0
+      }
+    },
+    "module2_coarse_cfo": {
+      "path": "module2_coarse_cfo",
+      "phase_status": {
+        "1": "COMPLETE",
+        "2": "COMPLETE",
+        "3": "COMPLETE",
+        "4": "COMPLETE",
+        "5": "COMPLETE",
+        "6": "COMPLETE",
+        "7": "COMPLETE"
+      },
+      "last_updated": "2026-02-03T19:29:38+11:00",
+      "metrics": {
+        "dsp": 16,
+        "lut": 3331,
+        "ff": 1927,
+        "bram": 67,
+        "ii": 1,
+        "latency": 0
+      }
+    },
+    "module3_fine_sync": {
+      "path": "module3_fine_sync",
+      "phase_status": {
+        "1": "COMPLETE",
+        "2": "COMPLETE",
+        "3": "COMPLETE",
+        "4": "COMPLETE",
+        "5": "COMPLETE",
+        "6": "COMPLETE",
+        "7": "COMPLETE"
+      },
+      "last_updated": "2026-02-04T12:22:55+11:00",
+      "metrics": {
+        "dsp": 488,
+        "lut": 2206,
+        "ff": 2082,
+        "bram": 0,
+        "ii": 1,
+        "latency": 167,
+        "note": "CSYNTH estimate; post-impl DSP much lower due to scheduling MUX resolution"
+      }
+    },
+    "module4_fine_cfo_apply": {
+      "path": "module4_fine_cfo_apply",
+      "phase_status": {
+        "1": "COMPLETE",
+        "2": "COMPLETE",
+        "3": "COMPLETE",
+        "4": "COMPLETE",
+        "5": "COMPLETE",
+        "6": "COMPLETE",
+        "7": "COMPLETE"
+      },
+      "last_updated": "2026-02-04T04:20:11+11:00",
+      "metrics": {
+        "dsp": 16,
+        "lut": 3154,
+        "ff": 1982,
+        "bram": 67,
+        "ii": 1,
+        "latency": 0
+      }
+    }
+  },
+  "system_post_impl": {
+    "dsp": 172,
+    "lut": 8220,
+    "ff": 14019,
+    "bram": 34,
+    "timing_slack_ns": 0.427,
+    "fmax_mhz": 117.51,
+    "cosim_latency_cycles": 33640,
+    "latency_ratio": 1.25
+  }
+}

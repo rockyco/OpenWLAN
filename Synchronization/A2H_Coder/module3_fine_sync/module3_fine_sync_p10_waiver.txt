@@ -1,0 +1,3 @@
+DATA-ONLY module: search_buffer_in.read() is a DATA stream, not a CONTROL signal.
+Module3 has @FSM_REQUIRED: NO - no async control inputs. All stream reads are
+continuous data consumption at II=1 (FP-ASYNC1). P10 applies only to CONTROL signals.

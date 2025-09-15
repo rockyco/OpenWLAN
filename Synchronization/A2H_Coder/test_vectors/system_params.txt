@@ -1,0 +1,15 @@
+% system parameters
+num_samples	26155
+filteredLen	26105
+numTaps	51
+lstfLen	16
+lltfLen	160
+searchBufferLen	640
+fftLen	64
+cpLength	16
+fs	20000000
+startOffset	69
+fineOffset	6
+coarseFreqOff	9.806863436716609e+03
+fineFreqOff	9.976947001629402e+03
+outputLen	26030

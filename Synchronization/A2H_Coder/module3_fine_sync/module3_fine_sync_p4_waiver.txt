@@ -1,0 +1,2 @@
+FIR cross-correlation is inherent O(N*L) - no incremental form exists.
+Maps to hls::FIR IP in Phase 5 (FP-CORR: 160 taps > 16, Karatsuba complex decomposition).

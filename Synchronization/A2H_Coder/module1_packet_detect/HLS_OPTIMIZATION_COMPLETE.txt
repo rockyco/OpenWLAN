@@ -1,0 +1,37 @@
+Phase 6: HLS Optimization Complete
+==================================
+Created-By: validate_phase6.sh
+Timestamp: 2026-02-03T19:28:37+11:00
+
+Module: module1_packet_detect
+Domain: SIGNAL_PROCESSING
+Threshold: 1e-03
+
+=== Validation Status ===
+validate_phase6.sh: PASS
+CSim: PASS
+CSynth: PASS
+CoSim: PASS
+FP5: PASS (no float/double)
+
+=== Resource Metrics ===
+DSP: 20
+LUT: 1945
+FF: 1970
+BRAM: 64
+II: 1
+
+=== Latency Metrics ===
+Latency (csynth): N/A
+Latency (cosim): N/A
+Ratio (csynth): 1.0x
+Ratio (cosim): N/Ax
+
+=== Reference Gap Analysis (v28.2.0) ===
+Reference: OpenWLAN (DSP=633, LUT=23374, FF=13151, BRAM=27)
+Tolerance: DSP=1.5x, LUT=1.5x, FF=1.5x, BRAM=2.0x
+Targets: DSP<=949, LUT<=35061, FF<=19726, BRAM<=54
+Gaps Found: 1
+Multi-Metric Complete: NO
+
+Validation: validate_phase6.sh v13.0.0

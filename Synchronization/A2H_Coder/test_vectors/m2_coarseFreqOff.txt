@@ -1,0 +1,2 @@
+% M2 control output: coarseFreqOff (Hz)
+9.806863436716609e+03

@@ -1,0 +1,2 @@
+% M3 control output: fineOffset
+6.000000000000000e+00

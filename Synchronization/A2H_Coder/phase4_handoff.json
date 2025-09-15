@@ -1,0 +1,47 @@
+{
+  "phase": 4,
+  "framework_version": "2.0.6",
+  "timestamp": "2026-02-03T07:26:59+11:00",
+  "modules": {
+    "module0_prefilter": {
+      "csr": 1.0,
+      "needs_separation": false,
+      "fsm_required": false,
+      "functions": [],
+      "recommended_tool": "simple_pipeline"
+    }
+,
+    "module1_packet_detect": {
+      "csr": 1.0,
+      "needs_separation": false,
+      "fsm_required": false,
+      "functions": [],
+      "recommended_tool": "simple_pipeline"
+    }
+,
+    "module2_coarse_cfo": {
+      "csr": 1.0,
+      "needs_separation": false,
+      "fsm_required": true,
+      "functions": [],
+      "recommended_tool": "simple_pipeline"
+    }
+,
+    "module3_fine_sync": {
+      "csr": 1.0,
+      "needs_separation": false,
+      "fsm_required": false,
+      "functions": [],
+      "recommended_tool": "simple_pipeline"
+    }
+,
+    "module4_fine_cfo_apply": {
+      "csr": 1.0,
+      "needs_separation": false,
+      "fsm_required": true,
+      "functions": [],
+      "recommended_tool": "simple_pipeline"
+    }
+
+  }
+}

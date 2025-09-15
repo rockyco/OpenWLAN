@@ -1,0 +1,2 @@
+% M4 control output: fineFreqOff (Hz)
+9.976947001629402e+03

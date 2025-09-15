@@ -1,0 +1,1 @@
+var modelInfo = {model:"WLANTimeAndFrequencySynchronization"};var modelHierarchy=[{model:"WLANTimeAndFrequencySynchronization",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

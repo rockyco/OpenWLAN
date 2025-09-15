@@ -1,0 +1,18 @@
+{
+  "phase": 7,
+  "framework_version": "2.0.7",
+  "timestamp": "2026-02-04T21:08:56+11:00",
+  "integration_dir": "./system_wlanSync_integrated",
+  "modules_integrated": 0,
+  "expected_modules": 16,
+  "splitter_count": 00,
+  "latency_ratio": 1.28,
+  "latency_threshold": 1.5,
+  "validation": {
+    "csim": true,
+    "csynth": true,
+    "cosim": true,
+    "fp11_architecture": true,
+    "fp7_latency": true
+  }
+}

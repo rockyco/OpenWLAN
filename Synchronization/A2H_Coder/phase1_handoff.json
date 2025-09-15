@@ -1,0 +1,49 @@
+{
+  "phase": 1,
+  "framework_version": "2.0.7",
+  "timestamp": "2026-02-03T06:43:45+11:00",
+  "project_name": "wlanSync",
+  "modular_file": "wlanSync_modular.m",
+  "context_file": "architecture_context.md",
+  "module_count": 5,
+  "modules": {
+    "module0_prefilter": {
+      "file": "module0_prefilter.m",
+      "csr": 1.0,
+      "fsm_required": false,
+      "needs_separation": false
+    }
+,
+    "module1_packet_detect": {
+      "file": "module1_packet_detect.m",
+      "csr": 1.0,
+      "fsm_required": false,
+      "needs_separation": false
+    }
+,
+    "module2_coarse_cfo": {
+      "file": "module2_coarse_cfo.m",
+      "csr": 1.0,
+      "fsm_required": true,
+      "needs_separation": false
+    }
+,
+    "module3_fine_sync": {
+      "file": "module3_fine_sync.m",
+      "csr": 1.0,
+      "fsm_required": false,
+      "needs_separation": false
+    }
+,
+    "module4_fine_cfo_apply": {
+      "file": "module4_fine_cfo_apply.m",
+      "csr": 1.0,
+      "fsm_required": true,
+      "needs_separation": false
+    }
+
+  },
+  "splitter_count": 0
+0,
+  "test_vector_edges": 19
+}

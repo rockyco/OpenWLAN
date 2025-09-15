@@ -1,0 +1,4 @@
+FSM module with correct pattern: data_in.read() at line 96 is a DATA stream inside
+the FSM loop that uses non-blocking poll for CONTROL signals (startOffset_in.empty(),
+fineOffset_in.empty()). The flagged read is continuous data consumption per FP-ASYNC1.
+CONTROL signals already use the correct FSM pattern with !stream.empty() checks.
