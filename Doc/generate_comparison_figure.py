@@ -78,7 +78,7 @@ ax1.set_ylabel("Count (log scale)")
 ax1.set_title("Resource Utilization - Absolute")
 ax1.set_xticks(x)
 ax1.set_xticklabels(resources)
-ax1.legend(loc="upper left", framealpha=0.9)
+ax1.legend(loc="lower right", framealpha=0.9)
 ax1.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
 ax1.grid(axis="y", alpha=0.3, zorder=0)
 
@@ -110,7 +110,7 @@ ax2.set_title("Utilization % of Zynq-7020")
 ax2.set_xticks(x)
 ax2.set_xticklabels(resources)
 ax2.set_ylim(0, 115)
-ax2.legend(loc="upper left", framealpha=0.9, fontsize=9)
+ax2.legend(loc="upper right", framealpha=0.9, fontsize=9)
 ax2.grid(axis="y", alpha=0.3, zorder=0)
 
 # Value labels
