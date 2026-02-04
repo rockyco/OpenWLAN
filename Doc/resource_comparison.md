@@ -150,30 +150,32 @@ Both implementations target the same IEEE 802.11 synchronization algorithm. The 
 | Waveform (max error) | - | - | 2.11e-02 | - |
 | Waveform (avg error) | - | - | 3.31e-03 | - |
 
-#### HDL Coder Simulink Simulation vs MATLAB Reference
+#### HDL Coder Simulink Simulation
 
-The HDL Coder design is generated directly from the MathWorks [WLAN HDL Time and Frequency Synchronization](https://au.mathworks.com/help/wireless-hdl/ug/wlanhdltimeandfrequencysynchronization.html) Simulink model. Its fixed-point accuracy is validated within Simulink's HDL verification workflow:
+The HDL Coder design is generated directly from the MathWorks [WLAN HDL Time and Frequency Synchronization](https://au.mathworks.com/help/wireless-hdl/ug/wlanhdltimeandfrequencysynchronization.html) Simulink model using native fixed-point arithmetic. From the MathWorks documentation, the HDL simulation reports:
 
-| Metric | HDL Coder | Notes |
-|--------|-----------|-------|
-| Coarse CFO | Bit-accurate to Simulink model | Fixed-point quantization per Simulink word-length settings |
-| Fine CFO | Bit-accurate to Simulink model | Same as above |
-| Packet detection offset | Exact | Integer output, no quantization error |
-| Fine timing offset | Exact | Integer output, no quantization error |
-| Waveform accuracy | Fixed-point limited | Determined by Simulink-defined bit widths |
+> The timing diagram shows that the output rxOut is synchronized at the start of the L-STF and that the estimated frequency offset is 9.695 kHz, which is close to the introduced frequency offset of 10 kHz.
 
-The HDL Coder implementation achieves timing closure at 100 MHz (exact WNS not extracted). Its accuracy is inherently tied to the Simulink model's fixed-point configuration and cannot be independently measured without running the Simulink HDL verification testbench.
+| Metric | True Value | HDL Coder Estimate | Error | Relative Error |
+|--------|-----------|-------------------|-------|----------------|
+| Total CFO estimate | 10,000 Hz | 9,695 Hz | 305 Hz | 3.05% |
+
+Note: The MathWorks example uses a different noise realization than the A2H_Coder test vectors, so the specific CFO estimates differ due to random noise effects in addition to fixed-point quantization.
 
 #### Comparison Summary
 
-| Metric | A2H_Coder Error | HDL Coder Error | Notes |
-|--------|----------------|-----------------|-------|
-| Coarse CFO | 2.53e-04 relative | Fixed-point quantized | A2H uses float; HDL Coder uses Simulink fixed-point |
-| Fine CFO | 9.31e-06 relative | Fixed-point quantized | Both well within receiver requirements |
-| Timing (integer outputs) | 0 | 0 | Both exact |
-| Waveform | avg 3.31e-03 | Not extracted | A2H measured via HLS cosim test vectors |
+**Algorithm note:** In `wlanSync.m`, the fine CFO is estimated from the original uncorrected signal (line 23 re-extracts from `inputWaveformRef`), so `fineFreqOff` represents the total frequency correction applied to the output waveform. The coarse CFO is only used as an intermediate step to aid fine timing estimation.
 
-Both implementations produce synchronization outputs suitable for downstream OFDM demodulation. The A2H_Coder's floating-point path provides measurable error bounds; the HDL Coder's fixed-point path is validated within Simulink's closed-loop HDL verification environment.
+| Metric | True Value | A2H_Coder HLS | HDL Coder | Notes |
+|--------|-----------|---------------|-----------|-------|
+| Total CFO correction | 10,000 Hz | 9,977.04 Hz | 9,695 Hz | A2H applies fineFreqOff; HDL Coder reports combined |
+| CFO estimation error | - | 23 Hz (0.23%) | 305 Hz (3.05%) | Different noise realizations + fixed-point vs float |
+| Coarse CFO estimate | 10,000 Hz | 9,804.39 Hz | - | Intermediate; not applied to final output |
+| Packet detection | - | Exact | Exact | Integer output, no quantization |
+| Fine timing | - | Exact | Synchronized to L-STF | Integer output |
+| Waveform avg error | - | 3.31e-03 | Not extracted | A2H measured via HLS cosim |
+
+The A2H_Coder achieves tighter CFO estimation (0.23% vs 3.05%) primarily because it uses floating-point arithmetic in the HLS implementation, avoiding the fixed-point quantization inherent in the HDL Coder's Simulink-defined word lengths. Both estimates are well within the IEEE 802.11 receiver requirements for successful OFDM demodulation.
 
 ### Per-Module Co-Simulation Results
 

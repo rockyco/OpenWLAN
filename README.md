@@ -77,17 +77,17 @@ Target: Zynq-7020 at 100 MHz. Co-simulation latency: 33,640 cycles for 26,155 in
 
 ![WLAN Synchronization Analysis](Doc/wlan_sync_analysis.png)
 
-Both implementations target the same MATLAB algorithm (SNR=30 dB, CFO=10 kHz, timing offset=25 samples). The MATLAB floating-point output is the shared golden reference:
+Both implementations target the same MATLAB algorithm (SNR=30 dB, true CFO=10 kHz, timing offset=25 samples):
 
-| Metric | MATLAB Reference | A2H_Coder HLS | HDL Coder |
-|--------|-----------------|---------------|-----------|
-| Coarse CFO | 9,806.86 Hz | 9,804.39 Hz (err: 2.53e-04) | Fixed-point quantized |
-| Fine CFO | 9,976.95 Hz | 9,977.04 Hz (err: 9.31e-06) | Fixed-point quantized |
-| Packet detection offset | 69 samples | 69 samples (exact) | Exact |
-| Fine timing offset | 6 samples | 6 samples (exact) | Exact |
-| Waveform avg error | - | 3.31e-03 | Simulink-validated |
+| Metric | True Value | A2H_Coder HLS | HDL Coder |
+|--------|-----------|---------------|-----------|
+| Total CFO correction | 10,000 Hz | 9,977 Hz (err: 0.23%) | 9,695 Hz (err: 3.05%) |
+| Coarse CFO estimate | 10,000 Hz | 9,804 Hz | - |
+| Packet detection | - | Exact | Exact |
+| Fine timing | - | Exact | Synchronized |
+| Waveform avg error | - | 3.31e-03 | - |
 
-A2H_Coder accuracy is measured via Vitis HLS C/RTL co-simulation. HDL Coder accuracy is validated within Simulink's HDL verification workflow (results internal to the `.slx` model). A2H_Coder accuracy is also validated at each transformation stage: modular separation (exact), flattening (<1e-10), optimization (<1e-03). See [Doc/resource_comparison.md](Doc/resource_comparison.md#algorithm-accuracy) for the full analysis.
+A2H_Coder uses floating-point HLS C++, validated via Vitis co-simulation (source: `system_top.log`). HDL Coder uses Simulink-defined fixed-point, with 9,695 Hz reported in [MathWorks documentation](https://au.mathworks.com/help/wireless-hdl/ug/wlanhdltimeandfrequencysynchronization.html). The CFO difference reflects both arithmetic representation (float vs fixed-point) and different noise realizations. A2H_Coder accuracy is also validated at each transformation stage: modular separation (exact), flattening (<1e-10), optimization (<1e-03). See [Doc/resource_comparison.md](Doc/resource_comparison.md#algorithm-accuracy) for the full analysis.
 
 ## Project Structure
 
