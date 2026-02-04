@@ -75,7 +75,7 @@ Both implementations use nearly identical Block RAM: 17 tiles (HLS) vs 17.5 tile
 | module3_fine_sync | L-LTF cross-correlation | 488* | 2,206 | 2,082 | 0 | 1 | 167 |
 | module4_fine_cfo_apply | Fine CFO + correction | 16 | 3,154 | 1,982 | 67 | 1 | 0 |
 
-*\*module3 csynth DSP estimate (488) is much higher than post-implementation due to Vivado scheduling and MUX resolution optimizing the 160-tap FIR correlator.*
+*\*module3 csynth DSP estimate (488) assumes fully parallel processing. Post-implementation DSP is much lower because the FIR IP sample_period is set to 8, time-multiplexing DSP units so only 1/8 are required.*
 
 *Note: Per-module BRAM values are in RAMB18-equivalent units (HLS convention). System-level totals in the main comparison table use Vivado Block RAM Tile units from the post-route utilization report.*
 

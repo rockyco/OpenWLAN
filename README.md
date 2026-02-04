@@ -63,7 +63,7 @@ Five streaming HLS modules connected in series, all achieving II=1 (one sample p
 | module3_fine_sync | L-LTF 160-tap cross-correlation fine timing | 488* | 1 | 167 |
 | module4_fine_cfo_apply | Fine CFO estimation and final frequency correction | 16 | 1 | 0 |
 
-*Module 3 csynth DSP estimate (488) is higher than post-implementation (172 system total) due to Vivado scheduling and MUX resolution optimizing the 160-tap correlator.
+*Module 3 csynth DSP estimate (488) assumes fully parallel processing. Post-implementation DSP is much lower because the FIR IP sample_period parameter is set to 8, time-multiplexing DSP units so only 1/8 are required.
 
 Target: Zynq-7020 at 100 MHz. Co-simulation latency: 33,640 cycles for 26,155 input samples.
 

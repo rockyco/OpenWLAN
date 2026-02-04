@@ -87,7 +87,7 @@
         "bram": 0,
         "ii": 1,
         "latency": 167,
-        "note": "CSYNTH estimate; post-impl DSP much lower due to scheduling MUX resolution"
+        "note": "CSYNTH estimate (fully parallel); post-impl DSP much lower due to FIR IP sample_period=8 time-multiplexing"
       }
     },
     "module4_fine_cfo_apply": {

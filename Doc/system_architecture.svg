@@ -118,7 +118,7 @@
     <line x1="230" y1="8" x2="260" y2="8" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-ctrl)"/>
     <text x="268" y="12" font-size="9" fill="#666">Control signal</text>
 
-    <text x="450" y="12" font-size="8" fill="#999">*csynth estimate; post-impl DSP lower due to Vivado scheduling optimization</text>
+    <text x="450" y="12" font-size="8" fill="#999">*csynth estimate (fully parallel); post-impl uses 1/8 DSPs via FIR sample_period=8</text>
   </g>
 
   <!-- Title -->
