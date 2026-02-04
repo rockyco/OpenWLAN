@@ -64,5 +64,8 @@ Synchronization/A2H_Coder/**/hdlsrc/
 !Synchronization/HDL_Coder/
 !Synchronization/HDL_Coder/**
 
+# Drafts
+linkedin_post.md
+
 # Firebase
 firebase-debug.log
