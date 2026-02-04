@@ -34,8 +34,8 @@
   <path d="M748,170 L790,170 L790,220" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
 
   <!-- M2 -> M4 (main horizontal data path, goes below) -->
-  <path d="M606,285 L606,330 L722,330 L722,285" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
-  <text x="664" y="324" text-anchor="middle" font-size="9" fill="#777">2048</text>
+  <path d="M580,285 L580,328 L722,328 L722,285" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
+  <text x="651" y="322" text-anchor="middle" font-size="9" fill="#777">2048</text>
 
   <!-- M4 -> Output -->
   <line x1="856" y1="252" x2="876" y2="252" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
@@ -47,8 +47,8 @@
   <text x="453" y="282" text-anchor="middle" font-size="8" fill="#999" font-style="italic">startOffset</text>
 
   <!-- M2 -> M4: startOffset_fwd (ctrl, below data path) -->
-  <path d="M606,295 L606,360 L722,360 L722,295" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-ctrl)"/>
-  <text x="664" y="376" text-anchor="middle" font-size="8" fill="#999" font-style="italic">startOffset_fwd</text>
+  <path d="M560,285 L560,360 L750,360 L750,285" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-ctrl)"/>
+  <text x="655" y="375" text-anchor="middle" font-size="8" fill="#999" font-style="italic">startOffset_fwd</text>
 
   <!-- M3 -> M4: fineOffset (ctrl, right of data path) -->
   <path d="M748,148 L820,148 L820,220" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-ctrl)"/>
