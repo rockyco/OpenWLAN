@@ -53,15 +53,7 @@ See [Doc/resource_comparison.md](Doc/resource_comparison.md) for the full analys
 
 Five streaming HLS modules connected in series, all achieving II=1 (one sample per clock):
 
-```
-                        +---> module3_fine_sync ----+
-                        |     (L-LTF correlation)   |
-Input --> module0 --> module1 --> module2 -----------> module4 --> Output
-          prefilter   packet     coarse_cfo           fine_cfo
-          (FIR 51)    detect     (CFO est +            apply
-                      (L-STF)    correction)          (fine CFO +
-                                                       correction)
-```
+![System Architecture](Doc/system_architecture.svg)
 
 | Module | Function | DSP | II | Latency |
 |--------|----------|-----|----|---------|
@@ -117,6 +109,7 @@ OpenWLAN/
 └── Doc/
     ├── resource_comparison.md              # Quantitative comparison
     ├── resource_comparison.png             # Resource comparison figure
+    ├── system_architecture.svg             # System architecture diagram
     ├── generate_comparison_figure.py       # Figure generation script
     └── wlan_sync_analysis.png              # Performance visualization
 ```

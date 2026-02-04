@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <!-- Arrowhead for data paths -->
+    <marker id="arrow-data" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4A4A4A"/>
+    </marker>
+    <!-- Arrowhead for control signals -->
+    <marker id="arrow-ctrl" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="940" height="460" fill="white"/>
+
+  <!-- ==================== DATA PATH ARROWS (solid, dark) ==================== -->
+
+  <!-- Input -> M0 -->
+  <line x1="68" y1="252" x2="118" y2="252" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
+
+  <!-- M0 -> M1 -->
+  <line x1="248" y1="252" x2="298" y2="252" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
+  <text x="273" y="243" text-anchor="middle" font-size="9" fill="#777">64</text>
+
+  <!-- M1 -> M2 -->
+  <line x1="428" y1="252" x2="478" y2="252" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
+  <text x="453" y="243" text-anchor="middle" font-size="9" fill="#777">64</text>
+
+  <!-- M2 -> M3 (upward from M2 top-center to M3 left) -->
+  <path d="M543,220 L543,170 L618,170" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
+  <text x="568" y="163" font-size="9" fill="#777">1024</text>
+
+  <!-- M3 -> M4 (from M3 right side, down to M4 top) -->
+  <path d="M748,170 L790,170 L790,220" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
+
+  <!-- M2 -> M4 (main horizontal data path, goes below) -->
+  <path d="M606,285 L606,330 L722,330 L722,285" stroke="#4A4A4A" stroke-width="2.5" fill="none" marker-end="url(#arrow-data)"/>
+  <text x="664" y="324" text-anchor="middle" font-size="9" fill="#777">2048</text>
+
+  <!-- M4 -> Output -->
+  <line x1="856" y1="252" x2="876" y2="252" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
+
+  <!-- ==================== CONTROL SIGNAL ARROWS (dashed, lighter) ==================== -->
+
+  <!-- M1 -> M2: startOffset (ctrl) -->
+  <line x1="428" y1="268" x2="478" y2="268" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-ctrl)"/>
+  <text x="453" y="282" text-anchor="middle" font-size="8" fill="#999" font-style="italic">startOffset</text>
+
+  <!-- M2 -> M4: startOffset_fwd (ctrl, below data path) -->
+  <path d="M606,295 L606,360 L722,360 L722,295" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-ctrl)"/>
+  <text x="664" y="376" text-anchor="middle" font-size="8" fill="#999" font-style="italic">startOffset_fwd</text>
+
+  <!-- M3 -> M4: fineOffset (ctrl, right of data path) -->
+  <path d="M748,148 L820,148 L820,220" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-ctrl)"/>
+  <text x="835" y="190" font-size="8" fill="#999" font-style="italic">fineOffset</text>
+
+  <!-- ==================== INPUT NODE ==================== -->
+  <rect x="16" y="237" width="52" height="30" rx="15" fill="#E8E8E8" stroke="#AAA" stroke-width="1.5"/>
+  <text x="42" y="257" text-anchor="middle" font-size="11" font-weight="bold" fill="#555">Input</text>
+
+  <!-- ==================== MODULE BOXES ==================== -->
+
+  <!-- M0: Prefilter -->
+  <g>
+    <rect x="120" y="220" width="126" height="64" rx="6" fill="white" stroke="#4A90D9" stroke-width="2.5"/>
+    <rect x="120" y="220" width="6" height="64" rx="3" ry="0" fill="#4A90D9"/>
+    <text x="133" y="240" font-size="10" font-weight="bold" fill="#333">M0: Prefilter</text>
+    <text x="133" y="254" font-size="9" fill="#666">51-tap FIR lowpass</text>
+    <text x="133" y="274" font-size="8" fill="#999">DSP=42  II=1</text>
+  </g>
+
+  <!-- M1: Packet Detect -->
+  <g>
+    <rect x="300" y="220" width="126" height="64" rx="6" fill="white" stroke="#5BA55B" stroke-width="2.5"/>
+    <rect x="300" y="220" width="6" height="64" rx="3" ry="0" fill="#5BA55B"/>
+    <text x="313" y="240" font-size="10" font-weight="bold" fill="#333">M1: Packet Detect</text>
+    <text x="313" y="254" font-size="9" fill="#666">L-STF autocorrelation</text>
+    <text x="313" y="274" font-size="8" fill="#999">DSP=20  II=1</text>
+  </g>
+
+  <!-- M2: Coarse CFO -->
+  <g>
+    <rect x="480" y="220" width="126" height="64" rx="6" fill="white" stroke="#E8913A" stroke-width="2.5"/>
+    <rect x="480" y="220" width="6" height="64" rx="3" ry="0" fill="#E8913A"/>
+    <text x="493" y="240" font-size="10" font-weight="bold" fill="#333">M2: Coarse CFO</text>
+    <text x="493" y="254" font-size="9" fill="#666">Est + correction + buffer</text>
+    <text x="493" y="274" font-size="8" fill="#999">DSP=16  II=1</text>
+  </g>
+
+  <!-- M3: Fine Sync (above, between M2 and M4) -->
+  <g>
+    <rect x="620" y="130" width="126" height="80" rx="6" fill="white" stroke="#9B59B6" stroke-width="2.5"/>
+    <rect x="620" y="130" width="6" height="80" rx="3" ry="0" fill="#9B59B6"/>
+    <text x="633" y="152" font-size="10" font-weight="bold" fill="#333">M3: Fine Sync</text>
+    <text x="633" y="166" font-size="9" fill="#666">L-LTF 160-tap</text>
+    <text x="633" y="180" font-size="9" fill="#666">cross-correlation</text>
+    <text x="633" y="200" font-size="8" fill="#999">DSP=488*  II=1  Lat=167</text>
+  </g>
+
+  <!-- M4: Fine CFO Apply -->
+  <g>
+    <rect x="722" y="220" width="134" height="64" rx="6" fill="white" stroke="#E05D5D" stroke-width="2.5"/>
+    <rect x="722" y="220" width="6" height="64" rx="3" ry="0" fill="#E05D5D"/>
+    <text x="735" y="240" font-size="10" font-weight="bold" fill="#333">M4: Fine CFO Apply</text>
+    <text x="735" y="254" font-size="9" fill="#666">Fine CFO + correction</text>
+    <text x="735" y="274" font-size="8" fill="#999">DSP=16  II=1</text>
+  </g>
+
+  <!-- ==================== OUTPUT NODE ==================== -->
+  <rect x="878" y="237" width="56" height="30" rx="15" fill="#E8E8E8" stroke="#AAA" stroke-width="1.5"/>
+  <text x="906" y="257" text-anchor="middle" font-size="11" font-weight="bold" fill="#555">Output</text>
+
+  <!-- ==================== LEGEND ==================== -->
+  <g transform="translate(16, 410)">
+    <line x1="0" y1="8" x2="30" y2="8" stroke="#4A4A4A" stroke-width="2.5" marker-end="url(#arrow-data)"/>
+    <text x="38" y="12" font-size="9" fill="#666">Data path (FIFO depth shown)</text>
+
+    <line x1="230" y1="8" x2="260" y2="8" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-ctrl)"/>
+    <text x="268" y="12" font-size="9" fill="#666">Control signal</text>
+
+    <text x="450" y="12" font-size="8" fill="#999">*csynth estimate; post-impl DSP lower due to Vivado scheduling optimization</text>
+  </g>
+
+  <!-- Title -->
+  <text x="470" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">WLAN Synchronization Pipeline - System Architecture</text>
+  <text x="470" y="48" text-anchor="middle" font-size="10" fill="#888">Zynq-7020 @ 100 MHz | All modules II=1 | Co-sim latency: 33,640 cycles</text>
+
+</svg>

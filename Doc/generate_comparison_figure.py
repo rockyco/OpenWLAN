@@ -57,7 +57,7 @@ plt.rcParams.update({
 
 fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 fig.suptitle(
-    "OpenWLAN: A2H_Coder (HLS) vs HDL Coder on Zynq-7020",
+    "WLAN Synchronization: A2H_Coder (HLS) vs HDL Coder on Zynq-7020",
     fontsize=16,
     fontweight="bold",
     y=0.97,

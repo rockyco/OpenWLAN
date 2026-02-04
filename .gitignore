@@ -67,5 +67,8 @@ Synchronization/A2H_Coder/**/hdlsrc/
 # Drafts
 linkedin_post.md
 
+# Playwright MCP screenshots
+.playwright-mcp/
+
 # Firebase
 firebase-debug.log
