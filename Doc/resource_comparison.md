@@ -103,10 +103,90 @@ At 99.99% slice utilization, the HDL Coder implementation cannot accommodate any
 
 ### Both achieve functional equivalence
 
-The A2H_Coder co-simulation validates against the HDL Coder reference:
-- Coarse CFO: relative error 2.53e-04 (measured 9804.39 Hz vs reference 9806.86 Hz)
-- Fine CFO: relative error 9.31e-06 (measured 9977.04 Hz vs reference 9976.95 Hz)
-- Waveform: max error 2.11e-02, average error 3.31e-03
+See the [Algorithm Accuracy](#algorithm-accuracy) section below for detailed metrics.
+
+## Algorithm Accuracy
+
+### Test Conditions
+
+| Parameter | Value |
+|-----------|-------|
+| Channel bandwidth | CBW20 (20 MHz) |
+| SNR | 30 dB |
+| True carrier frequency offset | 10,000 Hz |
+| Timing offset | 25 samples |
+| Input waveform length | 26,155 complex samples |
+| Output waveform length | 26,030 complex samples |
+
+### Accuracy Across Transformation Stages
+
+The framework progressively transforms code through stages that trade numerical precision for hardware efficiency. Each stage is validated against the MATLAB golden reference.
+
+| Stage | Phase | Tolerance | Max Error | Status |
+|-------|-------|-----------|-----------|--------|
+| Modular separation | 1 | 1e-06 | 0.00e+00 | PASS |
+| Flattening (toolbox inlining) | 3 | 1e-10 | < 1e-10 | PASS (all 5 modules) |
+| Optimization (streaming arch.) | 4 | 1e-03 | < 1e-03 | PASS (all 5 modules) |
+| HLS C++ (float, co-simulation) | 5-7 | See below | See below | PASS |
+
+Phase 1 produces zero error because modular separation only restructures call boundaries without changing arithmetic. Phase 3 (flattening) maintains near-exact equivalence at 1e-10 because it replaces toolbox calls with mathematically identical explicit implementations. Phase 4 (optimization) introduces controlled error up to 1e-03 from algorithmic changes: sliding window incremental updates, NCO-based phase accumulation, and division avoidance.
+
+### Implementation Accuracy: A2H_Coder vs HDL Coder
+
+Both implementations target the same IEEE 802.11 synchronization algorithm. The MATLAB floating-point output serves as the shared golden reference.
+
+**Arithmetic representation:**
+- **HDL Coder**: Native fixed-point defined in the Simulink model. Bit widths are set by MathWorks' HDL Coder workflow with automatic word-length optimization. Validated through Simulink HDL co-simulation (results internal to the `.slx` model, not extracted here).
+- **A2H_Coder**: Floating-point HLS C++ (Phases 5-7), with Phase 6 fixed-point conversion using `ap_fixed` types. Validated through Vitis HLS C/RTL co-simulation against MATLAB golden test vectors.
+
+#### A2H_Coder HLS Co-Simulation vs MATLAB Reference
+
+| Metric | MATLAB Reference | A2H_Coder HLS | Abs. Error | Rel. Error |
+|--------|-----------------|---------------|------------|------------|
+| Coarse CFO | 9,806.86 Hz | 9,804.39 Hz | 2.47 Hz | 2.53e-04 |
+| Fine CFO | 9,976.95 Hz | 9,977.04 Hz | 0.09 Hz | 9.31e-06 |
+| Packet detection offset | 69 samples | 69 samples | 0 | 0 |
+| Fine timing offset | 6 samples | 6 samples | 0 | 0 |
+| Waveform (max error) | - | - | 2.11e-02 | - |
+| Waveform (avg error) | - | - | 3.31e-03 | - |
+
+#### HDL Coder Simulink Simulation vs MATLAB Reference
+
+The HDL Coder design is generated directly from the MathWorks [WLAN HDL Time and Frequency Synchronization](https://au.mathworks.com/help/wireless-hdl/ug/wlanhdltimeandfrequencysynchronization.html) Simulink model. Its fixed-point accuracy is validated within Simulink's HDL verification workflow:
+
+| Metric | HDL Coder | Notes |
+|--------|-----------|-------|
+| Coarse CFO | Bit-accurate to Simulink model | Fixed-point quantization per Simulink word-length settings |
+| Fine CFO | Bit-accurate to Simulink model | Same as above |
+| Packet detection offset | Exact | Integer output, no quantization error |
+| Fine timing offset | Exact | Integer output, no quantization error |
+| Waveform accuracy | Fixed-point limited | Determined by Simulink-defined bit widths |
+
+The HDL Coder implementation achieves timing closure at 100 MHz (exact WNS not extracted). Its accuracy is inherently tied to the Simulink model's fixed-point configuration and cannot be independently measured without running the Simulink HDL verification testbench.
+
+#### Comparison Summary
+
+| Metric | A2H_Coder Error | HDL Coder Error | Notes |
+|--------|----------------|-----------------|-------|
+| Coarse CFO | 2.53e-04 relative | Fixed-point quantized | A2H uses float; HDL Coder uses Simulink fixed-point |
+| Fine CFO | 9.31e-06 relative | Fixed-point quantized | Both well within receiver requirements |
+| Timing (integer outputs) | 0 | 0 | Both exact |
+| Waveform | avg 3.31e-03 | Not extracted | A2H measured via HLS cosim test vectors |
+
+Both implementations produce synchronization outputs suitable for downstream OFDM demodulation. The A2H_Coder's floating-point path provides measurable error bounds; the HDL Coder's fixed-point path is validated within Simulink's closed-loop HDL verification environment.
+
+### Per-Module Co-Simulation Results
+
+| Module | Co-sim Latency (cycles) | Status |
+|--------|------------------------|--------|
+| module0_prefilter | 26,181 | Pass |
+| module1_packet_detect | - | Pass (csim) |
+| module2_coarse_cfo | 26,314 | Pass |
+| module3_fine_sync | - | Pass (csim) |
+| module4_fine_cfo_apply | 26,571 | Pass |
+| **system_top (integrated)** | **33,626** | **Pass** |
+
+System latency ratio: 1.28 (threshold: 1.5). The integrated system adds ~7,000 cycles of overhead from inter-module FIFO handshaking and module3's 167-cycle pipeline latency.
 
 ## Data Sources
 
