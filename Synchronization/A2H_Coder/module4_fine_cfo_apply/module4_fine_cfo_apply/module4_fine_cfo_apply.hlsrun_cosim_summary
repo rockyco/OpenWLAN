@@ -1,0 +1,190 @@
+<ENTRY>
+{
+ "thisFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/module4_fine_cfo_apply.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359166",
+ "buildStep": {
+  "cmdId": "0460511b-3ccc-4392-997b-314b3c05fa01",
+  "name": "vitis-run",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/logs/hls_run_cosim.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/cosim.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359166",
+ "status": {
+  "cmdId": "0460511b-3ccc-4392-997b-314b3c05fa01",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359166",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "module4_fine_cfo_apply",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "buildStep": {
+  "cmdId": "399f18ba-6df9-4474-acc8-06074455f0a9",
+  "name": "cosim_design",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "status": {
+  "cmdId": "399f18ba-6df9-4474-acc8-06074455f0a9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls/sim/report/module4_fine_cfo_apply_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 07:59:19 2026",
+ "timestampMillis": "1770152359167",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 07:59:41 2026",
+ "timestampMillis": "1770152381206",
+ "status": {
+  "cmdId": "399f18ba-6df9-4474-acc8-06074455f0a9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 07:59:41 2026",
+ "timestampMillis": "1770152381208",
+ "status": {
+  "cmdId": "0460511b-3ccc-4392-997b-314b3c05fa01",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

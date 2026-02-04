@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="module4_fine_cfo_apply.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_module4_fine_cfo_apply_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity">
+         <obj_property name="label">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity">
+      <obj_property name="ElementShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_module4_fine_cfo_apply_group">
+      <obj_property name="label">AESL_inst_module4_fine_cfo_apply</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_module4_fine_cfo_apply_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

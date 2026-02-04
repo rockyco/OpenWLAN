@@ -1,0 +1,149 @@
+
+
+================================================================
+== Synthesis Summary Report of 'module1_packet_detect'
+================================================================
++ General Information: 
+    * Date:           Wed Feb  4 01:43:19 2026
+    * Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+    * Project:        module1_packet_detect
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |                    Modules                    | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |                    & Loops                    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ module1_packet_detect                        |     -|  0.24|        -|       -|         -|        -|     -|        no|     -|  20 (9%)|  2458 (2%)|  2302 (4%)|    -|
+    | + module1_packet_detect_Pipeline_STREAM_LOOP  |     -|  0.24|        -|       -|         -|        -|     -|        no|     -|  20 (9%)|  2422 (2%)|  2248 (4%)|    -|
+    |  o STREAM_LOOP                                |     -|  8.75|        -|       -|        11|        1|     -|       yes|     -|        -|          -|          -|    -|
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++-----------------+-----------+------------+
+| Interface       | Direction | Data Width |
++-----------------+-----------+------------+
+| data_in         | in        | 32         |
+| data_out        | out       | 32         |
+| startOffset_out | out       | 16         |
++-----------------+-----------+------------+
+
+* Other Ports
++-------------+---------+-----------+----------+
+| Port        | Mode    | Direction | Bitwidth |
++-------------+---------+-----------+----------+
+| num_samples | ap_none | in        | 32       |
++-------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+------------------------+
+| Argument        | Direction | Datatype               |
++-----------------+-----------+------------------------+
+| data_in         | in        | stream<complex_t, 0>&  |
+| data_out        | out       | stream<complex_t, 0>&  |
+| startOffset_out | out       | stream<ap_int<16>, 0>& |
+| num_samples     | in        | int                    |
++-----------------+-----------+------------------------+
+
+* SW-to-HW Mapping
++-----------------+-----------------+-----------+
+| Argument        | HW Interface    | HW Type   |
++-----------------+-----------------+-----------+
+| data_in         | data_in         | interface |
+| data_out        | data_out        | interface |
+| startOffset_out | startOffset_out | interface |
+| num_samples     | num_samples     | port      |
++-----------------+-----------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+------------------+-----------+--------------------------+---------+
+| Name                                          | DSP | Pragma | Variable         | Op        | Impl                     | Latency |
++-----------------------------------------------+-----+--------+------------------+-----------+--------------------------+---------+
+| + module1_packet_detect                       | 20  |        |                  |           |                          |         |
+|  + module1_packet_detect_Pipeline_STREAM_LOOP | 20  |        |                  |           |                          |         |
+|    icmp_ln51_fu_1004_p2                       |     |        | icmp_ln51        | setlt     | auto                     | 0       |
+|    i_2_fu_1010_p2                             |     |        | i_2              | add       | fabric                   | 0       |
+|    sparsemux_33_4_16_1_1_U4                   |     |        | rx_re            | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_33_4_16_1_1_U5                   |     |        | rx_im            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln65_fu_1048_p2                       |     |        | icmp_ln65        | seteq     | auto                     | 0       |
+|    n_fu_1054_p2                               |     |        | n                | add       | fabric                   | 0       |
+|    mac_muladd_16s_16s_28s_28_4_1_U13          | 1   |        | mul_ln75         | mul       | dsp_slice                | 3       |
+|    mul_16s_16s_28_1_1_U6                      | 1   |        | mul_ln75_1       | mul       | auto                     | 0       |
+|    mac_muladd_16s_16s_28s_28_4_1_U13          | 1   |        | add_ln75         | add       | dsp_slice                | 3       |
+|    mul_16s_16s_28_1_1_U7                      | 1   |        | mul_ln76         | mul       | auto                     | 0       |
+|    mac_mulsub_16s_16s_28s_28_4_1_U14          | 1   |        | mul_ln76_1       | mul       | dsp_slice                | 3       |
+|    mac_mulsub_16s_16s_28s_28_4_1_U14          | 1   |        | sub_ln76         | sub       | dsp_slice                | 3       |
+|    mac_muladd_16s_16s_29s_29_4_1_U12          | 1   |        | mul_ln78         | mul       | dsp_slice                | 3       |
+|    mul_16s_16s_29_1_1_U8                      | 1   |        | mul_ln78_1       | mul       | auto                     | 0       |
+|    mac_muladd_16s_16s_29s_29_4_1_U12          | 1   |        | add_ln78         | add       | dsp_slice                | 3       |
+|    mac_muladd_16s_16s_29ns_29_4_1_U15         | 1   |        | mul_ln78_2       | mul       | dsp_slice                | 3       |
+|    mac_muladd_16s_16s_29ns_29_4_1_U16         | 1   |        | mul_ln79         | mul       | dsp_slice                | 3       |
+|    mac_muladd_16s_16s_29ns_29_4_1_U15         | 1   |        | add_ln78_1       | add       | dsp_slice                | 3       |
+|    mac_muladd_16s_16s_29ns_29_4_1_U16         | 1   |        | add_ln79         | add       | dsp_slice                | 3       |
+|    corrSum_re_1_fu_1523_p2                    |     |        | corrSum_re_1     | add       | fabric                   | 0       |
+|    corrSum_im_1_fu_1540_p2                    |     |        | corrSum_im_1     | add       | fabric                   | 0       |
+|    powSumAcc_3_fu_1982_p2                     |     |        | powSumAcc_3      | add       | fabric                   | 0       |
+|    icmp_ln87_fu_1063_p2                       |     |        | icmp_ln87        | setgt     | auto                     | 0       |
+|    mul_32s_32s_54_1_1_U1                      | 4   |        | mul_ln89         | mul       | auto                     | 0       |
+|    mul_32s_32s_54_1_1_U2                      | 4   |        | mul_ln89_1       | mul       | auto                     | 0       |
+|    add_ln89_fu_2209_p2                        |     |        | add_ln89         | add       | fabric                   | 0       |
+|    mul_32s_32s_54_1_1_U3                      | 4   |        | mul_ln91         | mul       | auto                     | 0       |
+|    icmp_ln95_fu_2262_p2                       |     |        | icmp_ln95        | setlt     | auto                     | 0       |
+|    sustainedCount_3_fu_2273_p2                |     |        | sustainedCount_3 | add       | fabric                   | 0       |
+|    icmp_ln97_fu_2279_p2                       |     |        | icmp_ln97        | setgt     | auto                     | 0       |
+|    xor_ln98_fu_2294_p2                        |     |        | xor_ln98         | xor       | auto                     | 0       |
+|    sparsemux_33_4_16_1_1_U9                   |     |        | tmp_5            | sparsemux | compactencoding_dontcare | 0       |
+|    corrSum_re_2_fu_1735_p2                    |     |        | corrSum_re_2     | sub       | fabric                   | 0       |
+|    sparsemux_33_4_16_1_1_U10                  |     |        | tmp_6            | sparsemux | compactencoding_dontcare | 0       |
+|    corrSum_im_2_fu_1824_p2                    |     |        | corrSum_im_2     | sub       | fabric                   | 0       |
+|    sparsemux_33_4_16_1_1_U11                  |     |        | tmp_7            | sparsemux | compactencoding_dontcare | 0       |
+|    powSumAcc_2_fu_2134_p2                     |     |        | powSumAcc_2      | sub       | fabric                   | 0       |
++-----------------------------------------------+-----+--------+------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------+-------------------------------------------------------------------+
+| Type            | Options                      | Location                                                          |
++-----------------+------------------------------+-------------------------------------------------------------------+
+| array_partition | variable=delay_line complete | module1_packet_detect.cpp:22 in module1_packet_detect, delay_line |
+| array_partition | variable=cp_re_buf complete  | module1_packet_detect.cpp:28 in module1_packet_detect, cp_re_buf  |
+| array_partition | variable=cp_im_buf complete  | module1_packet_detect.cpp:29 in module1_packet_detect, cp_im_buf  |
+| array_partition | variable=ps_buf complete     | module1_packet_detect.cpp:30 in module1_packet_detect, ps_buf     |
+| unroll          |                              | module1_packet_detect.cpp:34 in module1_packet_detect             |
+| pipeline        | II=1                         | module1_packet_detect.cpp:52 in module1_packet_detect             |
++-----------------+------------------------------+-------------------------------------------------------------------+
+
+

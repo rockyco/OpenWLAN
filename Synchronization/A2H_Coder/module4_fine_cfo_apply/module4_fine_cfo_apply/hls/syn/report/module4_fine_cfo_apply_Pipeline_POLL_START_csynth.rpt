@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'module4_fine_cfo_apply_Pipeline_POLL_START'
+================================================================
+* Date:           Wed Feb  4 07:58:06 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        module4_fine_cfo_apply
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.731 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- POLL_START  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     87|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     70|    -|
+|Register         |        -|    -|     103|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     103|    157|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |n_3_fu_165_p2                          |         +|   0|  0|  38|          31|           1|
+    |ap_block_pp0_stage0_11001              |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1_grp1  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_tran3to4_state2           |       and|   0|  0|   2|           1|           1|
+    |tmp_2_nbreadreq_fu_74_p3               |       and|   0|  0|   2|           1|           0|
+    |icmp_ln89_fu_160_p2                    |      icmp|   0|  0|  39|          32|          32|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  87|          68|          38|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  25|          5|    1|          5|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_140_p4  |   9|          2|    1|          2|
+    |ap_return                               |   9|          2|    1|          2|
+    |data_in_blk_n                           |   9|          2|    1|          2|
+    |n_fu_64                                 |   9|          2|   31|         62|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  70|         15|   36|         75|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |UnifiedRetVal_reg_136    |   1|   0|    1|          0|
+    |ap_CS_fsm                |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_exit_tran_regpp0      |   1|   0|    2|          1|
+    |ap_return_preg           |   1|   0|    1|          0|
+    |icmp_ln89_reg_219        |   1|   0|    1|          0|
+    |n_1_reg_213              |  31|   0|   31|          0|
+    |n_3_reg_223              |  31|   0|   31|          0|
+    |n_fu_64                  |  31|   0|   31|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 103|   0|  104|          1|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|ap_return               |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_POLL_START|  return value|
+|num_samples             |   in|   32|     ap_none|                                 num_samples|        scalar|
+|data_in_dout            |   in|   32|     ap_fifo|                                     data_in|       pointer|
+|data_in_empty_n         |   in|    1|     ap_fifo|                                     data_in|       pointer|
+|data_in_read            |  out|    1|     ap_fifo|                                     data_in|       pointer|
+|startOffset_in_dout     |   in|   16|     ap_fifo|                              startOffset_in|       pointer|
+|startOffset_in_empty_n  |   in|    1|     ap_fifo|                              startOffset_in|       pointer|
+|startOffset_in_read     |  out|    1|     ap_fifo|                              startOffset_in|       pointer|
+|n_out                   |  out|   31|      ap_vld|                                       n_out|       pointer|
+|n_out_ap_vld            |  out|    1|      ap_vld|                                       n_out|       pointer|
+|n_2_out                 |  out|   31|      ap_vld|                                     n_2_out|       pointer|
+|n_2_out_ap_vld          |  out|    1|      ap_vld|                                     n_2_out|       pointer|
+|circ_buf_re_address1    |  out|   13|   ap_memory|                                 circ_buf_re|         array|
+|circ_buf_re_ce1         |  out|    1|   ap_memory|                                 circ_buf_re|         array|
+|circ_buf_re_we1         |  out|    1|   ap_memory|                                 circ_buf_re|         array|
+|circ_buf_re_d1          |  out|   16|   ap_memory|                                 circ_buf_re|         array|
+|circ_buf_im_address1    |  out|   13|   ap_memory|                                 circ_buf_im|         array|
+|circ_buf_im_ce1         |  out|    1|   ap_memory|                                 circ_buf_im|         array|
+|circ_buf_im_we1         |  out|    1|   ap_memory|                                 circ_buf_im|         array|
+|circ_buf_im_d1          |  out|   16|   ap_memory|                                 circ_buf_im|         array|
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

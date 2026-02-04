@@ -1,0 +1,237 @@
+<ENTRY>
+{
+ "thisFile": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/system_top.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493232",
+ "buildStep": {
+  "cmdId": "4f8aa235-06ef-4e9d-8736-6f1d6360e07a",
+  "name": "vitis-run",
+  "logFile": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/logs/hls_run_impl.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/impl.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493233",
+ "status": {
+  "cmdId": "4f8aa235-06ef-4e9d-8736-6f1d6360e07a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493233",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "system_top",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top.cpp",
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/module0_prefilter/module0_prefilter.cpp",
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/module1_packet_detect/module1_packet_detect.cpp",
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/module2_coarse_cfo/module2_coarse_cfo.cpp",
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/module3_fine_sync/module3_fine_sync.cpp",
+     "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493233",
+ "buildStep": {
+  "cmdId": "f393d575-899c-4ce8-80ce-fcfb2e18f795",
+  "name": "export_design",
+  "logFile": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/hls.log",
+  "commandLine": "export_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493234",
+ "status": {
+  "cmdId": "f393d575-899c-4ce8-80ce-fcfb2e18f795",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493235",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493235",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493235",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493235",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493236",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:11:33 2026",
+ "timestampMillis": "1770221493236",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:18:38 2026",
+ "timestampMillis": "1770221918868",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 03:18:38 2026",
+ "timestampMillis": "1770221918875",
+ "report": {
+  "path": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 03:18:38 2026",
+ "timestampMillis": "1770221918875",
+ "status": {
+  "cmdId": "f393d575-899c-4ce8-80ce-fcfb2e18f795",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 03:18:38 2026",
+ "timestampMillis": "1770221918890",
+ "status": {
+  "cmdId": "4f8aa235-06ef-4e9d-8736-6f1d6360e07a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

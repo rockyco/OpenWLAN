@@ -1,0 +1,1 @@
+ {CheckOptions: [ {key: xilinx-tb-process.TopFunctionName, value: 'module4_fine_cfo_apply'}, {key: xilinx-tb-process.KeepTopName, value: 1}, {key: xilinx-tb-process.BCSim, value: '0'} ] } 

@@ -1,0 +1,109 @@
+
+
+================================================================
+== Vitis HLS Report for 'run_2'
+================================================================
+* Date:           Wed Feb  4 21:04:51 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        system_top
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.000 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      167|      167|  1.670 us|  1.670 us|  167|  167|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|  160|     236|    213|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|  160|     236|    213|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   72|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_ce         |   in|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|         run.2|  return value|
+|ap_continue   |   in|    1|  ap_ctrl_hs|         run.2|  return value|
+|in_V_dout     |   in|   16|     ap_fifo|          in_V|       pointer|
+|in_V_empty_n  |   in|    1|     ap_fifo|          in_V|       pointer|
+|in_V_read     |  out|    1|     ap_fifo|          in_V|       pointer|
+|out_V_din     |  out|   40|     ap_fifo|         out_V|       pointer|
+|out_V_full_n  |   in|    1|     ap_fifo|         out_V|       pointer|
+|out_V_write   |  out|    1|     ap_fifo|         out_V|       pointer|
++--------------+-----+-----+------------+--------------+--------------+
+

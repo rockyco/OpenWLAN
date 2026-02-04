@@ -1,0 +1,51 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 11,360       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  1,346       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |    481       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |    456       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |    379       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |    349       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |    349       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |    355       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |    427       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |    446       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |    446       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |    439       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |    435       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |    435       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |    438       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |    438       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++--------------------------+-------------------------------+-----------------+---------------+--------------+-------------+---------------+
+| Function                 | Location                      | Compile/Link    | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++--------------------------+-------------------------------+-----------------+---------------+--------------+-------------+---------------+
+| + module4_fine_cfo_apply | module4_fine_cfo_apply.cpp:68 | 11,360          | 379           | 446          | 435         | 438           |
+|    complex_t             | common_types_opt.hpp:24       |   315 (3 calls) |               |              |             |               |
+|    fp_atan2_nco          | module4_fine_cfo_apply.cpp:34 | 4,077           |               |              |             |               |
++--------------------------+-------------------------------+-----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

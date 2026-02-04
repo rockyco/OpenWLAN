@@ -1,0 +1,14 @@
+set status(tv_done) 0
+set status(tvin) "module4_fine_cfo_apply.autotvin.dat"
+set status(wrapc_done) 1
+set status(bc_done) 0
+set status(bc_tb_done) 0
+set status(bc_tb_new_done) 0
+set status(tvout) "module4_fine_cfo_apply.autotvout.dat"
+set status(sc_done) 0
+set status(cas_done) 0
+set status(hdl_tvin) ""
+set status(hdl_tvout) ""
+set status(vlog_needed) 0
+set status(tb_needed) 1
+set status(argv) ""

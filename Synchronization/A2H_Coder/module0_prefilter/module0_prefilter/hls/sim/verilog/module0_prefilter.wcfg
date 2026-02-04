@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="module0_prefilter.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_dataflow_monitor_sv " />
+            <top_module name="apatb_module0_prefilter_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter//AESL_inst_module0_prefilter_activity">
+         <obj_property name="label">AESL_inst_module0_prefilter_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_module0_prefilter_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_module0_prefilter_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter//AESL_inst_module0_prefilter_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter//AESL_inst_module0_prefilter_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter//AESL_inst_module0_prefilter_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity">
+            <obj_property name="label">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/AESL_inst_module0_prefilter_activity">
+      <obj_property name="ElementShortName">AESL_inst_module0_prefilter_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_module0_prefilter_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_module0_prefilter_group">
+      <obj_property name="label">AESL_inst_module0_prefilter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity">
+         <obj_property name="ElementShortName">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_module0_prefilter_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_group">
+         <obj_property name="label">grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/grp_module0_prefilter_Pipeline_PREFILTER_LOOP_fu_47/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group32">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group33">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group34">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/filteredLen_out_write">
+               <obj_property name="ElementShortName">filteredLen_out_write</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/filteredLen_out_full_n">
+               <obj_property name="ElementShortName">filteredLen_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/filteredLen_out_din">
+               <obj_property name="ElementShortName">filteredLen_out_din[15:0]</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_din[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_out_write">
+               <obj_property name="ElementShortName">data_out_write</obj_property>
+               <obj_property name="ObjectShortName">data_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_out_full_n">
+               <obj_property name="ElementShortName">data_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">data_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_out_din">
+               <obj_property name="ElementShortName">data_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group41">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group42">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/num_samples">
+               <obj_property name="ElementShortName">num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_in_read">
+               <obj_property name="ElementShortName">data_in_read</obj_property>
+               <obj_property name="ObjectShortName">data_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_in_empty_n">
+               <obj_property name="ElementShortName">data_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">data_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/data_in_dout">
+               <obj_property name="ElementShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group47">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_idle">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group52">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_rst">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group54">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/AESL_inst_module0_prefilter/ap_clk">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group56">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group57">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group58">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/AUTOTB_TRANSACTION_NUM">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/ready_cnt">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/done_cnt">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group59">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/LENGTH_data_in">
+               <obj_property name="ElementShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/LENGTH_data_out">
+               <obj_property name="ElementShortName">LENGTH_data_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_out[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/LENGTH_filteredLen_out">
+               <obj_property name="ElementShortName">LENGTH_filteredLen_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_filteredLen_out[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/LENGTH_num_samples">
+               <obj_property name="ElementShortName">LENGTH_num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group67">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group68">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/filteredLen_out_write">
+               <obj_property name="ElementShortName">filteredLen_out_write</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/filteredLen_out_full_n">
+               <obj_property name="ElementShortName">filteredLen_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/filteredLen_out_din">
+               <obj_property name="ElementShortName">filteredLen_out_din[15:0]</obj_property>
+               <obj_property name="ObjectShortName">filteredLen_out_din[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/data_out_write">
+               <obj_property name="ElementShortName">data_out_write</obj_property>
+               <obj_property name="ObjectShortName">data_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/data_out_full_n">
+               <obj_property name="ElementShortName">data_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">data_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/data_out_din">
+               <obj_property name="ElementShortName">data_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group75">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group76">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/num_samples">
+               <obj_property name="ElementShortName">num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/data_in_read">
+               <obj_property name="ElementShortName">data_in_read</obj_property>
+               <obj_property name="ObjectShortName">data_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module0_prefilter_top/data_in_empty_n">
+               <obj_property name="ElementShortName">data_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">data_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module0_prefilter_top/data_in_dout">
+               <obj_property name="ElementShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

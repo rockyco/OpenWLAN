@@ -1,0 +1,190 @@
+<ENTRY>
+{
+ "thisFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/module1_packet_detect.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "buildStep": {
+  "cmdId": "24150e51-b6aa-4ba6-80df-31cdd1945f93",
+  "name": "vitis-run",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/logs/hls_run_cosim.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/cosim.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "status": {
+  "cmdId": "24150e51-b6aa-4ba6-80df-31cdd1945f93",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "module1_packet_detect",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "buildStep": {
+  "cmdId": "ff5e160c-8754-48c3-a7f3-8d96554bcf41",
+  "name": "cosim_design",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "status": {
+  "cmdId": "ff5e160c-8754-48c3-a7f3-8d96554bcf41",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls/sim/report/module1_packet_detect_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289307",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289308",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Feb  3 19:28:09 2026",
+ "timestampMillis": "1770107289308",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Feb  3 19:28:37 2026",
+ "timestampMillis": "1770107317524",
+ "status": {
+  "cmdId": "ff5e160c-8754-48c3-a7f3-8d96554bcf41",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Feb  3 19:28:37 2026",
+ "timestampMillis": "1770107317526",
+ "status": {
+  "cmdId": "24150e51-b6aa-4ba6-80df-31cdd1945f93",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

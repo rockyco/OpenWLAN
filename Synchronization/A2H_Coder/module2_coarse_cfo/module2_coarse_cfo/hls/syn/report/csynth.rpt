@@ -1,0 +1,226 @@
+
+
+================================================================
+== Synthesis Summary Report of 'module2_coarse_cfo'
+================================================================
++ General Information: 
+    * Date:           Wed Feb  4 08:41:04 2026
+    * Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+    * Project:        module2_coarse_cfo
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |                   Modules                   | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |           |           |     |
+    |                   & Loops                   | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |+ module2_coarse_cfo                         |     -|  0.24|        -|          -|         -|        -|     -|        no|   7 (2%)|  16 (7%)|  2289 (2%)|  3776 (7%)|    -|
+    | + module2_coarse_cfo_Pipeline_PHASE_A       |     -|  1.80|     2051|  2.051e+04|         -|     2051|     -|        no|        -|        -|   68 (~0%)|  163 (~0%)|    -|
+    |  o PHASE_A                                  |     -|  8.75|     2049|  2.049e+04|         3|        1|  2048|       yes|        -|        -|          -|          -|    -|
+    | + module2_coarse_cfo_Pipeline_CFO_ESTIMATE  |     -|  1.07|      148|  1.480e+03|         -|      148|     -|        no|        -|   4 (1%)|  422 (~0%)|  344 (~0%)|    -|
+    |  o CFO_ESTIMATE                             |     -|  8.75|      146|  1.460e+03|         5|        1|   143|       yes|        -|        -|          -|          -|    -|
+    | + module2_coarse_cfo_Pipeline_PHASE_D       |     -|  0.80|        -|          -|         -|        -|     -|        no|  2 (~0%)|   4 (1%)|  298 (~0%)|  479 (~0%)|    -|
+    |  o PHASE_D                                  |     -|  8.75|        -|          -|         4|        1|     -|       yes|        -|        -|          -|          -|    -|
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++---------------------+-----------+------------+
+| Interface           | Direction | Data Width |
++---------------------+-----------+------------+
+| coarseFreqOff_out   | out       | 32         |
+| data_in             | in        | 32         |
+| passthrough_out     | out       | 32         |
+| searchBufferLen_out | out       | 16         |
+| search_buffer_out   | out       | 32         |
+| startOffset_fwd_out | out       | 16         |
+| startOffset_in      | in        | 16         |
++---------------------+-----------+------------+
+
+* Other Ports
++-------------+---------+-----------+----------+
+| Port        | Mode    | Direction | Bitwidth |
++-------------+---------+-----------+----------+
+| num_samples | ap_none | in        | 32       |
++-------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------------+-----------+--------------------------------------------------+
+| Argument            | Direction | Datatype                                         |
++---------------------+-----------+--------------------------------------------------+
+| data_in             | in        | stream<complex_t, 0>&                            |
+| startOffset_in      | in        | stream<ap_int<16>, 0>&                           |
+| search_buffer_out   | out       | stream<complex_t, 0>&                            |
+| coarseFreqOff_out   | out       | stream<ap_fixed<32, 16, AP_TRN, AP_WRAP, 0>, 0>& |
+| searchBufferLen_out | out       | stream<ap_int<16>, 0>&                           |
+| passthrough_out     | out       | stream<complex_t, 0>&                            |
+| startOffset_fwd_out | out       | stream<ap_int<16>, 0>&                           |
+| num_samples         | in        | int                                              |
++---------------------+-----------+--------------------------------------------------+
+
+* SW-to-HW Mapping
++---------------------+---------------------+-----------+
+| Argument            | HW Interface        | HW Type   |
++---------------------+---------------------+-----------+
+| data_in             | data_in             | interface |
+| startOffset_in      | startOffset_in      | interface |
+| search_buffer_out   | search_buffer_out   | interface |
+| coarseFreqOff_out   | coarseFreqOff_out   | interface |
+| searchBufferLen_out | searchBufferLen_out | interface |
+| passthrough_out     | passthrough_out     | interface |
+| startOffset_fwd_out | startOffset_fwd_out | interface |
+| num_samples         | num_samples         | port      |
++---------------------+---------------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+| Name                                        | DSP | Pragma | Variable       | Op     | Impl      | Latency |
++---------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+| + module2_coarse_cfo                        | 16  |        |                |        |           |         |
+|   icmp_ln113_fu_388_p2                      |     |        | icmp_ln113     | setlt  | auto      | 0       |
+|   useLen_fu_393_p3                          |     |        | useLen         | select | auto_sel  | 0       |
+|   sub_ln114_fu_412_p2                       |     |        | sub_ln114      | sub    | fabric    | 0       |
+|   sub_ln114_1_fu_422_p2                     |     |        | sub_ln114_1    | sub    | fabric    | 0       |
+|   select_ln114_fu_432_p3                    |     |        | select_ln114   | select | auto_sel  | 0       |
+|   sub_ln115_fu_443_p2                       |     |        | sub_ln115      | sub    | fabric    | 0       |
+|   corrLen_fu_453_p2                         |     |        | corrLen        | add    | fabric    | 0       |
+|   add_fu_458_p2                             |     |        | add            | add    | fabric    | 0       |
+|   add24_fu_463_p2                           |     |        | add24          | add    | fabric    | 0       |
+|   icmp_ln119_fu_468_p2                      |     |        | icmp_ln119     | setgt  | auto      | 0       |
+|   sub_ln119_1_fu_484_p2                     |     |        | sub_ln119_1    | sub    | fabric    | 0       |
+|   empty_fu_493_p2                           |     |        | empty          | setgt  | auto      | 0       |
+|   p_op_fu_498_p2                            |     |        | p_op           | sub    | fabric    | 0       |
+|   smax_neg_fu_503_p3                        |     |        | smax_neg       | select | auto_sel  | 0       |
+|   add_ln119_1_fu_511_p2                     |     |        | add_ln119_1    | add    | fabric    | 0       |
+|   sub_ln36_fu_542_p2                        |     |        | sub_ln36       | sub    | fabric    | 0       |
+|   ax_fu_548_p3                              |     |        | ax             | select | auto_sel  | 0       |
+|   sub_ln37_fu_556_p2                        |     |        | sub_ln37       | sub    | fabric    | 0       |
+|   ay_fu_562_p3                              |     |        | ay             | select | auto_sel  | 0       |
+|   or_ln39_fu_570_p2                         |     |        | or_ln39        | or     | auto      | 0       |
+|   icmp_ln39_fu_574_p2                       |     |        | icmp_ln39      | seteq  | auto      | 0       |
+|   swap_fu_580_p2                            |     |        | swap           | setgt  | auto      | 0       |
+|   den_fu_584_p3                             |     |        | den            | select | auto_sel  | 0       |
+|   select_ln44_fu_590_p3                     |     |        | select_ln44    | select | auto_sel  | 0       |
+|   sdiv_51ns_32s_51_55_seq_1_U40             |     |        | sdiv_ln47      | sdiv   | auto_seq  | 54      |
+|   sub_ln48_fu_624_p2                        |     |        | sub_ln48       | sub    | fabric    | 0       |
+|   icmp_ln49_fu_668_p2                       |     |        | icmp_ln49      | setne  | auto      | 0       |
+|   add_ln49_fu_674_p2                        |     |        | add_ln49       | add    | fabric    | 0       |
+|   select_ln49_fu_680_p3                     |     |        | select_ln49    | select | auto_sel  | 0       |
+|   lut_idx_fu_688_p3                         |     |        | lut_idx        | select | auto_sel  | 0       |
+|   icmp_ln50_fu_696_p2                       |     |        | icmp_ln50      | setgt  | auto      | 0       |
+|   lut_idx_1_fu_701_p3                       |     |        | lut_idx_1      | select | auto_sel  | 0       |
+|   frac_fu_720_p2                            |     |        | frac           | sub    | fabric    | 0       |
+|   add_ln54_fu_730_p2                        |     |        | add_ln54       | add    | fabric    | 0       |
+|   sub_ln55_fu_765_p2                        |     |        | sub_ln55       | sub    | fabric    | 0       |
+|   mul_28s_32s_54_1_1_U38                    | 4   |        | mul_ln55       | mul    | auto      | 0       |
+|   angle_fu_800_p2                           |     |        | angle          | add    | fabric    | 0       |
+|   angle_1_fu_805_p2                         |     |        | angle_1        | sub    | fabric    | 0       |
+|   angle_2_fu_811_p3                         |     |        | angle_2        | select | auto_sel  | 0       |
+|   sub_ln58_fu_825_p2                        |     |        | sub_ln58       | sub    | fabric    | 0       |
+|   angle_4_fu_841_p3                         |     |        | angle_4        | select | auto_sel  | 0       |
+|   angle_5_fu_847_p2                         |     |        | angle_5        | sub    | fabric    | 0       |
+|   angle_6_fu_853_p3                         |     |        | angle_6        | select | auto_sel  | 0       |
+|   icmp_ln60_fu_870_p2                       |     |        | icmp_ln60      | setgt  | auto      | 0       |
+|   angle_7_fu_875_p2                         |     |        | angle_7        | add    | fabric    | 0       |
+|   angle_8_fu_880_p3                         |     |        | angle_8        | select | auto_sel  | 0       |
+|   add_ln61_fu_895_p2                        |     |        | add_ln61       | add    | fabric    | 0       |
+|   select_ln61_fu_901_p3                     |     |        | select_ln61    | select | auto_sel  | 0       |
+|   icmp_ln132_fu_909_p2                      |     |        | icmp_ln132     | setgt  | auto      | 0       |
+|   signed_angle_1_fu_915_p2                  |     |        | signed_angle_1 | add    | fabric    | 0       |
+|   signed_angle_2_fu_921_p3                  |     |        | signed_angle_2 | select | auto_sel  | 0       |
+|   mul_32s_28ns_48_1_1_U39                   | 4   |        | mul_ln137      | mul    | auto      | 0       |
+|   sub_ln138_fu_968_p2                       |     |        | sub_ln138      | sub    | fabric    | 0       |
+|   sub_ln138_1_fu_991_p2                     |     |        | sub_ln138_1    | sub    | fabric    | 0       |
+|   phase_inc_fu_997_p3                       |     |        | phase_inc      | select | auto_sel  | 0       |
+|  + module2_coarse_cfo_Pipeline_PHASE_A      | 0   |        |                |        |           |         |
+|    icmp_ln88_fu_213_p2                      |     |        | icmp_ln88      | seteq  | auto      | 0       |
+|    add_ln88_fu_219_p2                       |     |        | add_ln88       | add    | fabric    | 0       |
+|  + module2_coarse_cfo_Pipeline_CFO_ESTIMATE | 4   |        |                |        |           |         |
+|    icmp_ln119_fu_176_p2                     |     |        | icmp_ln119     | seteq  | auto      | 0       |
+|    add_ln119_fu_181_p2                      |     |        | add_ln119      | add    | fabric    | 0       |
+|    add_ln121_fu_191_p2                      |     |        | add_ln121      | add    | fabric    | 0       |
+|    add_ln122_fu_202_p2                      |     |        | add_ln122      | add    | fabric    | 0       |
+|    mac_muladd_16s_16s_32s_33_4_1_U11        | 1   |        | mul_ln125      | mul    | dsp_slice | 3       |
+|    mul_16s_16s_32_1_1_U9                    | 1   |        | mul_ln125_1    | mul    | auto      | 0       |
+|    mac_muladd_16s_16s_32s_33_4_1_U11        | 1   |        | sext_ln125_4   | sext   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32s_33_4_1_U11        | 1   |        | add_ln125      | add    | dsp_slice | 3       |
+|    C_re_1_fu_265_p2                         |     |        | C_re_1         | add    | fabric    | 0       |
+|    mul_16s_16s_32_1_1_U10                   | 1   |        | mul_ln126      | mul    | auto      | 0       |
+|    mac_mulsub_16s_16s_32s_32_4_1_U12        | 1   |        | mul_ln126_1    | mul    | dsp_slice | 3       |
+|    mac_mulsub_16s_16s_32s_32_4_1_U12        | 1   |        | sub_ln126      | sub    | dsp_slice | 3       |
+|    C_im_1_fu_284_p2                         |     |        | C_im_1         | add    | fabric    | 0       |
+|  + module2_coarse_cfo_Pipeline_PHASE_D      | 4   |        |                |        |           |         |
+|    icmp_ln150_fu_222_p2                     |     |        | icmp_ln150     | setlt  | auto      | 0       |
+|    icmp_ln155_fu_231_p2                     |     |        | icmp_ln155     | setlt  | auto      | 0       |
+|    buf_idx_fu_240_p2                        |     |        | buf_idx        | add    | fabric    | 0       |
+|    icmp_ln159_fu_273_p2                     |     |        | icmp_ln159     | setne  | auto      | 0       |
+|    add_ln159_fu_279_p2                      |     |        | add_ln159      | add    | fabric    | 0       |
+|    select_ln159_fu_285_p3                   |     |        | select_ln159   | select | auto_sel  | 0       |
+|    ref_tmp_i_i_0_fu_293_p3                  |     |        | ref_tmp_i_i_0  | select | auto_sel  | 0       |
+|    mul_16s_16s_30_1_1_U23                   | 1   |        | mul_ln164      | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U24                   | 1   |        | mul_ln164_1    | mul    | auto      | 0       |
+|    sub_ln164_fu_383_p2                      |     |        | sub_ln164      | sub    | fabric    | 0       |
+|    mul_16s_16s_30_1_1_U25                   | 1   |        | mul_ln165      | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U26                   | 1   |        | mul_ln165_1    | mul    | auto      | 0       |
+|    add_ln165_fu_431_p2                      |     |        | add_ln165      | add    | fabric    | 0       |
+|    phase_acc_1_fu_307_p2                    |     |        | phase_acc_1    | add    | fabric    | 0       |
+|    search_cnt_2_fu_312_p2                   |     |        | search_cnt_2   | add    | fabric    | 0       |
+|    n_2_fu_328_p2                            |     |        | n_2            | add    | fabric    | 0       |
++---------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------------------------+--------+------+------+------+--------+--------------+------+---------+------------------+
+| Name                                   | Usage  | Type | BRAM | URAM | Pragma | Variable     | Impl | Latency | Bitwidth, Depth, |
+|                                        |        |      |      |      |        |              |      |         | Banks            |
++----------------------------------------+--------+------+------+------+--------+--------------+------+---------+------------------+
+| + module2_coarse_cfo                   |        |      | 7    | 0    |        |              |      |         |                  |
+|   early_buf_re_U                       | ram_2p |      | 2    |      | pragma | early_buf_re | bram | 1       | 16, 2048, 1      |
+|   early_buf_im_U                       | ram_2p |      | 2    |      | pragma | early_buf_im | bram | 1       | 16, 2048, 1      |
+|   atan_lut_U                           | rom_2p |      | 1    |      |        | atan_lut     | auto | 1       | 16, 256, 1       |
+|  + module2_coarse_cfo_Pipeline_PHASE_D |        |      | 2    | 0    |        |              |      |         |                  |
+|    m2_cos_lut_U                        | rom_1p |      | 1    |      |        | m2_cos_lut   | auto | 1       | 16, 1024, 1      |
+|    m2_sin_lut_U                        | rom_1p |      | 1    |      |        | m2_sin_lut   | auto | 1       | 16, 1024, 1      |
++----------------------------------------+--------+------+------+------+--------+--------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+------------------------------------------+------------------------------------------------------------+
+| Type         | Options                                  | Location                                                   |
++--------------+------------------------------------------+------------------------------------------------------------+
+| bind_storage | variable=early_buf type=ram_2p impl=BRAM | module2_coarse_cfo.cpp:77 in module2_coarse_cfo, early_buf |
+| pipeline     | II=1                                     | module2_coarse_cfo.cpp:89 in module2_coarse_cfo            |
+| pipeline     | II=1                                     | module2_coarse_cfo.cpp:120 in module2_coarse_cfo           |
+| pipeline     | II=1                                     | module2_coarse_cfo.cpp:151 in module2_coarse_cfo           |
++--------------+------------------------------------------+------------------------------------------------------------+
+
+

@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'system_top'
+================================================================
+* Date:           Wed Feb  4 21:04:52 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        system_top
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                            |                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |          Instance          |          Module         |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |module0_prefilter_U0        |module0_prefilter        |        ?|        ?|         ?|         ?|    ?|    ?|        no|
+        |Block_entry_proc_U0         |Block_entry_proc         |        0|        0|      0 ns|      0 ns|    0|    0|        no|
+        |module1_packet_detect_U0    |module1_packet_detect    |        ?|        ?|         ?|         ?|    ?|    ?|        no|
+        |module2_coarse_cfo_U0       |module2_coarse_cfo       |        ?|        ?|         ?|         ?|    ?|    ?|        no|
+        |module3_fine_sync_U0        |module3_fine_sync        |      646|      646|  6.460 us|  6.460 us|  647|  647|  dataflow|
+        |module4_fine_cfo_apply_U0   |module4_fine_cfo_apply   |        ?|        ?|         ?|         ?|    ?|    ?|        no|
+        |consume_filteredLen_U0      |consume_filteredLen      |        0|        0|      0 ns|      0 ns|    0|    0|        no|
+        |consume_searchBufferLen_U0  |consume_searchBufferLen  |        0|        0|      0 ns|      0 ns|    0|    0|        no|
+        |forward_coarseFreqOff_U0    |forward_coarseFreqOff    |        0|        0|      0 ns|      0 ns|    0|    0|        no|
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     16|    -|
+|FIFO             |       10|    -|    1527|    918|    -|
+|Instance         |       26|  589|   15099|  17349|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     18|    -|
+|Register         |        -|    -|       2|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       36|  589|   16628|  18301|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       12|  267|      15|     34|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-------------------------+---------+-----+------+------+-----+
+    |          Instance          |          Module         | BRAM_18K| DSP |  FF  |  LUT | URAM|
+    +----------------------------+-------------------------+---------+-----+------+------+-----+
+    |Block_entry_proc_U0         |Block_entry_proc         |        0|    0|    34|    59|    0|
+    |consume_filteredLen_U0      |consume_filteredLen      |        0|    0|     2|    20|    0|
+    |consume_searchBufferLen_U0  |consume_searchBufferLen  |        0|    0|     2|    20|    0|
+    |forward_coarseFreqOff_U0    |forward_coarseFreqOff    |        0|    0|     2|    29|    0|
+    |module0_prefilter_U0        |module0_prefilter        |        0|   42|  5633|  4410|    0|
+    |module1_packet_detect_U0    |module1_packet_detect    |        0|   20|  2439|  2304|    0|
+    |module2_coarse_cfo_U0       |module2_coarse_cfo       |        7|   16|  2272|  3834|    0|
+    |module3_fine_sync_U0        |module3_fine_sync        |        0|  488|  1880|  1938|    0|
+    |module4_fine_cfo_apply_U0   |module4_fine_cfo_apply   |       19|   23|  2835|  4735|    0|
+    +----------------------------+-------------------------+---------+-----+------+------+-----+
+    |Total                       |                         |       26|  589| 15099| 17349|    0|
+    +----------------------------+-------------------------+---------+-----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+-----+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+-----+----+-----+------+-----+---------+
+    |add_loc_c1_U            |        0|   99|   0|    -|     2|   32|       64|
+    |add_loc_c2_channel_U    |        0|   99|   0|    -|     2|   32|       64|
+    |add_loc_c_U             |        0|   99|   0|    -|     3|   32|       96|
+    |m0_filteredLen_U        |        0|   99|   0|    -|     4|   16|       64|
+    |m0_to_m1_data_U         |        2|  155|   0|    -|    64|   32|     2048|
+    |m1_startOffset_U        |        0|   99|   0|    -|     4|   16|       64|
+    |m1_to_m2_data_U         |        2|  155|   0|    -|    64|   32|     2048|
+    |m2_coarseFreqOff_U      |        0|   99|   0|    -|     4|   32|      128|
+    |m2_searchBufferLen_U    |        0|   99|   0|    -|     4|   16|       64|
+    |m2_search_buffer_U      |        2|  163|   0|    -|  1024|   32|    32768|
+    |m2_to_m4_data_U         |        4|  163|   0|    -|  2048|   32|    65536|
+    |m2_to_m4_startOffset_U  |        0|   99|   0|    -|     4|   16|       64|
+    |m3_fineOffset_U         |        0|   99|   0|    -|     4|   16|       64|
+    +------------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                   |       10| 1527|   0|    0|  3231|  336|   103072|
+    +------------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Block_entry_proc_U0_ap_start           |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                           |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                          |       and|   0|  0|   2|           1|           1|
+    |module0_prefilter_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |module2_coarse_cfo_U0_start_full_n     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_Block_entry_proc_U0_ap_ready   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_module0_prefilter_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  16|           8|           8|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_Block_entry_proc_U0_ap_ready   |   9|          2|    1|          2|
+    |ap_sync_reg_module0_prefilter_U0_ap_ready  |   9|          2|    1|          2|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      |  18|          4|    2|          4|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+---+----+-----+-----------+
+    |                    Name                   | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_Block_entry_proc_U0_ap_ready   |  1|   0|    1|          0|
+    |ap_sync_reg_module0_prefilter_U0_ap_ready  |  1|   0|    1|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+    |Total                                      |  2|   0|    2|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------------+-----+-----+------------+-------------------+--------------+
+|data_in_dout              |   in|   32|     ap_fifo|            data_in|       pointer|
+|data_in_empty_n           |   in|    1|     ap_fifo|            data_in|       pointer|
+|data_in_read              |  out|    1|     ap_fifo|            data_in|       pointer|
+|corrected_out_din         |  out|   32|     ap_fifo|      corrected_out|       pointer|
+|corrected_out_full_n      |   in|    1|     ap_fifo|      corrected_out|       pointer|
+|corrected_out_write       |  out|    1|     ap_fifo|      corrected_out|       pointer|
+|coarseFreqOff_out_din     |  out|   32|     ap_fifo|  coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_full_n  |   in|    1|     ap_fifo|  coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_write   |  out|    1|     ap_fifo|  coarseFreqOff_out|       pointer|
+|fineFreqOff_out_din       |  out|   32|     ap_fifo|    fineFreqOff_out|       pointer|
+|fineFreqOff_out_full_n    |   in|    1|     ap_fifo|    fineFreqOff_out|       pointer|
+|fineFreqOff_out_write     |  out|    1|     ap_fifo|    fineFreqOff_out|       pointer|
+|num_samples               |   in|   32|     ap_none|        num_samples|        scalar|
+|ap_clk                    |   in|    1|  ap_ctrl_hs|         system_top|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|         system_top|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|         system_top|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|         system_top|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|         system_top|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|         system_top|  return value|
++--------------------------+-----+-----+------------+-------------------+--------------+
+

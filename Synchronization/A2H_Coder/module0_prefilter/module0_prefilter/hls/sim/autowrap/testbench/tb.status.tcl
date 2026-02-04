@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module0_prefilter/module0_prefilter/hls/./sim/autowrap/testbench/module0_prefilter.cpp_pre.cpp.tb.cpp

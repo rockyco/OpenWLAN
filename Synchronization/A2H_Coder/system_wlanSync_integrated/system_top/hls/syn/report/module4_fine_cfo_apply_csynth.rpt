@@ -1,0 +1,319 @@
+
+
+================================================================
+== Vitis HLS Report for 'module4_fine_cfo_apply'
+================================================================
+* Date:           Wed Feb  4 21:04:52 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        system_top
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |                                                            |                                                 |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                          Instance                          |                      Module                     |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_355       |module4_fine_cfo_apply_Pipeline_POLL_START       |        ?|        ?|          ?|          ?|    ?|    ?|                                              no|
+        |grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_370        |module4_fine_cfo_apply_Pipeline_POLL_FINE        |        3|        4|  30.000 ns|  40.000 ns|    3|    4|                                              no|
+        |grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_387  |module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA  |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_402     |module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE     |       69|       69|   0.690 us|   0.690 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_413    |module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP    |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_433      |module4_fine_cfo_apply_Pipeline_APPLY_DRAIN      |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|   1574|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|   23|    1819|   2181|    -|
+|Memory           |       19|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       0|    980|    -|
+|Register         |        -|    -|    1016|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       19|   23|    2835|   4735|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        6|   10|       2|      8|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |                          Instance                          |                      Module                     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_433      |module4_fine_cfo_apply_Pipeline_APPLY_DRAIN      |        0|   4|  199|  346|    0|
+    |grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_413    |module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP    |        0|   4|  405|  603|    0|
+    |grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_402     |module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE     |        0|   4|  302|  264|    0|
+    |grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_387  |module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA  |        0|   0|   81|  218|    0|
+    |grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_370        |module4_fine_cfo_apply_Pipeline_POLL_FINE        |        0|   0|  106|  158|    0|
+    |grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_355       |module4_fine_cfo_apply_Pipeline_POLL_START       |        0|   0|  103|  157|    0|
+    |mul_28s_32s_54_1_1_U246                                     |mul_28s_32s_54_1_1                               |        0|   4|    0|   20|    0|
+    |mul_32s_26ns_48_1_1_U248                                    |mul_32s_26ns_48_1_1                              |        0|   4|    0|   20|    0|
+    |mul_32s_27s_32_1_1_U247                                     |mul_32s_27s_32_1_1                               |        0|   3|    0|   20|    0|
+    |sdiv_51ns_32s_51_55_seq_1_U249                              |sdiv_51ns_32s_51_55_seq_1                        |        0|   0|  623|  375|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                       |                                                 |        0|  23| 1819| 2181|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory    |                           Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |m4_cos_lut_U   |module2_coarse_cfo_Pipeline_PHASE_D_m2_cos_lut_ROM_AUTO_1R  |        1|  0|   0|    0|  1024|   16|     1|        16384|
+    |m4_sin_lut_U   |module2_coarse_cfo_Pipeline_PHASE_D_m2_sin_lut_ROM_AUTO_1R  |        1|  0|   0|    0|  1024|   16|     1|        16384|
+    |atan_lut_U     |module2_coarse_cfo_atan_lut_1_ROM_AUTO_1R                   |        1|  0|   0|    0|   256|   16|     1|         4096|
+    |circ_buf_re_U  |module4_fine_cfo_apply_circ_buf_re_RAM_2P_BRAM_1R1W         |        8|  0|   0|    0|  8192|   16|     1|       131072|
+    |circ_buf_im_U  |module4_fine_cfo_apply_circ_buf_re_RAM_2P_BRAM_1R1W         |        8|  0|   0|    0|  8192|   16|     1|       131072|
+    +---------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total          |                                                            |       19|  0|   0|    0| 18688|   80|     5|       299008|
+    +---------------+------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln121_fu_570_p2                 |         +|   0|  0|  14|          13|          13|
+    |add_ln51_fu_836_p2                  |         +|   0|  0|  14|          13|           1|
+    |add_ln56_fu_892_p2                  |         +|   0|  0|  15|           8|           1|
+    |add_ln63_fu_1057_p2                 |         +|   0|  0|  39|          32|          27|
+    |angle_7_fu_1037_p2                  |         +|   0|  0|  39|          32|          28|
+    |angle_fu_962_p2                     |         +|   0|  0|  39|          32|          32|
+    |cfo_data_end_fu_585_p2              |         +|   0|  0|  25|          18|           9|
+    |combined_offset_fu_576_p2           |         +|   0|  0|  24|          17|          17|
+    |signed_angle_1_fu_1077_p2           |         +|   0|  0|  39|          32|          28|
+    |angle_1_fu_967_p2                   |         -|   0|  0|  39|          25|          32|
+    |angle_5_fu_1009_p2                  |         -|   0|  0|  39|          27|          32|
+    |frac_fu_882_p2                      |         -|   0|  0|  39|          32|          32|
+    |sub_ln147_fu_703_p2                 |         -|   0|  0|  39|          32|          32|
+    |sub_ln148_fu_698_p2                 |         -|   0|  0|  39|          32|          32|
+    |sub_ln150_fu_726_p2                 |         -|   0|  0|  39|          32|          32|
+    |sub_ln175_1_fu_1153_p2              |         -|   0|  0|  34|           1|          27|
+    |sub_ln175_fu_1130_p2                |         -|   0|  0|  55|           1|          48|
+    |sub_ln38_fu_664_p2                  |         -|   0|  0|  39|           1|          32|
+    |sub_ln39_fu_678_p2                  |         -|   0|  0|  39|           1|          32|
+    |sub_ln50_fu_786_p2                  |         -|   0|  0|  58|          51|          51|
+    |sub_ln57_fu_927_p2                  |         -|   0|  0|  32|          25|          25|
+    |sub_ln60_fu_987_p2                  |         -|   0|  0|  55|          42|          48|
+    |ap_block_state4                     |       and|   0|  0|   2|           1|           1|
+    |ap_block_state7                     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op121_read_state7      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln104_fu_523_p2                |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln149_fu_708_p2                |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln169_fu_1071_p2               |      icmp|   0|  0|  39|          32|          26|
+    |icmp_ln184_fu_1166_p2               |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln41_fu_736_p2                 |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln51_fu_830_p2                 |      icmp|   0|  0|  26|          19|           1|
+    |icmp_ln52_fu_858_p2                 |      icmp|   0|  0|  14|          13|           8|
+    |icmp_ln62_fu_1032_p2                |      icmp|   0|  0|  14|           6|           1|
+    |swap_fu_742_p2                      |      icmp|   0|  0|  39|          32|          32|
+    |ap_block_state1                     |        or|   0|  0|   2|           1|           1|
+    |ap_block_state8                     |        or|   0|  0|   2|           1|           1|
+    |or_ln41_fu_732_p2                   |        or|   0|  0|  32|          32|          32|
+    |angle_2_fu_973_p3                   |    select|   0|  0|  32|           1|          32|
+    |angle_4_fu_1003_p3                  |    select|   0|  0|  32|           1|          32|
+    |angle_6_fu_1015_p3                  |    select|   0|  0|  32|           1|          32|
+    |angle_8_fu_1042_p3                  |    select|   0|  0|  32|           1|          32|
+    |ax_fu_670_p3                        |    select|   0|  0|  32|           1|          32|
+    |ay_fu_684_p3                        |    select|   0|  0|  32|           1|          32|
+    |den_fu_746_p3                       |    select|   0|  0|  32|           1|          32|
+    |lut_idx_1_fu_863_p3                 |    select|   0|  0|  13|           1|           8|
+    |lut_idx_fu_850_p3                   |    select|   0|  0|  13|           1|          13|
+    |phase_acc_0_lcssa_sel_i_fu_1207_p3  |    select|   0|  0|  32|           1|          32|
+    |phase_inc_fu_1159_p3                |    select|   0|  0|  27|           1|          27|
+    |select_ln149_fu_714_p3              |    select|   0|  0|  32|           1|          32|
+    |select_ln46_fu_752_p3               |    select|   0|  0|  32|           1|          32|
+    |select_ln51_fu_842_p3               |    select|   0|  0|  13|           1|          13|
+    |select_ln63_fu_1063_p3              |    select|   0|  0|  32|           1|          32|
+    |signed_angle_2_fu_1083_p3           |    select|   0|  0|  32|           1|          32|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |Total                               |          |   0|  0|1574|         782|        1227|
+    +------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |                  Name                  | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |add_loc_blk_n                           |    9|          2|    1|          2|
+    |angle_10_reg_344                        |    9|          2|   32|         64|
+    |ap_NS_fsm                               |  421|         83|    1|         83|
+    |ap_done                                 |    9|          2|    1|          2|
+    |ap_phi_mux_fineOffset_3_phi_fu_336_p4   |   14|          3|   16|         48|
+    |ap_phi_mux_startOffset_3_phi_fu_325_p4  |   14|          3|   16|         48|
+    |circ_buf_im_address0                    |   20|          4|   13|         52|
+    |circ_buf_im_address1                    |   31|          6|   13|         78|
+    |circ_buf_im_ce0                         |   20|          4|    1|          4|
+    |circ_buf_im_ce1                         |   31|          6|    1|          6|
+    |circ_buf_im_d1                          |   25|          5|   16|         80|
+    |circ_buf_im_we1                         |   25|          5|    1|          5|
+    |circ_buf_re_address0                    |   20|          4|   13|         52|
+    |circ_buf_re_address1                    |   31|          6|   13|         78|
+    |circ_buf_re_ce0                         |   20|          4|    1|          4|
+    |circ_buf_re_ce1                         |   31|          6|    1|          6|
+    |circ_buf_re_d1                          |   25|          5|   16|         80|
+    |circ_buf_re_we1                         |   25|          5|    1|          5|
+    |corrected_out_din                       |    9|          2|   32|         64|
+    |corrected_out_write                     |   14|          3|    1|          3|
+    |fineFreqOff_out_blk_n                   |    9|          2|    1|          2|
+    |fineOffset_1_reg_280                    |    9|          2|   16|         32|
+    |m2_to_m4_data_read                      |   25|          5|    1|          5|
+    |m2_to_m4_startOffset_blk_n              |    9|          2|    1|          2|
+    |m2_to_m4_startOffset_read               |   14|          3|    1|          3|
+    |m3_fineOffset_blk_n                     |    9|          2|    1|          2|
+    |m3_fineOffset_read                      |   14|          3|    1|          3|
+    |m4_cos_lut_address0                     |   14|          3|   10|         30|
+    |m4_cos_lut_ce0                          |   14|          3|    1|          3|
+    |m4_sin_lut_address0                     |   14|          3|   10|         30|
+    |m4_sin_lut_ce0                          |   14|          3|    1|          3|
+    |startOffset_1_reg_254                   |    9|          2|   16|         32|
+    |write_cnt_5_reg_244                     |    9|          2|   31|         62|
+    |write_cnt_reg_294                       |   14|          3|   32|         96|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |Total                                   |  980|        198|  313|       1069|
+    +----------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                  | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln121_reg_1324                                                       |  13|   0|   13|          0|
+    |angle_10_reg_344                                                         |  32|   0|   32|          0|
+    |angle_2_reg_1453                                                         |  32|   0|   32|          0|
+    |angle_6_reg_1459                                                         |  32|   0|   32|          0|
+    |ap_CS_fsm                                                                |  82|   0|   82|          0|
+    |ap_done_reg                                                              |   1|   0|    1|          0|
+    |ax_reg_1352                                                              |  32|   0|   32|          0|
+    |ay_reg_1360                                                              |  32|   0|   32|          0|
+    |cfo_data_end_reg_1337                                                    |  18|   0|   18|          0|
+    |combined_offset_reg_1331                                                 |  17|   0|   17|          0|
+    |fO_rx_reg_306                                                            |   1|   0|    1|          0|
+    |fineFreqOff_reg_1491                                                     |  32|   0|   32|          0|
+    |fineOffset_1_reg_280                                                     |  16|   0|   16|          0|
+    |frac_reg_1423                                                            |  32|   0|   32|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_433_ap_start_reg      |   1|   0|    1|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_413_ap_start_reg    |   1|   0|    1|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_402_ap_start_reg     |   1|   0|    1|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_387_ap_start_reg  |   1|   0|    1|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_370_ap_start_reg        |   1|   0|    1|          0|
+    |grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_355_ap_start_reg       |   1|   0|    1|          0|
+    |icmp_ln184_reg_1503                                                      |   1|   0|    1|          0|
+    |lut_idx_reg_1417                                                         |  13|   0|   13|          0|
+    |n_2_loc_fu_186                                                           |  31|   0|   31|          0|
+    |n_4_loc_fu_182                                                           |  32|   0|   32|          0|
+    |n_6_loc_fu_178                                                           |  32|   0|   32|          0|
+    |n_loc_fu_190                                                             |  31|   0|   31|          0|
+    |num_samples_reg_1276                                                     |  32|   0|   32|          0|
+    |phase_acc_0_lcssa_sel_i_reg_1513                                         |  32|   0|   32|          0|
+    |phase_acc_reg_1508                                                       |  32|   0|   32|          0|
+    |phase_inc_reg_1496                                                       |  27|   0|   27|          0|
+    |sO_rx_reg_266                                                            |   1|   0|    1|          0|
+    |scaled_reg_1412                                                          |  32|   0|   32|          0|
+    |sdiv_ln49_reg_1406                                                       |  51|   0|   51|          0|
+    |select_ln149_reg_1371                                                    |  32|   0|   32|          0|
+    |signed_angle_2_reg_1475                                                  |  32|   0|   32|          0|
+    |startOffset_1_reg_254                                                    |  16|   0|   16|          0|
+    |sub_ln150_reg_1383                                                       |  32|   0|   32|          0|
+    |sub_ln57_reg_1443                                                        |  17|   0|   25|          8|
+    |swap_reg_1391                                                            |   1|   0|    1|          0|
+    |targetBlock1_reg_1301                                                    |   1|   0|    1|          0|
+    |targetBlock_reg_1286                                                     |   1|   0|    1|          0|
+    |tmp_2_reg_1486                                                           |  26|   0|   26|          0|
+    |tmp_7_reg_1465                                                           |   6|   0|    6|          0|
+    |tmp_9_reg_1481                                                           |   1|   0|    1|          0|
+    |trunc_ln150_reg_1378                                                     |  13|   0|   13|          0|
+    |trunc_ln_reg_1448                                                        |  32|   0|   32|          0|
+    |v0_reg_1438                                                              |  16|   0|   24|          8|
+    |write_cnt_5_reg_244                                                      |  31|   0|   31|          0|
+    |write_cnt_reg_294                                                        |  32|   0|   32|          0|
+    |x_neg_reg_1342                                                           |   1|   0|    1|          0|
+    |y_neg_reg_1347                                                           |   1|   0|    1|          0|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                    |1016|   0| 1032|         16|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_continue                          |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply|  return value|
+|m2_to_m4_data_dout                   |   in|   32|     ap_fifo|           m2_to_m4_data|       pointer|
+|m2_to_m4_data_empty_n                |   in|    1|     ap_fifo|           m2_to_m4_data|       pointer|
+|m2_to_m4_data_read                   |  out|    1|     ap_fifo|           m2_to_m4_data|       pointer|
+|m2_to_m4_data_num_data_valid         |   in|   12|     ap_fifo|           m2_to_m4_data|       pointer|
+|m2_to_m4_data_fifo_cap               |   in|   12|     ap_fifo|           m2_to_m4_data|       pointer|
+|m2_to_m4_startOffset_dout            |   in|   16|     ap_fifo|    m2_to_m4_startOffset|       pointer|
+|m2_to_m4_startOffset_empty_n         |   in|    1|     ap_fifo|    m2_to_m4_startOffset|       pointer|
+|m2_to_m4_startOffset_read            |  out|    1|     ap_fifo|    m2_to_m4_startOffset|       pointer|
+|m2_to_m4_startOffset_num_data_valid  |   in|    3|     ap_fifo|    m2_to_m4_startOffset|       pointer|
+|m2_to_m4_startOffset_fifo_cap        |   in|    3|     ap_fifo|    m2_to_m4_startOffset|       pointer|
+|m3_fineOffset_dout                   |   in|   16|     ap_fifo|           m3_fineOffset|       pointer|
+|m3_fineOffset_empty_n                |   in|    1|     ap_fifo|           m3_fineOffset|       pointer|
+|m3_fineOffset_read                   |  out|    1|     ap_fifo|           m3_fineOffset|       pointer|
+|m3_fineOffset_num_data_valid         |   in|    3|     ap_fifo|           m3_fineOffset|       pointer|
+|m3_fineOffset_fifo_cap               |   in|    3|     ap_fifo|           m3_fineOffset|       pointer|
+|corrected_out_din                    |  out|   32|     ap_fifo|           corrected_out|       pointer|
+|corrected_out_full_n                 |   in|    1|     ap_fifo|           corrected_out|       pointer|
+|corrected_out_write                  |  out|    1|     ap_fifo|           corrected_out|       pointer|
+|fineFreqOff_out_din                  |  out|   32|     ap_fifo|         fineFreqOff_out|       pointer|
+|fineFreqOff_out_full_n               |   in|    1|     ap_fifo|         fineFreqOff_out|       pointer|
+|fineFreqOff_out_write                |  out|    1|     ap_fifo|         fineFreqOff_out|       pointer|
+|add_loc_dout                         |   in|   32|     ap_fifo|                 add_loc|       pointer|
+|add_loc_empty_n                      |   in|    1|     ap_fifo|                 add_loc|       pointer|
+|add_loc_read                         |  out|    1|     ap_fifo|                 add_loc|       pointer|
+|add_loc_num_data_valid               |   in|    3|     ap_fifo|                 add_loc|       pointer|
+|add_loc_fifo_cap                     |   in|    3|     ap_fifo|                 add_loc|       pointer|
++-------------------------------------+-----+-----+------------+------------------------+--------------+
+

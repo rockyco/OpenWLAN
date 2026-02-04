@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vitis HLS Report for 'module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP'
+================================================================
+* Date:           Wed Feb  4 07:58:06 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        module4_fine_cfo_apply
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.954 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- APPLY_OVERLAP  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    471|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    4|       0|     24|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    108|    -|
+|Register         |        -|    -|     405|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    4|     405|    603|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |        Instance        |       Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |mul_16s_16s_30_1_1_U35  |mul_16s_16s_30_1_1  |        0|   1|  0|   6|    0|
+    |mul_16s_16s_30_1_1_U36  |mul_16s_16s_30_1_1  |        0|   1|  0|   6|    0|
+    |mul_16s_16s_30_1_1_U37  |mul_16s_16s_30_1_1  |        0|   1|  0|   6|    0|
+    |mul_16s_16s_30_1_1_U38  |mul_16s_16s_30_1_1  |        0|   1|  0|   6|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |Total                   |                    |        0|   4|  0|  24|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln192_fu_334_p2             |         +|   0|  0|  13|          10|           1|
+    |add_ln198_fu_567_p2             |         +|   0|  0|  33|          26|          26|
+    |i_3_fu_282_p2                   |         +|   0|  0|  38|          31|           1|
+    |phase_acc_1_fu_362_p2           |         +|   0|  0|  39|          32|          32|
+    |sample_idx_fu_295_p2            |         +|   0|  0|  14|          13|          13|
+    |write_cnt_3_fu_464_p2           |         +|   0|  0|  39|          32|           1|
+    |sub_ln197_fu_519_p2             |         -|   0|  0|  33|          26|          26|
+    |ap_block_pp0_stage0_01001_grp1  |       and|   0|  0|   2|           1|           1|
+    |addr_cmp15_fu_390_p2            |      icmp|   0|  0|  71|          64|          64|
+    |addr_cmp_fu_409_p2              |      icmp|   0|  0|  71|          64|          64|
+    |icmp_ln184_fu_277_p2            |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln192_fu_328_p2            |      icmp|   0|  0|  23|          16|           1|
+    |ap_block_pp0_stage0_11001       |        or|   0|  0|   2|           1|           1|
+    |ref_tmp_i_i648_0_fu_348_p3      |    select|   0|  0|  10|           1|          10|
+    |sample_im_fu_414_p3             |    select|   0|  0|  16|           1|          16|
+    |sample_re_fu_395_p3             |    select|   0|  0|  16|           1|          16|
+    |select_ln192_fu_340_p3          |    select|   0|  0|  10|           1|          10|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0| 471|         353|         317|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |corrected_out_blk_n      |   9|          2|    1|          2|
+    |data_in_blk_n            |   9|          2|    1|          2|
+    |i_2_fu_114               |   9|          2|   31|         62|
+    |phase_acc_fu_106         |   9|          2|   32|         64|
+    |reuse_addr_reg12_fu_90   |   9|          2|   64|        128|
+    |reuse_addr_reg_fu_98     |   9|          2|   64|        128|
+    |reuse_reg11_fu_94        |   9|          2|   16|         32|
+    |reuse_reg_fu_102         |   9|          2|   16|         32|
+    |write_cnt_fu_110         |   9|          2|   32|         64|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 108|         24|  260|        520|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                    |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg           |   1|   0|    1|          0|
+    |cos_val_reg_694                            |  16|   0|   16|          0|
+    |i_2_fu_114                                 |  31|   0|   31|          0|
+    |phase_acc_fu_106                           |  32|   0|   32|          0|
+    |reuse_addr_reg12_fu_90                     |  64|   0|   64|          0|
+    |reuse_addr_reg_fu_98                       |  64|   0|   64|          0|
+    |reuse_reg11_fu_94                          |  16|   0|   16|          0|
+    |reuse_reg_fu_102                           |  16|   0|   16|          0|
+    |sample_im_reg_689                          |  16|   0|   16|          0|
+    |sample_re_reg_684                          |  16|   0|   16|          0|
+    |sext_ln175_cast_reg_649                    |  32|   0|   32|          0|
+    |sin_val_reg_699                            |  16|   0|   16|          0|
+    |trunc_ln1_reg_709                          |  16|   0|   16|          0|
+    |trunc_ln_reg_704                           |  16|   0|   16|          0|
+    |write_cnt_fu_110                           |  32|   0|   32|          0|
+    |zext_ln187_reg_658                         |  13|   0|   64|         51|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      | 405|   0|  456|         51|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                 Source Object                 |    C Type    |
++----------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP|  return value|
+|data_in_dout          |   in|   32|     ap_fifo|                                        data_in|       pointer|
+|data_in_empty_n       |   in|    1|     ap_fifo|                                        data_in|       pointer|
+|data_in_read          |  out|    1|     ap_fifo|                                        data_in|       pointer|
+|corrected_out_din     |  out|   32|     ap_fifo|                                  corrected_out|       pointer|
+|corrected_out_full_n  |   in|    1|     ap_fifo|                                  corrected_out|       pointer|
+|corrected_out_write   |  out|    1|     ap_fifo|                                  corrected_out|       pointer|
+|write_cnt_3_reload    |   in|   32|     ap_none|                             write_cnt_3_reload|        scalar|
+|overlap_len           |   in|   32|     ap_none|                                    overlap_len|        scalar|
+|empty                 |   in|   13|     ap_none|                                          empty|        scalar|
+|sext_ln175            |   in|   27|     ap_none|                                     sext_ln175|        scalar|
+|circ_buf_re_address0  |  out|   13|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_ce0       |  out|    1|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_q0        |   in|   16|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_address1  |  out|   13|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_ce1       |  out|    1|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_we1       |  out|    1|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_re_d1        |  out|   16|   ap_memory|                                    circ_buf_re|         array|
+|circ_buf_im_address0  |  out|   13|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_ce0       |  out|    1|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_q0        |   in|   16|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_address1  |  out|   13|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_ce1       |  out|    1|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_we1       |  out|    1|   ap_memory|                                    circ_buf_im|         array|
+|circ_buf_im_d1        |  out|   16|   ap_memory|                                    circ_buf_im|         array|
+|m4_cos_lut_address0   |  out|   10|   ap_memory|                                     m4_cos_lut|         array|
+|m4_cos_lut_ce0        |  out|    1|   ap_memory|                                     m4_cos_lut|         array|
+|m4_cos_lut_q0         |   in|   16|   ap_memory|                                     m4_cos_lut|         array|
+|m4_sin_lut_address0   |  out|   10|   ap_memory|                                     m4_sin_lut|         array|
+|m4_sin_lut_ce0        |  out|    1|   ap_memory|                                     m4_sin_lut|         array|
+|m4_sin_lut_q0         |   in|   16|   ap_memory|                                     m4_sin_lut|         array|
++----------------------+-----+-----+------------+-----------------------------------------------+--------------+
+

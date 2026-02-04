@@ -1,0 +1,99 @@
+[
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module3_fine_sync/module3_fine_sync.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module3_fine_sync/module3_fine_sync.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module0_prefilter/module0_prefilter.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module0_prefilter/module0_prefilter.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../system_top.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../system_top.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module1_packet_detect/module1_packet_detect.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module1_packet_detect/module1_packet_detect.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module2_coarse_cfo/module2_coarse_cfo.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module2_coarse_cfo/module2_coarse_cfo.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=system_top",
+      "-DPHASE6",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../../module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+  },
+  {
+    "directory": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top",
+    "arguments": [
+      "/opt/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/opt/Xilinx/Vitis/2024.2/include",
+      "-DCOSIM_SMALL_DATASET",
+      "-c",
+      "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../system_top_tb.cpp"
+    ],
+    "file": "/home/amd/UTS/OpenWLAN/Synchronization/A2H_Coder/system_wlanSync_integrated/system_top/../system_top_tb.cpp"
+  }
+]

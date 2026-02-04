@@ -1,0 +1,209 @@
+<ENTRY>
+{
+ "thisFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/system_top.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "buildStep": {
+  "cmdId": "31b05913-55bc-4417-9ea9-451b14416950",
+  "name": "vitis-run",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/logs/hls_compile.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/csynth.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "status": {
+  "cmdId": "31b05913-55bc-4417-9ea9-451b14416950",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "system_top",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module0_prefilter/module0_prefilter.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module2_coarse_cfo/module2_coarse_cfo.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module3_fine_sync/module3_fine_sync.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "buildStep": {
+  "cmdId": "55da6e42-450d-4d5a-b10b-2af87636dde4",
+  "name": "csynth_design",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "status": {
+  "cmdId": "55da6e42-450d-4d5a-b10b-2af87636dde4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:18 2026",
+ "timestampMillis": "1770199458842",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:53 2026",
+ "timestampMillis": "1770199493279",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:53 2026",
+ "timestampMillis": "1770199493279",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb  4 21:04:53 2026",
+ "timestampMillis": "1770199493279",
+ "report": {
+  "path": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:53 2026",
+ "timestampMillis": "1770199493279",
+ "status": {
+  "cmdId": "55da6e42-450d-4d5a-b10b-2af87636dde4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:53 2026",
+ "timestampMillis": "1770199493319",
+ "status": {
+  "cmdId": "31b05913-55bc-4417-9ea9-451b14416950",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

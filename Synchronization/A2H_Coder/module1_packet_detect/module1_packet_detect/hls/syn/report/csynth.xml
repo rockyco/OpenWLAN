@@ -1,0 +1,584 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>module1_packet_detect</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>1.25</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>module1_packet_detect.cpp:9</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>20</DSP>
+            <FF>2458</FF>
+            <LUT>2302</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>module1_packet_detect</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_dout</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_empty_n</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_read</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out_din</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out_full_n</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out_write</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_out_din</name>
+            <Object>startOffset_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_out_full_n</name>
+            <Object>startOffset_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_out_write</name>
+            <Object>startOffset_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>num_samples</name>
+            <Object>num_samples</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>module1_packet_detect</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_module1_packet_detect_Pipeline_STREAM_LOOP_fu_55</InstName>
+                    <ModuleName>module1_packet_detect_Pipeline_STREAM_LOOP</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>55</ID>
+                    <BindInstances>icmp_ln51_fu_1004_p2 i_2_fu_1010_p2 sparsemux_33_4_16_1_1_U4 sparsemux_33_4_16_1_1_U5 icmp_ln65_fu_1048_p2 n_fu_1054_p2 mac_muladd_16s_16s_28s_28_4_1_U13 mul_16s_16s_28_1_1_U6 mac_muladd_16s_16s_28s_28_4_1_U13 mul_16s_16s_28_1_1_U7 mac_mulsub_16s_16s_28s_28_4_1_U14 mac_mulsub_16s_16s_28s_28_4_1_U14 mac_muladd_16s_16s_29s_29_4_1_U12 mul_16s_16s_29_1_1_U8 mac_muladd_16s_16s_29s_29_4_1_U12 mac_muladd_16s_16s_29ns_29_4_1_U15 mac_muladd_16s_16s_29ns_29_4_1_U16 mac_muladd_16s_16s_29ns_29_4_1_U15 mac_muladd_16s_16s_29ns_29_4_1_U16 corrSum_re_1_fu_1523_p2 corrSum_im_1_fu_1540_p2 powSumAcc_3_fu_1982_p2 icmp_ln87_fu_1063_p2 mul_32s_32s_54_1_1_U1 mul_32s_32s_54_1_1_U2 add_ln89_fu_2209_p2 mul_32s_32s_54_1_1_U3 icmp_ln95_fu_2262_p2 sustainedCount_3_fu_2273_p2 icmp_ln97_fu_2279_p2 xor_ln98_fu_2294_p2 sparsemux_33_4_16_1_1_U9 corrSum_re_2_fu_1735_p2 sparsemux_33_4_16_1_1_U10 corrSum_im_2_fu_1824_p2 sparsemux_33_4_16_1_1_U11 powSumAcc_2_fu_2134_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>module1_packet_detect_Pipeline_STREAM_LOOP</Name>
+            <Loops>
+                <STREAM_LOOP/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <STREAM_LOOP>
+                        <Name>STREAM_LOOP</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>11</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </STREAM_LOOP>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module1_packet_detect.cpp:51</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <STREAM_LOOP>
+                            <Name>STREAM_LOOP</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module1_packet_detect.cpp:93</SourceLocation>
+                        </STREAM_LOOP>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>20</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>9</UTIL_DSP>
+                    <FF>2422</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>2248</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln51_fu_1004_p2" SOURCE="module1_packet_detect.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln51" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_1010_p2" SOURCE="module1_packet_detect.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="i_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_16_1_1_U4" SOURCE="module1_packet_detect.cpp:60" STORAGESUBTYPE="" URAM="0" VARIABLE="rx_re" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_16_1_1_U5" SOURCE="module1_packet_detect.cpp:60" STORAGESUBTYPE="" URAM="0" VARIABLE="rx_im" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln65_fu_1048_p2" SOURCE="module1_packet_detect.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln65" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="n_fu_1054_p2" SOURCE="module1_packet_detect.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="n" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_28s_28_4_1_U13" SOURCE="module1_packet_detect.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln75" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_28_1_1_U6" SOURCE="module1_packet_detect.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln75_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_28s_28_4_1_U13" SOURCE="module1_packet_detect.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_28_1_1_U7" SOURCE="module1_packet_detect.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln76" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_28s_28_4_1_U14" SOURCE="module1_packet_detect.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln76_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_28s_28_4_1_U14" SOURCE="module1_packet_detect.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln76" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29s_29_4_1_U12" SOURCE="module1_packet_detect.cpp:78" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln78" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_29_1_1_U8" SOURCE="module1_packet_detect.cpp:78" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln78_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29s_29_4_1_U12" SOURCE="module1_packet_detect.cpp:78" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln78" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29ns_29_4_1_U15" SOURCE="module1_packet_detect.cpp:78" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln78_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29ns_29_4_1_U16" SOURCE="module1_packet_detect.cpp:79" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln79" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29ns_29_4_1_U15" SOURCE="module1_packet_detect.cpp:78" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln78_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_29ns_29_4_1_U16" SOURCE="module1_packet_detect.cpp:79" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln79" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="corrSum_re_1_fu_1523_p2" SOURCE="module1_packet_detect.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="corrSum_re_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="corrSum_im_1_fu_1540_p2" SOURCE="module1_packet_detect.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="corrSum_im_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="powSumAcc_3_fu_1982_p2" SOURCE="module1_packet_detect.cpp:84" STORAGESUBTYPE="" URAM="0" VARIABLE="powSumAcc_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln87_fu_1063_p2" SOURCE="module1_packet_detect.cpp:87" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln87" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_54_1_1_U1" SOURCE="module1_packet_detect.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln89" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_54_1_1_U2" SOURCE="module1_packet_detect.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln89_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_2209_p2" SOURCE="module1_packet_detect.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln89" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_54_1_1_U3" SOURCE="module1_packet_detect.cpp:91" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln91" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln95_fu_2262_p2" SOURCE="module1_packet_detect.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln95" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="sustainedCount_3_fu_2273_p2" SOURCE="module1_packet_detect.cpp:96" STORAGESUBTYPE="" URAM="0" VARIABLE="sustainedCount_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln97_fu_2279_p2" SOURCE="module1_packet_detect.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln97" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln98_fu_2294_p2" SOURCE="module1_packet_detect.cpp:98" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln98" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_16_1_1_U9" SOURCE="module1_packet_detect.cpp:110" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="corrSum_re_2_fu_1735_p2" SOURCE="module1_packet_detect.cpp:110" STORAGESUBTYPE="" URAM="0" VARIABLE="corrSum_re_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_16_1_1_U10" SOURCE="module1_packet_detect.cpp:111" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="corrSum_im_2_fu_1824_p2" SOURCE="module1_packet_detect.cpp:111" STORAGESUBTYPE="" URAM="0" VARIABLE="corrSum_im_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_16_1_1_U11" SOURCE="module1_packet_detect.cpp:112" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STREAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="powSumAcc_2_fu_2134_p2" SOURCE="module1_packet_detect.cpp:112" STORAGESUBTYPE="" URAM="0" VARIABLE="powSumAcc_2" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module1_packet_detect</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module1_packet_detect.cpp:9</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>20</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>9</UTIL_DSP>
+                    <FF>2458</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>2302</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="data_in" index="0" direction="in" srcType="stream&lt;complex_t, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="data_in" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="data_out" index="1" direction="out" srcType="stream&lt;complex_t, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="data_out" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="startOffset_out" index="2" direction="out" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="startOffset_out" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="num_samples" index="3" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="num_samples" name="num_samples" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="data_in" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="data_in_">
+            <portMaps>
+                <portMap portMapName="data_in_dout">RD_DATA</portMap>
+                <portMap portMapName="data_in_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="data_in_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>data_in_dout</port>
+                <port>data_in_empty_n</port>
+                <port>data_in_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="data_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="data_out" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="32" portPrefix="data_out_">
+            <portMaps>
+                <portMap portMapName="data_out_din">WR_DATA</portMap>
+                <portMap portMapName="data_out_full_n">FULL_N</portMap>
+                <portMap portMapName="data_out_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>data_out_din</port>
+                <port>data_out_full_n</port>
+                <port>data_out_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="data_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="startOffset_out" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="16" portPrefix="startOffset_out_">
+            <portMaps>
+                <portMap portMapName="startOffset_out_din">WR_DATA</portMap>
+                <portMap portMapName="startOffset_out_full_n">FULL_N</portMap>
+                <portMap portMapName="startOffset_out_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>startOffset_out_din</port>
+                <port>startOffset_out_full_n</port>
+                <port>startOffset_out_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="startOffset_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="num_samples" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="num_samples">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>num_samples</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="num_samples"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table>
+                    <keys size="3">Interface, Direction, Data Width</keys>
+                    <column name="data_in">in, 32</column>
+                    <column name="data_out">out, 32</column>
+                    <column name="startOffset_out">out, 16</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="num_samples">ap_none, in, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="data_in">in, stream&lt;complex_t 0&gt;&amp;</column>
+                    <column name="data_out">out, stream&lt;complex_t 0&gt;&amp;</column>
+                    <column name="startOffset_out">out, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="num_samples">in, int</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="data_in">data_in, interface</column>
+                    <column name="data_out">data_out, interface</column>
+                    <column name="startOffset_out">startOffset_out, interface</column>
+                    <column name="num_samples">num_samples, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="array_partition" location="module1_packet_detect.cpp:22" status="valid" parentFunction="module1_packet_detect" variable="delay_line" isDirective="0" options="variable=delay_line complete"/>
+        <Pragma type="array_partition" location="module1_packet_detect.cpp:28" status="valid" parentFunction="module1_packet_detect" variable="cp_re_buf" isDirective="0" options="variable=cp_re_buf complete"/>
+        <Pragma type="array_partition" location="module1_packet_detect.cpp:29" status="valid" parentFunction="module1_packet_detect" variable="cp_im_buf" isDirective="0" options="variable=cp_im_buf complete"/>
+        <Pragma type="array_partition" location="module1_packet_detect.cpp:30" status="valid" parentFunction="module1_packet_detect" variable="ps_buf" isDirective="0" options="variable=ps_buf complete"/>
+        <Pragma type="unroll" location="module1_packet_detect.cpp:34" status="valid" parentFunction="module1_packet_detect" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="module1_packet_detect.cpp:52" status="valid" parentFunction="module1_packet_detect" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

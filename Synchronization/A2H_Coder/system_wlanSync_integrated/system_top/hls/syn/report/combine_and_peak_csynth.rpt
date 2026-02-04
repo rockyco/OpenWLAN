@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'combine_and_peak'
+================================================================
+* Date:           Wed Feb  4 21:04:51 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        system_top
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.480 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      646|      646|  6.460 us|  6.460 us|  646|  646|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                             |                                   |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                   Instance                  |               Module              |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +---------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_combine_and_peak_Pipeline_COMBINE_fu_45  |combine_and_peak_Pipeline_COMBINE  |      644|      644|  6.440 us|  6.440 us|  640|  640|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +---------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     57|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    8|     494|    650|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     38|    -|
+|Register         |        -|    -|      37|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    8|     531|    745|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    3|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |                   Instance                  |               Module              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |grp_combine_and_peak_Pipeline_COMBINE_fu_45  |combine_and_peak_Pipeline_COMBINE  |        0|   8|  494|  650|    0|
+    +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |Total                                        |                                   |        0|   8|  494|  650|    0|
+    +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |fineOffset_fu_73_p2  |         +|   0|  0|  39|          32|           9|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    |m3_fineOffset_din    |    select|   0|  0|  16|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  57|          34|          11|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm            |  20|          4|    1|          4|
+    |ap_done              |   9|          2|    1|          2|
+    |m3_fineOffset_blk_n  |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  38|          8|    3|          8|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                           | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                 |   3|   0|    3|          0|
+    |ap_done_reg                                               |   1|   0|    1|          0|
+    |grp_combine_and_peak_Pipeline_COMBINE_fu_45_ap_start_reg  |   1|   0|    1|          0|
+    |max_pos_2_loc_fu_34                                       |  32|   0|   32|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                     |  37|   0|   37|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++------------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  combine_and_peak|  return value|
+|re_out_dout                   |   in|   40|     ap_fifo|            re_out|       pointer|
+|re_out_empty_n                |   in|    1|     ap_fifo|            re_out|       pointer|
+|re_out_read                   |  out|    1|     ap_fifo|            re_out|       pointer|
+|re_out_num_data_valid         |   in|    3|     ap_fifo|            re_out|       pointer|
+|re_out_fifo_cap               |   in|    3|     ap_fifo|            re_out|       pointer|
+|im_out_dout                   |   in|   40|     ap_fifo|            im_out|       pointer|
+|im_out_empty_n                |   in|    1|     ap_fifo|            im_out|       pointer|
+|im_out_read                   |  out|    1|     ap_fifo|            im_out|       pointer|
+|im_out_num_data_valid         |   in|    3|     ap_fifo|            im_out|       pointer|
+|im_out_fifo_cap               |   in|    3|     ap_fifo|            im_out|       pointer|
+|sum_out_dout                  |   in|   40|     ap_fifo|           sum_out|       pointer|
+|sum_out_empty_n               |   in|    1|     ap_fifo|           sum_out|       pointer|
+|sum_out_read                  |  out|    1|     ap_fifo|           sum_out|       pointer|
+|sum_out_num_data_valid        |   in|    3|     ap_fifo|           sum_out|       pointer|
+|sum_out_fifo_cap              |   in|    3|     ap_fifo|           sum_out|       pointer|
+|m3_fineOffset_din             |  out|   16|     ap_fifo|     m3_fineOffset|       pointer|
+|m3_fineOffset_full_n          |   in|    1|     ap_fifo|     m3_fineOffset|       pointer|
+|m3_fineOffset_write           |  out|    1|     ap_fifo|     m3_fineOffset|       pointer|
+|m3_fineOffset_num_data_valid  |   in|    3|     ap_fifo|     m3_fineOffset|       pointer|
+|m3_fineOffset_fifo_cap        |   in|    3|     ap_fifo|     m3_fineOffset|       pointer|
++------------------------------+-----+-----+------------+------------------+--------------+
+

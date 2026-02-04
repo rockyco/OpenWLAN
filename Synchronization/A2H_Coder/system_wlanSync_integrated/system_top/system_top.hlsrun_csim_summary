@@ -1,0 +1,125 @@
+<ENTRY>
+{
+ "thisFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/system_top.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Feb  4 21:03:54 2026",
+ "timestampMillis": "1770199434671",
+ "buildStep": {
+  "cmdId": "fda50470-88b3-445e-82c4-a280a9441593",
+  "name": "vitis-run",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/logs/hls_run_csim.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/csim.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:03:54 2026",
+ "timestampMillis": "1770199434671",
+ "status": {
+  "cmdId": "fda50470-88b3-445e-82c4-a280a9441593",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Feb  4 21:03:54 2026",
+ "timestampMillis": "1770199434671",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "system_top",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module0_prefilter/module0_prefilter.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module1_packet_detect/module1_packet_detect.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module2_coarse_cfo/module2_coarse_cfo.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module3_fine_sync/module3_fine_sync.cpp",
+     "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Feb  4 21:03:54 2026",
+ "timestampMillis": "1770199434672",
+ "buildStep": {
+  "cmdId": "4230a010-2e87-4eb2-a654-85dd11956ffc",
+  "name": "csim_design",
+  "logFile": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:03:54 2026",
+ "timestampMillis": "1770199434672",
+ "status": {
+  "cmdId": "4230a010-2e87-4eb2-a654-85dd11956ffc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:11 2026",
+ "timestampMillis": "1770199451062",
+ "status": {
+  "cmdId": "4230a010-2e87-4eb2-a654-85dd11956ffc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb  4 21:04:11 2026",
+ "timestampMillis": "1770199451064",
+ "status": {
+  "cmdId": "fda50470-88b3-445e-82c4-a280a9441593",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

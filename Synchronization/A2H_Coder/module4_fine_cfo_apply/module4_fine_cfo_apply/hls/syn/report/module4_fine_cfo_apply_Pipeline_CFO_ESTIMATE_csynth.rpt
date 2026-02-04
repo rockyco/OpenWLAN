@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vitis HLS Report for 'module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE'
+================================================================
+* Date:           Wed Feb  4 07:58:06 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        module4_fine_cfo_apply
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.437 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       69|       69|  0.690 us|  0.690 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- CFO_ESTIMATE  |       67|       67|         5|          1|          1|    64|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    2|       -|      -|    -|
+|Expression       |        -|    -|       0|    166|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    2|       0|     12|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     54|    -|
+|Register         |        -|    -|     302|     32|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    4|     302|    264|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |        Instance        |       Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |mul_16s_16s_32_1_1_U23  |mul_16s_16s_32_1_1  |        0|   1|  0|   6|    0|
+    |mul_16s_16s_32_1_1_U24  |mul_16s_16s_32_1_1  |        0|   1|  0|   6|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |Total                   |                    |        0|   2|  0|  12|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    +-----------------------------------+-------------------------------+--------------+
+    |              Instance             |             Module            |  Expression  |
+    +-----------------------------------+-------------------------------+--------------+
+    |mac_muladd_16s_16s_32s_33_4_1_U25  |mac_muladd_16s_16s_32s_33_4_1  |  i0 + i1 * i2|
+    |mac_mulsub_16s_16s_32s_32_4_1_U26  |mac_mulsub_16s_16s_32s_32_4_1  |  i0 - i1 * i2|
+    +-----------------------------------+-------------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |C_im_1_fu_295_p2      |         +|   0|  0|  39|          32|          32|
+    |C_re_1_fu_276_p2      |         +|   0|  0|  39|          32|          32|
+    |add_ln158_fu_180_p2   |         +|   0|  0|  15|           8|           8|
+    |add_ln159_fu_196_p2   |         +|   0|  0|  14|           9|           8|
+    |cx_idx_fu_190_p2      |         +|   0|  0|  14|          13|          13|
+    |i_2_fu_166_p2         |         +|   0|  0|  14|           7|           1|
+    |sx_idx_fu_206_p2      |         +|   0|  0|  14|          13|          13|
+    |icmp_ln156_fu_160_p2  |      icmp|   0|  0|  15|           7|           8|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 166|         122|         117|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |C_im_fu_60               |   9|          2|   32|         64|
+    |C_re_fu_64               |   9|          2|   32|         64|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    7|         14|
+    |i_fu_68                  |   9|          2|    7|         14|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   80|        160|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |C_im_fu_60                          |  32|   0|   32|          0|
+    |C_re_fu_64                          |  32|   0|   32|          0|
+    |ap_CS_fsm                           |   1|   0|    1|          0|
+    |ap_done_reg                         |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg    |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg    |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg    |   1|   0|    1|          0|
+    |i_fu_68                             |   7|   0|    7|          0|
+    |icmp_ln156_reg_360                  |   1|   0|    1|          0|
+    |sext_ln162_2_reg_401                |  32|   0|   32|          0|
+    |sext_ln162_2_reg_401_pp0_iter2_reg  |  32|   0|   32|          0|
+    |sext_ln162_reg_389                  |  32|   0|   32|          0|
+    |sext_ln162_reg_389_pp0_iter2_reg    |  32|   0|   32|          0|
+    |sx_im_reg_407                       |  16|   0|   16|          0|
+    |zext_ln161_reg_374                  |  13|   0|   64|         51|
+    |icmp_ln156_reg_360                  |  64|  32|    1|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               | 302|  32|  290|         51|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE|  return value|
+|empty                 |   in|   13|     ap_none|                                         empty|        scalar|
+|C_re_out              |  out|   32|      ap_vld|                                      C_re_out|       pointer|
+|C_re_out_ap_vld       |  out|    1|      ap_vld|                                      C_re_out|       pointer|
+|C_im_out              |  out|   32|      ap_vld|                                      C_im_out|       pointer|
+|C_im_out_ap_vld       |  out|    1|      ap_vld|                                      C_im_out|       pointer|
+|circ_buf_re_address0  |  out|   13|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_re_ce0       |  out|    1|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_re_q0        |   in|   16|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_re_address1  |  out|   13|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_re_ce1       |  out|    1|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_re_q1        |   in|   16|   ap_memory|                                   circ_buf_re|         array|
+|circ_buf_im_address0  |  out|   13|   ap_memory|                                   circ_buf_im|         array|
+|circ_buf_im_ce0       |  out|    1|   ap_memory|                                   circ_buf_im|         array|
+|circ_buf_im_q0        |   in|   16|   ap_memory|                                   circ_buf_im|         array|
+|circ_buf_im_address1  |  out|   13|   ap_memory|                                   circ_buf_im|         array|
+|circ_buf_im_ce1       |  out|    1|   ap_memory|                                   circ_buf_im|         array|
+|circ_buf_im_q1        |   in|   16|   ap_memory|                                   circ_buf_im|         array|
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+

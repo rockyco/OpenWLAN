@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="module4_fine_cfo_apply.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_dataflow_monitor_sv " />
+            <top_module name="apatb_module4_fine_cfo_apply_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity">
+         <obj_property name="label">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply//AESL_inst_module4_fine_cfo_apply_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity">
+            <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/AESL_inst_module4_fine_cfo_apply_activity">
+      <obj_property name="ElementShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_module4_fine_cfo_apply_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_module4_fine_cfo_apply_group">
+      <obj_property name="label">AESL_inst_module4_fine_cfo_apply</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity">
+         <obj_property name="ElementShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_module4_fine_cfo_apply_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_group">
+         <obj_property name="label">grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group107">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group108">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group109">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineFreqOff_out_write">
+               <obj_property name="ElementShortName">fineFreqOff_out_write</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineFreqOff_out_full_n">
+               <obj_property name="ElementShortName">fineFreqOff_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineFreqOff_out_din">
+               <obj_property name="ElementShortName">fineFreqOff_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/corrected_out_write">
+               <obj_property name="ElementShortName">corrected_out_write</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/corrected_out_full_n">
+               <obj_property name="ElementShortName">corrected_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/corrected_out_din">
+               <obj_property name="ElementShortName">corrected_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group116">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group117">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/num_samples">
+               <obj_property name="ElementShortName">num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineOffset_in_read">
+               <obj_property name="ElementShortName">fineOffset_in_read</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineOffset_in_empty_n">
+               <obj_property name="ElementShortName">fineOffset_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/fineOffset_in_dout">
+               <obj_property name="ElementShortName">fineOffset_in_dout[15:0]</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_dout[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/startOffset_in_read">
+               <obj_property name="ElementShortName">startOffset_in_read</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/startOffset_in_empty_n">
+               <obj_property name="ElementShortName">startOffset_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/startOffset_in_dout">
+               <obj_property name="ElementShortName">startOffset_in_dout[15:0]</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_dout[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/data_in_read">
+               <obj_property name="ElementShortName">data_in_read</obj_property>
+               <obj_property name="ObjectShortName">data_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/data_in_empty_n">
+               <obj_property name="ElementShortName">data_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">data_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/data_in_dout">
+               <obj_property name="ElementShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group128">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_idle">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group133">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_rst">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group135">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/AESL_inst_module4_fine_cfo_apply/ap_clk">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group137">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group138">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group139">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/AUTOTB_TRANSACTION_NUM">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/ready_cnt">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/done_cnt">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group140">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_corrected_out">
+               <obj_property name="ElementShortName">LENGTH_corrected_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_corrected_out[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_data_in">
+               <obj_property name="ElementShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_fineFreqOff_out">
+               <obj_property name="ElementShortName">LENGTH_fineFreqOff_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_fineFreqOff_out[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_fineOffset_in">
+               <obj_property name="ElementShortName">LENGTH_fineOffset_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_fineOffset_in[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_num_samples">
+               <obj_property name="ElementShortName">LENGTH_num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/LENGTH_startOffset_in">
+               <obj_property name="ElementShortName">LENGTH_startOffset_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_startOffset_in[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group150">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group151">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/fineFreqOff_out_write">
+               <obj_property name="ElementShortName">fineFreqOff_out_write</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/fineFreqOff_out_full_n">
+               <obj_property name="ElementShortName">fineFreqOff_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/fineFreqOff_out_din">
+               <obj_property name="ElementShortName">fineFreqOff_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">fineFreqOff_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/corrected_out_write">
+               <obj_property name="ElementShortName">corrected_out_write</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/corrected_out_full_n">
+               <obj_property name="ElementShortName">corrected_out_full_n</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/corrected_out_din">
+               <obj_property name="ElementShortName">corrected_out_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">corrected_out_din[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group158">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group159">
+            <obj_property name="label">return(fifo)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/num_samples">
+               <obj_property name="ElementShortName">num_samples[31:0]</obj_property>
+               <obj_property name="ObjectShortName">num_samples[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/fineOffset_in_read">
+               <obj_property name="ElementShortName">fineOffset_in_read</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/fineOffset_in_empty_n">
+               <obj_property name="ElementShortName">fineOffset_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/fineOffset_in_dout">
+               <obj_property name="ElementShortName">fineOffset_in_dout[15:0]</obj_property>
+               <obj_property name="ObjectShortName">fineOffset_in_dout[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/startOffset_in_read">
+               <obj_property name="ElementShortName">startOffset_in_read</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/startOffset_in_empty_n">
+               <obj_property name="ElementShortName">startOffset_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/startOffset_in_dout">
+               <obj_property name="ElementShortName">startOffset_in_dout[15:0]</obj_property>
+               <obj_property name="ObjectShortName">startOffset_in_dout[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/data_in_read">
+               <obj_property name="ElementShortName">data_in_read</obj_property>
+               <obj_property name="ObjectShortName">data_in_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_module4_fine_cfo_apply_top/data_in_empty_n">
+               <obj_property name="ElementShortName">data_in_empty_n</obj_property>
+               <obj_property name="ObjectShortName">data_in_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_module4_fine_cfo_apply_top/data_in_dout">
+               <obj_property name="ElementShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in_dout[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

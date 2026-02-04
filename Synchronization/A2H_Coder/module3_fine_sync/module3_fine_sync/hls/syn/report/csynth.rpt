@@ -1,0 +1,153 @@
+
+
+================================================================
+== Synthesis Summary Report of 'module3_fine_sync'
+================================================================
++ General Information: 
+    * Date:           Wed Feb  4 12:22:55 2026
+    * Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+    * Project:        module3_fine_sync
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-----------+-----------+-----+
+    |                Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |            |           |           |     |
+    |                & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |     DSP    |     FF    |    LUT    | URAM|
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-----------+-----------+-----+
+    |+ module3_fine_sync*                   |     -|  0.27|        -|          -|         -|        -|     -|  dataflow|     -|  488 (221%)|  2082 (1%)|  2206 (4%)|    -|
+    | + split_input                         |     -|  3.02|        -|          -|         -|        -|     -|        no|     -|           -|  106 (~0%)|  227 (~0%)|    -|
+    |  + split_input_Pipeline_SPLIT         |     -|  3.02|        -|          -|         -|        -|     -|        no|     -|           -|   68 (~0%)|  178 (~0%)|    -|
+    |   o SPLIT                             |     -|  8.75|        -|          -|         3|        1|     -|       yes|     -|           -|          -|          -|    -|
+    | + run_1                               |     -|  6.75|      167|  1.670e+03|         -|      167|     -|        no|   N/A|         N/A|        N/A|        N/A|  N/A|
+    | + run_2                               |     -|  6.75|      167|  1.670e+03|         -|      167|     -|        no|   N/A|         N/A|        N/A|        N/A|  N/A|
+    | + run                                 |     -|  6.75|      167|  1.670e+03|         -|      167|     -|        no|   N/A|         N/A|        N/A|        N/A|  N/A|
+    | + combine_and_peak                    |     -|  0.27|        -|          -|         -|        -|     -|        no|     -|      8 (3%)|  575 (~0%)|   860 (1%)|    -|
+    |  + combine_and_peak_Pipeline_COMBINE  |     -|  0.27|        -|          -|         -|        -|     -|        no|     -|      8 (3%)|  537 (~0%)|   751 (1%)|    -|
+    |   o COMBINE                           |     -|  8.75|        -|          -|         5|        1|     -|       yes|     -|           -|          -|          -|    -|
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++------------------+-----------+------------+
+| Interface        | Direction | Data Width |
++------------------+-----------+------------+
+| fineOffset_out   | out       | 16         |
+| search_buffer_in | in        | 32         |
++------------------+-----------+------------+
+
+* Other Ports
++-----------------+---------+-----------+----------+
+| Port            | Mode    | Direction | Bitwidth |
++-----------------+---------+-----------+----------+
+| searchBufferLen | ap_none | in        | 32       |
++-----------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+------------------------+
+| Argument         | Direction | Datatype               |
++------------------+-----------+------------------------+
+| search_buffer_in | in        | stream<complex_t, 0>&  |
+| fineOffset_out   | out       | stream<ap_int<16>, 0>& |
+| searchBufferLen  | in        | int                    |
++------------------+-----------+------------------------+
+
+* SW-to-HW Mapping
++------------------+------------------+-----------+
+| Argument         | HW Interface     | HW Type   |
++------------------+------------------+-----------+
+| search_buffer_in | search_buffer_in | interface |
+| fineOffset_out   | fineOffset_out   | interface |
+| searchBufferLen  | searchBufferLen  | port      |
++------------------+------------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------+-----+--------+--------------+--------+----------+---------+
+| Name                                  | DSP | Pragma | Variable     | Op     | Impl     | Latency |
++---------------------------------------+-----+--------+--------------+--------+----------+---------+
+| + module3_fine_sync                   | 488 |        |              |        |          |         |
+|  + split_input                        | 0   |        |              |        |          |         |
+|   + split_input_Pipeline_SPLIT        | 0   |        |              |        |          |         |
+|     icmp_ln31_fu_93_p2                |     |        | icmp_ln31    | setlt  | auto     | 0       |
+|     add_ln31_fu_99_p2                 |     |        | add_ln31     | add    | fabric   | 0       |
+|     sum_stream_din                    |     |        | sum_val      | add    | fabric   | 0       |
+|  + combine_and_peak                   | 8   |        |              |        |          |         |
+|    fineOffset_fu_108_p2               |     |        | fineOffset   | add    | fabric   | 0       |
+|    fineOffset_out_din                 |     |        | select_ln80  | select | auto_sel | 0       |
+|   + combine_and_peak_Pipeline_COMBINE | 8   |        |              |        |          |         |
+|     icmp_ln57_fu_133_p2               |     |        | icmp_ln57    | setlt  | auto     | 0       |
+|     i_5_fu_139_p2                     |     |        | i_5          | add    | fabric   | 0       |
+|     corr_re_fu_170_p2                 |     |        | corr_re      | sub    | fabric   | 0       |
+|     mul_36s_36s_72_1_1_U15            | 4   |        | mul_ln65     | mul    | auto     | 0       |
+|     mul_36s_36s_72_1_1_U16            | 4   |        | mul_ln65_1   | mul    | auto     | 0       |
+|     add_ln65_fu_224_p2                |     |        | add_ln65     | add    | fabric   | 0       |
+|     icmp_ln69_fu_244_p2               |     |        | icmp_ln69    | setgt  | auto     | 0       |
+|     icmp_ln70_fu_249_p2               |     |        | icmp_ln70    | setgt  | auto     | 0       |
+|     add_ln72_fu_254_p2                |     |        | add_ln72     | add    | fabric   | 0       |
+|     max_metric_1_fu_263_p3            |     |        | max_metric_1 | select | auto_sel | 0       |
+|     max_pos_1_fu_270_p3               |     |        | max_pos_1    | select | auto_sel | 0       |
+|     max_metric_2_fu_278_p3            |     |        | max_metric_2 | select | auto_sel | 0       |
+|     max_pos_2_fu_286_p3               |     |        | max_pos_2    | select | auto_sel | 0       |
++---------------------------------------+-----+--------+--------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-----------------------+--------------+-------------+------+------+--------+-------------------+------+---------+------------------+
+| Name                  | Usage        | Type        | BRAM | URAM | Pragma | Variable          | Impl | Latency | Bitwidth, Depth, |
+|                       |              |             |      |      |        |                   |      |         | Banks            |
++-----------------------+--------------+-------------+------+------+--------+-------------------+------+---------+------------------+
+| + module3_fine_sync   |              |             | 0    | 0    |        |                   |      |         |                  |
+|   re_stream_U         | fifo channel | stream      |      |      |        | re_stream         | srl  | 0       | 16, 2, 1         |
+|   im_stream_U         | fifo channel | stream      |      |      |        | im_stream         | srl  | 0       | 16, 2, 1         |
+|   sum_stream_U        | fifo channel | stream      |      |      |        | sum_stream        | srl  | 0       | 16, 2, 1         |
+|   searchBufferLen_c_U | fifo channel | scalar prop |      |      |        | searchBufferLen_c | srl  | 0       | 32, 3, 1         |
+|   re_out_U            | fifo channel | stream      |      |      |        | re_out            | srl  | 0       | 40, 2, 1         |
+|   im_out_U            | fifo channel | stream      |      |      |        | im_out            | srl  | 0       | 40, 2, 1         |
+|   sum_out_U           | fifo channel | stream      |      |      |        | sum_out           | srl  | 0       | 40, 2, 1         |
++-----------------------+--------------+-------------+------+------+--------+-------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+-----------------------------+-----------------------------------------------------------+
+| Type     | Options                     | Location                                                  |
++----------+-----------------------------+-----------------------------------------------------------+
+| pipeline | II=1                        | module3_fine_sync.cpp:32 in split_input                   |
+| pipeline | II=1                        | module3_fine_sync.cpp:58 in combine_and_peak              |
+| dataflow |                             | module3_fine_sync.cpp:88 in module3_fine_sync             |
+| stream   | variable=re_stream depth=2  | module3_fine_sync.cpp:94 in module3_fine_sync, re_stream  |
+| stream   | variable=im_stream depth=2  | module3_fine_sync.cpp:95 in module3_fine_sync, im_stream  |
+| stream   | variable=sum_stream depth=2 | module3_fine_sync.cpp:96 in module3_fine_sync, sum_stream |
+| stream   | variable=re_out depth=2     | module3_fine_sync.cpp:101 in module3_fine_sync, re_out    |
+| stream   | variable=im_out depth=2     | module3_fine_sync.cpp:102 in module3_fine_sync, im_out    |
+| stream   | variable=sum_out depth=2    | module3_fine_sync.cpp:103 in module3_fine_sync, sum_out   |
++----------+-----------------------------+-----------------------------------------------------------+
+
+

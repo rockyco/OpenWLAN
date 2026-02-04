@@ -1,0 +1,4 @@
+DATA-ONLY module: data_in.read() is a DATA stream, not a CONTROL signal.
+Module0 (prefilter) has @FSM_REQUIRED: NO - no async control inputs. The module
+is a pure FIR filter with continuous data streaming at II=1. All stream reads are
+data consumption per FP-ASYNC1. P10 applies only to CONTROL signals.

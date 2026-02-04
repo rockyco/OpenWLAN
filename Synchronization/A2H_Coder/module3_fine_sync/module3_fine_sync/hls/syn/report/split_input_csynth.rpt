@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'split_input'
+================================================================
+* Date:           Wed Feb  4 12:22:54 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        module3_fine_sync
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.728 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                      |                            |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |               Instance               |           Module           |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_split_input_Pipeline_SPLIT_fu_54  |split_input_Pipeline_SPLIT  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      68|    178|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     47|    -|
+|Register         |        -|    -|      38|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     106|    227|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+----------------------------+---------+----+----+-----+-----+
+    |               Instance               |           Module           | BRAM_18K| DSP| FF | LUT | URAM|
+    +--------------------------------------+----------------------------+---------+----+----+-----+-----+
+    |grp_split_input_Pipeline_SPLIT_fu_54  |split_input_Pipeline_SPLIT  |        0|   0|  68|  178|    0|
+    +--------------------------------------+----------------------------+---------+----+----+-----+-----+
+    |Total                                 |                            |        0|   0|  68|  178|    0|
+    +--------------------------------------+----------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  20|          4|    1|          4|
+    |ap_done                  |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    |searchBufferLen_c_blk_n  |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  47|         10|    4|         10|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+----+----+-----+-----------+
+    |                        Name                       | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                          |   3|   0|    3|          0|
+    |ap_done_reg                                        |   1|   0|    1|          0|
+    |grp_split_input_Pipeline_SPLIT_fu_54_ap_start_reg  |   1|   0|    1|          0|
+    |length_read_reg_83                                 |  32|   0|   32|          0|
+    |start_once_reg                                     |   1|   0|    1|          0|
+    +---------------------------------------------------+----+----+-----+-----------+
+    |Total                                              |  38|   0|   38|          0|
+    +---------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+-------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|        split_input|  return value|
+|start_full_n                      |   in|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|        split_input|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|        split_input|  return value|
+|start_out                         |  out|    1|  ap_ctrl_hs|        split_input|  return value|
+|start_write                       |  out|    1|  ap_ctrl_hs|        split_input|  return value|
+|search_buffer_in_dout             |   in|   32|     ap_fifo|   search_buffer_in|       pointer|
+|search_buffer_in_empty_n          |   in|    1|     ap_fifo|   search_buffer_in|       pointer|
+|search_buffer_in_read             |  out|    1|     ap_fifo|   search_buffer_in|       pointer|
+|re_stream_din                     |  out|   16|     ap_fifo|          re_stream|       pointer|
+|re_stream_full_n                  |   in|    1|     ap_fifo|          re_stream|       pointer|
+|re_stream_write                   |  out|    1|     ap_fifo|          re_stream|       pointer|
+|re_stream_num_data_valid          |   in|    3|     ap_fifo|          re_stream|       pointer|
+|re_stream_fifo_cap                |   in|    3|     ap_fifo|          re_stream|       pointer|
+|im_stream_din                     |  out|   16|     ap_fifo|          im_stream|       pointer|
+|im_stream_full_n                  |   in|    1|     ap_fifo|          im_stream|       pointer|
+|im_stream_write                   |  out|    1|     ap_fifo|          im_stream|       pointer|
+|im_stream_num_data_valid          |   in|    3|     ap_fifo|          im_stream|       pointer|
+|im_stream_fifo_cap                |   in|    3|     ap_fifo|          im_stream|       pointer|
+|sum_stream_din                    |  out|   16|     ap_fifo|         sum_stream|       pointer|
+|sum_stream_full_n                 |   in|    1|     ap_fifo|         sum_stream|       pointer|
+|sum_stream_write                  |  out|    1|     ap_fifo|         sum_stream|       pointer|
+|sum_stream_num_data_valid         |   in|    3|     ap_fifo|         sum_stream|       pointer|
+|sum_stream_fifo_cap               |   in|    3|     ap_fifo|         sum_stream|       pointer|
+|length_r                          |   in|   32|     ap_none|           length_r|        scalar|
+|searchBufferLen_c_din             |  out|   32|     ap_fifo|  searchBufferLen_c|       pointer|
+|searchBufferLen_c_full_n          |   in|    1|     ap_fifo|  searchBufferLen_c|       pointer|
+|searchBufferLen_c_write           |  out|    1|     ap_fifo|  searchBufferLen_c|       pointer|
+|searchBufferLen_c_num_data_valid  |   in|    3|     ap_fifo|  searchBufferLen_c|       pointer|
+|searchBufferLen_c_fifo_cap        |   in|    3|     ap_fifo|  searchBufferLen_c|       pointer|
++----------------------------------+-----+-----+------------+-------------------+--------------+
+

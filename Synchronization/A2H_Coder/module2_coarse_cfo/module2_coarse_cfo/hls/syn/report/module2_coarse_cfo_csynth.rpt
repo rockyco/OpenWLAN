@@ -1,0 +1,292 @@
+
+
+================================================================
+== Vitis HLS Report for 'module2_coarse_cfo'
+================================================================
+* Date:           Wed Feb  4 08:41:04 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        module2_coarse_cfo
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |                                                     |                                          |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+        |                       Instance                      |                  Module                  |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |grp_module2_coarse_cfo_Pipeline_PHASE_A_fu_302       |module2_coarse_cfo_Pipeline_PHASE_A       |     2051|     2051|  20.510 us|  20.510 us|  2049|  2049|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_module2_coarse_cfo_Pipeline_CFO_ESTIMATE_fu_320  |module2_coarse_cfo_Pipeline_CFO_ESTIMATE  |        2|      148|  20.000 ns|   1.480 us|     1|   144|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_module2_coarse_cfo_Pipeline_PHASE_D_fu_333       |module2_coarse_cfo_Pipeline_PHASE_D       |        ?|        ?|          ?|          ?|     0|     0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|   1720|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        2|   16|    1411|   1401|    -|
+|Memory           |        5|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       0|    655|    -|
+|Register         |        -|    -|     878|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        7|   16|    2289|   3776|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        2|    7|       2|      7|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------+------------------------------------------+---------+----+-----+-----+-----+
+    |                       Instance                      |                  Module                  | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------------------------+------------------------------------------+---------+----+-----+-----+-----+
+    |grp_module2_coarse_cfo_Pipeline_CFO_ESTIMATE_fu_320  |module2_coarse_cfo_Pipeline_CFO_ESTIMATE  |        0|   4|  422|  344|    0|
+    |grp_module2_coarse_cfo_Pipeline_PHASE_A_fu_302       |module2_coarse_cfo_Pipeline_PHASE_A       |        0|   0|   68|  163|    0|
+    |grp_module2_coarse_cfo_Pipeline_PHASE_D_fu_333       |module2_coarse_cfo_Pipeline_PHASE_D       |        2|   4|  298|  479|    0|
+    |mul_28s_32s_54_1_1_U38                               |mul_28s_32s_54_1_1                        |        0|   4|    0|   20|    0|
+    |mul_32s_28ns_48_1_1_U39                              |mul_32s_28ns_48_1_1                       |        0|   4|    0|   20|    0|
+    |sdiv_51ns_32s_51_55_seq_1_U40                        |sdiv_51ns_32s_51_55_seq_1                 |        0|   0|  623|  375|    0|
+    +-----------------------------------------------------+------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                |                                          |        2|  16| 1411| 1401|    0|
+    +-----------------------------------------------------+------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------+-------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory     |             Module            | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+-------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |atan_lut_U      |atan_lut_ROM_AUTO_1R           |        1|  0|   0|    0|   256|   16|     1|         4096|
+    |early_buf_re_U  |early_buf_re_RAM_2P_BRAM_1R1W  |        2|  0|   0|    0|  2048|   16|     1|        32768|
+    |early_buf_im_U  |early_buf_re_RAM_2P_BRAM_1R1W  |        2|  0|   0|    0|  2048|   16|     1|        32768|
+    +----------------+-------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total           |                               |        5|  0|   0|    0|  4352|   48|     3|        69632|
+    +----------------+-------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add24_fu_463_p2           |         +|   0|  0|  12|          11|           5|
+    |add_fu_458_p2             |         +|   0|  0|  12|          11|           4|
+    |add_ln113_fu_382_p2       |         +|   0|  0|  32|          32|           5|
+    |add_ln119_1_fu_511_p2     |         +|   0|  0|  39|          32|          32|
+    |add_ln119_fu_479_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln49_fu_674_p2        |         +|   0|  0|  14|          13|           1|
+    |add_ln54_fu_730_p2        |         +|   0|  0|  15|           8|           1|
+    |add_ln61_fu_895_p2        |         +|   0|  0|  39|          32|          27|
+    |angle_7_fu_875_p2         |         +|   0|  0|  39|          32|          28|
+    |angle_fu_800_p2           |         +|   0|  0|  39|          32|          32|
+    |corrLen_fu_453_p2         |         +|   0|  0|  39|          32|          32|
+    |signed_angle_1_fu_915_p2  |         +|   0|  0|  39|          32|          28|
+    |angle_1_fu_805_p2         |         -|   0|  0|  39|          25|          32|
+    |angle_5_fu_847_p2         |         -|   0|  0|  39|          27|          32|
+    |frac_fu_720_p2            |         -|   0|  0|  39|          32|          32|
+    |p_op_fu_498_p2            |         -|   0|  0|  39|           1|          32|
+    |rxLen_local_fu_377_p2     |         -|   0|  0|  32|          32|          32|
+    |sub_ln114_1_fu_422_p2     |         -|   0|  0|  13|           1|           5|
+    |sub_ln114_fu_412_p2       |         -|   0|  0|  13|           1|           4|
+    |sub_ln115_fu_443_p2       |         -|   0|  0|  14|           6|           6|
+    |sub_ln119_1_fu_484_p2     |         -|   0|  0|  14|           6|           6|
+    |sub_ln119_fu_474_p2       |         -|   0|  0|  32|           4|          32|
+    |sub_ln138_1_fu_991_p2     |         -|   0|  0|  36|           1|          29|
+    |sub_ln138_fu_968_p2       |         -|   0|  0|  55|           1|          48|
+    |sub_ln36_fu_542_p2        |         -|   0|  0|  39|           1|          32|
+    |sub_ln37_fu_556_p2        |         -|   0|  0|  39|           1|          32|
+    |sub_ln48_fu_624_p2        |         -|   0|  0|  58|          51|          51|
+    |sub_ln55_fu_765_p2        |         -|   0|  0|  32|          25|          25|
+    |sub_ln58_fu_825_p2        |         -|   0|  0|  55|          42|          48|
+    |empty_fu_493_p2           |      icmp|   0|  0|  39|          32|           9|
+    |icmp_ln113_fu_388_p2      |      icmp|   0|  0|  39|          32|           8|
+    |icmp_ln119_fu_468_p2      |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln132_fu_909_p2      |      icmp|   0|  0|  39|          32|          26|
+    |icmp_ln39_fu_574_p2       |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln49_fu_668_p2       |      icmp|   0|  0|  26|          19|           1|
+    |icmp_ln50_fu_696_p2       |      icmp|   0|  0|  14|          13|           8|
+    |icmp_ln60_fu_870_p2       |      icmp|   0|  0|  14|           6|           1|
+    |swap_fu_580_p2            |      icmp|   0|  0|  39|          32|          32|
+    |ap_block_state3           |        or|   0|  0|   2|           1|           1|
+    |ap_block_state74          |        or|   0|  0|   2|           1|           1|
+    |or_ln39_fu_570_p2         |        or|   0|  0|  32|          32|          32|
+    |angle_2_fu_811_p3         |    select|   0|  0|  32|           1|          32|
+    |angle_4_fu_841_p3         |    select|   0|  0|  32|           1|          32|
+    |angle_6_fu_853_p3         |    select|   0|  0|  32|           1|          32|
+    |angle_8_fu_880_p3         |    select|   0|  0|  32|           1|          32|
+    |ax_fu_548_p3              |    select|   0|  0|  32|           1|          32|
+    |ay_fu_562_p3              |    select|   0|  0|  32|           1|          32|
+    |den_fu_584_p3             |    select|   0|  0|  32|           1|          32|
+    |lut_idx_1_fu_701_p3       |    select|   0|  0|  13|           1|           8|
+    |lut_idx_fu_688_p3         |    select|   0|  0|  13|           1|          13|
+    |phase_inc_fu_997_p3       |    select|   0|  0|  29|           1|          29|
+    |select_ln114_fu_432_p3    |    select|   0|  0|   5|           1|           5|
+    |select_ln44_fu_590_p3     |    select|   0|  0|  32|           1|          32|
+    |select_ln49_fu_680_p3     |    select|   0|  0|  13|           1|          13|
+    |select_ln61_fu_901_p3     |    select|   0|  0|  32|           1|          32|
+    |signed_angle_2_fu_921_p3  |    select|   0|  0|  32|           1|          32|
+    |smax_neg_fu_503_p3        |    select|   0|  0|  32|           1|          32|
+    |useLen_fu_393_p3          |    select|   0|  0|  32|           1|          32|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|1720|         837|        1278|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+-----+-----------+-----+-----------+
+    |            Name            | LUT | Input Size| Bits| Total Bits|
+    +----------------------------+-----+-----------+-----+-----------+
+    |angle_10_reg_291            |    9|          2|   32|         64|
+    |ap_NS_fsm                   |  361|         75|    1|         75|
+    |ap_phi_mux_x_phi_fu_284_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_y_phi_fu_273_p4  |    9|          2|   32|         64|
+    |coarseFreqOff_out_blk_n     |    9|          2|    1|          2|
+    |data_in_read                |   14|          3|    1|          3|
+    |early_buf_im_address0       |   14|          3|   11|         33|
+    |early_buf_im_address1       |   14|          3|   11|         33|
+    |early_buf_im_ce0            |   14|          3|    1|          3|
+    |early_buf_im_ce1            |   14|          3|    1|          3|
+    |early_buf_im_we1            |    9|          2|    1|          2|
+    |early_buf_re_address0       |   14|          3|   11|         33|
+    |early_buf_re_address1       |   14|          3|   11|         33|
+    |early_buf_re_ce0            |   14|          3|    1|          3|
+    |early_buf_re_ce1            |   14|          3|    1|          3|
+    |early_buf_re_we1            |    9|          2|    1|          2|
+    |passthrough_out_din         |    9|          2|   32|         64|
+    |passthrough_out_write       |   14|          3|    1|          3|
+    |searchBufferLen_out_blk_n   |    9|          2|    1|          2|
+    |startOffset_2_reg_260       |    9|          2|   16|         32|
+    |startOffset_fwd_out_blk_n   |    9|          2|    1|          2|
+    |startOffset_fwd_out_din     |    9|          2|   16|         32|
+    |startOffset_fwd_out_write   |   14|          3|    1|          3|
+    |startOffset_in_blk_n        |    9|          2|    1|          2|
+    |startOffset_in_read         |   14|          3|    1|          3|
+    |x_reg_280                   |    9|          2|   32|         64|
+    |y_reg_269                   |    9|          2|   32|         64|
+    +----------------------------+-----+-----------+-----+-----------+
+    |Total                       |  655|        139|  283|        691|
+    +----------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                               | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |add24_reg_1085                                                    |  11|   0|   11|          0|
+    |add_ln113_reg_1059                                                |  32|   0|   32|          0|
+    |add_ln119_1_reg_1100                                              |  32|   0|   32|          0|
+    |add_ln119_reg_1094                                                |  32|   0|   32|          0|
+    |add_reg_1080                                                      |  11|   0|   11|          0|
+    |angle_10_reg_291                                                  |  32|   0|   32|          0|
+    |angle_2_reg_1196                                                  |  32|   0|   32|          0|
+    |angle_6_reg_1202                                                  |  32|   0|   32|          0|
+    |ap_CS_fsm                                                         |  74|   0|   74|          0|
+    |ax_reg_1115                                                       |  32|   0|   32|          0|
+    |ay_reg_1123                                                       |  32|   0|   32|          0|
+    |coarseFreqOff_reg_1234                                            |  32|   0|   32|          0|
+    |frac_reg_1166                                                     |  32|   0|   32|          0|
+    |grp_module2_coarse_cfo_Pipeline_CFO_ESTIMATE_fu_320_ap_start_reg  |   1|   0|    1|          0|
+    |grp_module2_coarse_cfo_Pipeline_PHASE_A_fu_302_ap_start_reg       |   1|   0|    1|          0|
+    |grp_module2_coarse_cfo_Pipeline_PHASE_D_fu_333_ap_start_reg       |   1|   0|    1|          0|
+    |icmp_ln119_reg_1090                                               |   1|   0|    1|          0|
+    |lut_idx_reg_1160                                                  |  13|   0|   13|          0|
+    |num_samples_read_reg_1029                                         |  32|   0|   32|          0|
+    |phase_inc_reg_1239                                                |  29|   0|   29|          0|
+    |scaled_reg_1155                                                   |  32|   0|   32|          0|
+    |sdiv_ln47_reg_1149                                                |  51|   0|   51|          0|
+    |select_ln114_reg_1070                                             |   5|   0|    5|          0|
+    |sext_ln111_reg_1047                                               |  32|   0|   32|          0|
+    |sext_ln115_1_reg_1075                                             |   6|   0|    6|          0|
+    |signed_angle_2_reg_1218                                           |  32|   0|   32|          0|
+    |startOffset_2_reg_260                                             |  16|   0|   16|          0|
+    |sub_ln55_reg_1186                                                 |  17|   0|   25|          8|
+    |swap_reg_1134                                                     |   1|   0|    1|          0|
+    |tmp_2_reg_1229                                                    |  28|   0|   28|          0|
+    |tmp_7_reg_1208                                                    |   6|   0|    6|          0|
+    |tmp_9_reg_1224                                                    |   1|   0|    1|          0|
+    |trunc_ln111_reg_1052                                              |  11|   0|   11|          0|
+    |trunc_ln5_reg_1191                                                |  32|   0|   32|          0|
+    |useLen_reg_1065                                                   |  32|   0|   32|          0|
+    |v0_reg_1181                                                       |  16|   0|   24|          8|
+    |x_neg_reg_1105                                                    |   1|   0|    1|          0|
+    |x_reg_280                                                         |  32|   0|   32|          0|
+    |y_neg_reg_1110                                                    |   1|   0|    1|          0|
+    |y_reg_269                                                         |  32|   0|   32|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                             | 878|   0|  894|         16|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|   module2_coarse_cfo|  return value|
+|data_in_dout                |   in|   32|     ap_fifo|              data_in|       pointer|
+|data_in_empty_n             |   in|    1|     ap_fifo|              data_in|       pointer|
+|data_in_read                |  out|    1|     ap_fifo|              data_in|       pointer|
+|startOffset_in_dout         |   in|   16|     ap_fifo|       startOffset_in|       pointer|
+|startOffset_in_empty_n      |   in|    1|     ap_fifo|       startOffset_in|       pointer|
+|startOffset_in_read         |  out|    1|     ap_fifo|       startOffset_in|       pointer|
+|search_buffer_out_din       |  out|   32|     ap_fifo|    search_buffer_out|       pointer|
+|search_buffer_out_full_n    |   in|    1|     ap_fifo|    search_buffer_out|       pointer|
+|search_buffer_out_write     |  out|    1|     ap_fifo|    search_buffer_out|       pointer|
+|coarseFreqOff_out_din       |  out|   32|     ap_fifo|    coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_full_n    |   in|    1|     ap_fifo|    coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_write     |  out|    1|     ap_fifo|    coarseFreqOff_out|       pointer|
+|searchBufferLen_out_din     |  out|   16|     ap_fifo|  searchBufferLen_out|       pointer|
+|searchBufferLen_out_full_n  |   in|    1|     ap_fifo|  searchBufferLen_out|       pointer|
+|searchBufferLen_out_write   |  out|    1|     ap_fifo|  searchBufferLen_out|       pointer|
+|passthrough_out_din         |  out|   32|     ap_fifo|      passthrough_out|       pointer|
+|passthrough_out_full_n      |   in|    1|     ap_fifo|      passthrough_out|       pointer|
+|passthrough_out_write       |  out|    1|     ap_fifo|      passthrough_out|       pointer|
+|startOffset_fwd_out_din     |  out|   16|     ap_fifo|  startOffset_fwd_out|       pointer|
+|startOffset_fwd_out_full_n  |   in|    1|     ap_fifo|  startOffset_fwd_out|       pointer|
+|startOffset_fwd_out_write   |  out|    1|     ap_fifo|  startOffset_fwd_out|       pointer|
+|num_samples                 |   in|   32|     ap_none|          num_samples|        scalar|
++----------------------------+-----+-----+------------+---------------------+--------------+
+

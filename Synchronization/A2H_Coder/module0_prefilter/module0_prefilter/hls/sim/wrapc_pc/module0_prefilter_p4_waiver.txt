@@ -1,0 +1,2 @@
+FIR convolution is inherent O(N*L) - no incremental form exists for general FIR.
+Maps to hls::FIR IP in Phase 5 (FP-CORR: 51 taps > 16).

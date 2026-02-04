@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# xsim v2024.2.2 (64-bit)
+# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+# IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
+# SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
+# Start of session at: Wed Feb  4 21:06:02 2026
+# Process ID         : 2883487
+# Current directory  : /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/sim/verilog
+# Command line       : xsim -mode tcl -source {xsim.dir/system_top/xsim_script.tcl}
+# Log file           : /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/sim/verilog/xsim.log
+# Journal file       : /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/system_wlanSync_integrated/system_top/hls/sim/verilog/xsim.jou
+# Running On         : amd
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 5 7640HS w/ Radeon 760M Graphics
+# CPU Frequency      : 2136.456 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 31248 MB
+# Swap memory        : 10737 MB
+# Total Virtual      : 41985 MB
+# Available Virtual  : 29442 MB
+#-----------------------------------------------------------
+source xsim.dir/system_top/xsim_script.tcl
+open_wave_config system_top_dataflow_ana.wcfg
+source system_top.tcl

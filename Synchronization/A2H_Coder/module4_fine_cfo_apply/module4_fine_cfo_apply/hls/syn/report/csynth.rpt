@@ -1,0 +1,252 @@
+
+
+================================================================
+== Synthesis Summary Report of 'module4_fine_cfo_apply'
+================================================================
++ General Information: 
+    * Date:           Wed Feb  4 07:58:07 2026
+    * Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+    * Project:        module4_fine_cfo_apply
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+    |                       Modules                      | Issue|      | Latency | Latency | Iteration|         | Trip |          |         |          |           |           |     |
+    |                       & Loops                      | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF    |    LUT    | URAM|
+    +----------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+    |+ module4_fine_cfo_apply                            |     -|  0.24|        -|        -|         -|        -|     -|        no|  19 (6%)|  23 (10%)|  2830 (2%)|  4689 (8%)|    -|
+    | + module4_fine_cfo_apply_Pipeline_POLL_START       |     -|  2.02|        -|        -|         -|        -|     -|        no|        -|         -|  103 (~0%)|  157 (~0%)|    -|
+    |  o POLL_START                                      |     -|  8.75|        -|        -|         2|        1|     -|       yes|        -|         -|          -|          -|    -|
+    | + module4_fine_cfo_apply_Pipeline_POLL_FINE        |     -|  2.02|        4|   40.000|         -|        4|     -|        no|        -|         -|  106 (~0%)|  158 (~0%)|    -|
+    |  o POLL_FINE                                       |     -|  8.75|        1|   10.000|         2|        1|     0|       yes|        -|         -|          -|          -|    -|
+    | + module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA  |     -|  2.02|        -|        -|         -|        -|     -|        no|        -|         -|   81 (~0%)|  218 (~0%)|    -|
+    |  o ENSURE_CFO_DATA                                 |     -|  8.75|        -|        -|         2|        1|     -|       yes|        -|         -|          -|          -|    -|
+    | + module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE     |     -|  0.31|       69|  690.000|         -|       69|     -|        no|        -|    4 (1%)|  302 (~0%)|  264 (~0%)|    -|
+    |  o CFO_ESTIMATE                                    |     -|  8.75|       67|  670.000|         5|        1|    64|       yes|        -|         -|          -|          -|    -|
+    | + module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP    |     -|  0.80|        -|        -|         -|        -|     -|        no|        -|    4 (1%)|  405 (~0%)|   605 (1%)|    -|
+    |  o APPLY_OVERLAP                                   |     -|  8.75|        -|        -|         4|        1|     -|       yes|        -|         -|          -|          -|    -|
+    | + module4_fine_cfo_apply_Pipeline_APPLY_DRAIN      |     -|  0.80|        -|        -|         -|        -|     -|        no|        -|    4 (1%)|  199 (~0%)|  346 (~0%)|    -|
+    |  o APPLY_DRAIN                                     |     -|  8.75|        -|        -|         4|        1|     -|       yes|        -|         -|          -|          -|    -|
+    +----------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++-----------------+-----------+------------+
+| Interface       | Direction | Data Width |
++-----------------+-----------+------------+
+| corrected_out   | out       | 32         |
+| data_in         | in        | 32         |
+| fineFreqOff_out | out       | 32         |
+| fineOffset_in   | in        | 16         |
+| startOffset_in  | in        | 16         |
++-----------------+-----------+------------+
+
+* Other Ports
++-------------+---------+-----------+----------+
+| Port        | Mode    | Direction | Bitwidth |
++-------------+---------+-----------+----------+
+| num_samples | ap_none | in        | 32       |
++-------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+--------------------------------------------------+
+| Argument        | Direction | Datatype                                         |
++-----------------+-----------+--------------------------------------------------+
+| data_in         | in        | stream<complex_t, 0>&                            |
+| startOffset_in  | in        | stream<ap_int<16>, 0>&                           |
+| fineOffset_in   | in        | stream<ap_int<16>, 0>&                           |
+| corrected_out   | out       | stream<complex_t, 0>&                            |
+| fineFreqOff_out | out       | stream<ap_fixed<32, 16, AP_TRN, AP_WRAP, 0>, 0>& |
+| num_samples     | in        | int                                              |
++-----------------+-----------+--------------------------------------------------+
+
+* SW-to-HW Mapping
++-----------------+-----------------+-----------+
+| Argument        | HW Interface    | HW Type   |
++-----------------+-----------------+-----------+
+| data_in         | data_in         | interface |
+| startOffset_in  | startOffset_in  | interface |
+| fineOffset_in   | fineOffset_in   | interface |
+| corrected_out   | corrected_out   | interface |
+| fineFreqOff_out | fineFreqOff_out | interface |
+| num_samples     | num_samples     | port      |
++-----------------+-----------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+-----------------------+--------+-----------+---------+
+| Name                                               | DSP | Pragma | Variable              | Op     | Impl      | Latency |
++----------------------------------------------------+-----+--------+-----------------------+--------+-----------+---------+
+| + module4_fine_cfo_apply                           | 23  |        |                       |        |           |         |
+|   icmp_ln104_fu_476_p2                             |     |        | icmp_ln104            | setlt  | auto      | 0       |
+|   add_ln121_fu_503_p2                              |     |        | add_ln121             | add    | fabric    | 0       |
+|   combined_offset_fu_509_p2                        |     |        | combined_offset       | add    | fabric    | 0       |
+|   cfo_data_end_fu_518_p2                           |     |        | cfo_data_end          | add    | fabric    | 0       |
+|   data_remaining_fu_581_p2                         |     |        | data_remaining        | sub    | fabric    | 0       |
+|   rxLen_fu_586_p2                                  |     |        | rxLen                 | sub    | fabric    | 0       |
+|   icmp_ln149_fu_591_p2                             |     |        | icmp_ln149            | setlt  | auto      | 0       |
+|   overlap_len_fu_597_p3                            |     |        | overlap_len           | select | auto_sel  | 0       |
+|   drain_len_fu_609_p2                              |     |        | drain_len             | sub    | fabric    | 0       |
+|   sub_ln38_fu_547_p2                               |     |        | sub_ln38              | sub    | fabric    | 0       |
+|   ax_fu_553_p3                                     |     |        | ax                    | select | auto_sel  | 0       |
+|   sub_ln39_fu_561_p2                               |     |        | sub_ln39              | sub    | fabric    | 0       |
+|   ay_fu_567_p3                                     |     |        | ay                    | select | auto_sel  | 0       |
+|   or_ln41_fu_615_p2                                |     |        | or_ln41               | or     | auto      | 0       |
+|   icmp_ln41_fu_619_p2                              |     |        | icmp_ln41             | seteq  | auto      | 0       |
+|   swap_fu_625_p2                                   |     |        | swap                  | setgt  | auto      | 0       |
+|   den_fu_629_p3                                    |     |        | den                   | select | auto_sel  | 0       |
+|   select_ln46_fu_635_p3                            |     |        | select_ln46           | select | auto_sel  | 0       |
+|   sdiv_51ns_32s_51_55_seq_1_U67                    |     |        | sdiv_ln49             | sdiv   | auto_seq  | 54      |
+|   sub_ln50_fu_669_p2                               |     |        | sub_ln50              | sub    | fabric    | 0       |
+|   icmp_ln51_fu_713_p2                              |     |        | icmp_ln51             | setne  | auto      | 0       |
+|   add_ln51_fu_719_p2                               |     |        | add_ln51              | add    | fabric    | 0       |
+|   select_ln51_fu_725_p3                            |     |        | select_ln51           | select | auto_sel  | 0       |
+|   lut_idx_fu_733_p3                                |     |        | lut_idx               | select | auto_sel  | 0       |
+|   icmp_ln52_fu_741_p2                              |     |        | icmp_ln52             | setgt  | auto      | 0       |
+|   lut_idx_1_fu_746_p3                              |     |        | lut_idx_1             | select | auto_sel  | 0       |
+|   frac_fu_765_p2                                   |     |        | frac                  | sub    | fabric    | 0       |
+|   add_ln56_fu_775_p2                               |     |        | add_ln56              | add    | fabric    | 0       |
+|   sub_ln57_fu_810_p2                               |     |        | sub_ln57              | sub    | fabric    | 0       |
+|   mul_28s_32s_54_1_1_U65                           | 4   |        | mul_ln57              | mul    | auto      | 0       |
+|   angle_fu_845_p2                                  |     |        | angle                 | add    | fabric    | 0       |
+|   angle_1_fu_850_p2                                |     |        | angle_1               | sub    | fabric    | 0       |
+|   angle_2_fu_856_p3                                |     |        | angle_2               | select | auto_sel  | 0       |
+|   sub_ln60_fu_870_p2                               |     |        | sub_ln60              | sub    | fabric    | 0       |
+|   angle_4_fu_886_p3                                |     |        | angle_4               | select | auto_sel  | 0       |
+|   angle_5_fu_892_p2                                |     |        | angle_5               | sub    | fabric    | 0       |
+|   angle_6_fu_898_p3                                |     |        | angle_6               | select | auto_sel  | 0       |
+|   icmp_ln62_fu_915_p2                              |     |        | icmp_ln62             | setgt  | auto      | 0       |
+|   angle_7_fu_920_p2                                |     |        | angle_7               | add    | fabric    | 0       |
+|   angle_8_fu_925_p3                                |     |        | angle_8               | select | auto_sel  | 0       |
+|   add_ln63_fu_940_p2                               |     |        | add_ln63              | add    | fabric    | 0       |
+|   select_ln63_fu_946_p3                            |     |        | select_ln63           | select | auto_sel  | 0       |
+|   icmp_ln169_fu_954_p2                             |     |        | icmp_ln169            | setgt  | auto      | 0       |
+|   signed_angle_1_fu_960_p2                         |     |        | signed_angle_1        | add    | fabric    | 0       |
+|   signed_angle_2_fu_966_p3                         |     |        | signed_angle_2        | select | auto_sel  | 0       |
+|   mul_32s_26ns_48_1_1_U66                          | 4   |        | mul_ln174             | mul    | auto      | 0       |
+|   sub_ln175_fu_1013_p2                             |     |        | sub_ln175             | sub    | fabric    | 0       |
+|   sub_ln175_1_fu_1036_p2                           |     |        | sub_ln175_1           | sub    | fabric    | 0       |
+|   phase_inc_fu_1042_p3                             |     |        | phase_inc             | select | auto_sel  | 0       |
+|   icmp_ln184_fu_1050_p2                            |     |        | icmp_ln184            | setgt  | auto      | 0       |
+|   mul_27s_32s_32_1_1_U64                           | 3   |        | phase_acc             | mul    | auto      | 0       |
+|   phase_acc_0_lcssa_sel_fu_1059_p3                 |     |        | phase_acc_0_lcssa_sel | select | auto_sel  | 0       |
+|  + module4_fine_cfo_apply_Pipeline_POLL_START      | 0   |        |                       |        |           |         |
+|    icmp_ln89_fu_160_p2                             |     |        | icmp_ln89             | setlt  | auto      | 0       |
+|    n_3_fu_165_p2                                   |     |        | n_3                   | add    | fabric    | 0       |
+|  + module4_fine_cfo_apply_Pipeline_POLL_FINE       | 0   |        |                       |        |           |         |
+|    icmp_ln104_fu_168_p2                            |     |        | icmp_ln104            | setlt  | auto      | 0       |
+|    n_6_fu_173_p2                                   |     |        | n_6                   | add    | fabric    | 0       |
+|  + module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA | 0   |        |                       |        |           |         |
+|    icmp_ln138_fu_146_p2                            |     |        | icmp_ln138            | setlt  | auto      | 0       |
+|    icmp_ln140_fu_156_p2                            |     |        | icmp_ln140            | setlt  | auto      | 0       |
+|    write_cnt_2_fu_162_p2                           |     |        | write_cnt_2           | add    | fabric    | 0       |
+|    n_8_fu_173_p2                                   |     |        | n_8                   | add    | fabric    | 0       |
+|  + module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE    | 4   |        |                       |        |           |         |
+|    icmp_ln156_fu_160_p2                            |     |        | icmp_ln156            | seteq  | auto      | 0       |
+|    i_2_fu_166_p2                                   |     |        | i_2                   | add    | fabric    | 0       |
+|    add_ln158_fu_180_p2                             |     |        | add_ln158             | add    | fabric    | 0       |
+|    cx_idx_fu_190_p2                                |     |        | cx_idx                | add    | fabric    | 0       |
+|    add_ln159_fu_196_p2                             |     |        | add_ln159             | add    | fabric    | 0       |
+|    sx_idx_fu_206_p2                                |     |        | sx_idx                | add    | fabric    | 0       |
+|    mac_muladd_16s_16s_32s_33_4_1_U25               | 1   |        | mul_ln162             | mul    | dsp_slice | 3       |
+|    mul_16s_16s_32_1_1_U23                          | 1   |        | mul_ln162_1           | mul    | auto      | 0       |
+|    mac_muladd_16s_16s_32s_33_4_1_U25               | 1   |        | sext_ln162_4          | sext   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32s_33_4_1_U25               | 1   |        | add_ln162             | add    | dsp_slice | 3       |
+|    C_re_1_fu_276_p2                                |     |        | C_re_1                | add    | fabric    | 0       |
+|    mul_16s_16s_32_1_1_U24                          | 1   |        | mul_ln163             | mul    | auto      | 0       |
+|    mac_mulsub_16s_16s_32s_32_4_1_U26               | 1   |        | mul_ln163_1           | mul    | dsp_slice | 3       |
+|    mac_mulsub_16s_16s_32s_32_4_1_U26               | 1   |        | sub_ln163             | sub    | dsp_slice | 3       |
+|    C_im_1_fu_295_p2                                |     |        | C_im_1                | add    | fabric    | 0       |
+|  + module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP   | 4   |        |                       |        |           |         |
+|    icmp_ln184_fu_277_p2                            |     |        | icmp_ln184            | setlt  | auto      | 0       |
+|    i_3_fu_282_p2                                   |     |        | i_3                   | add    | fabric    | 0       |
+|    sample_idx_fu_295_p2                            |     |        | sample_idx            | add    | fabric    | 0       |
+|    addr_cmp15_fu_390_p2                            |     |        | addr_cmp15            | seteq  | auto      | 0       |
+|    sample_re_fu_395_p3                             |     |        | sample_re             | select | auto_sel  | 0       |
+|    addr_cmp_fu_409_p2                              |     |        | addr_cmp              | seteq  | auto      | 0       |
+|    sample_im_fu_414_p3                             |     |        | sample_im             | select | auto_sel  | 0       |
+|    write_cnt_3_fu_464_p2                           |     |        | write_cnt_3           | add    | fabric    | 0       |
+|    icmp_ln192_fu_328_p2                            |     |        | icmp_ln192            | setne  | auto      | 0       |
+|    add_ln192_fu_334_p2                             |     |        | add_ln192             | add    | fabric    | 0       |
+|    select_ln192_fu_340_p3                          |     |        | select_ln192          | select | auto_sel  | 0       |
+|    ref_tmp_i_i648_0_fu_348_p3                      |     |        | ref_tmp_i_i648_0      | select | auto_sel  | 0       |
+|    mul_16s_16s_30_1_1_U35                          | 1   |        | mul_ln197             | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U36                          | 1   |        | mul_ln197_1           | mul    | auto      | 0       |
+|    sub_ln197_fu_519_p2                             |     |        | sub_ln197             | sub    | fabric    | 0       |
+|    mul_16s_16s_30_1_1_U37                          | 1   |        | mul_ln198             | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U38                          | 1   |        | mul_ln198_1           | mul    | auto      | 0       |
+|    add_ln198_fu_567_p2                             |     |        | add_ln198             | add    | fabric    | 0       |
+|    phase_acc_1_fu_362_p2                           |     |        | phase_acc_1           | add    | fabric    | 0       |
+|  + module4_fine_cfo_apply_Pipeline_APPLY_DRAIN     | 4   |        |                       |        |           |         |
+|    icmp_ln204_fu_204_p2                            |     |        | icmp_ln204            | setlt  | auto      | 0       |
+|    i_5_fu_209_p2                                   |     |        | i_5                   | add    | fabric    | 0       |
+|    icmp_ln209_fu_260_p2                            |     |        | icmp_ln209            | setne  | auto      | 0       |
+|    add_ln209_fu_266_p2                             |     |        | add_ln209             | add    | fabric    | 0       |
+|    select_ln209_fu_272_p3                          |     |        | select_ln209          | select | auto_sel  | 0       |
+|    ref_tmp_i_i_0_fu_280_p3                         |     |        | ref_tmp_i_i_0         | select | auto_sel  | 0       |
+|    mul_16s_16s_30_1_1_U50                          | 1   |        | mul_ln214             | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U51                          | 1   |        | mul_ln214_1           | mul    | auto      | 0       |
+|    sub_ln214_fu_353_p2                             |     |        | sub_ln214             | sub    | fabric    | 0       |
+|    mul_16s_16s_30_1_1_U52                          | 1   |        | mul_ln215             | mul    | auto      | 0       |
+|    mul_16s_16s_30_1_1_U53                          | 1   |        | mul_ln215_1           | mul    | auto      | 0       |
+|    add_ln215_fu_401_p2                             |     |        | add_ln215             | add    | fabric    | 0       |
+|    phase_acc_2_fu_294_p2                           |     |        | phase_acc_2           | add    | fabric    | 0       |
++----------------------------------------------------+-----+--------+-----------------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------+--------+------+------+------+--------+-------------+------+---------+------------------+
+| Name                     | Usage  | Type | BRAM | URAM | Pragma | Variable    | Impl | Latency | Bitwidth, Depth, |
+|                          |        |      |      |      |        |             |      |         | Banks            |
++--------------------------+--------+------+------+------+--------+-------------+------+---------+------------------+
+| + module4_fine_cfo_apply |        |      | 19   | 0    |        |             |      |         |                  |
+|   circ_buf_re_U          | ram_2p |      | 8    |      | pragma | circ_buf_re | bram | 1       | 16, 8192, 1      |
+|   circ_buf_im_U          | ram_2p |      | 8    |      | pragma | circ_buf_im | bram | 1       | 16, 8192, 1      |
+|   atan_lut_U             | rom_2p |      | 1    |      |        | atan_lut    | auto | 1       | 16, 256, 1       |
+|   m4_cos_lut_U           | rom_1p |      | 1    |      |        | m4_cos_lut  | auto | 1       | 16, 1024, 1      |
+|   m4_sin_lut_U           | rom_1p |      | 1    |      |        | m4_sin_lut  | auto | 1       | 16, 1024, 1      |
++--------------------------+--------+------+------+------+--------+-------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+-----------------------------------------+-------------------------------------------------------------------+
+| Type         | Options                                 | Location                                                          |
++--------------+-----------------------------------------+-------------------------------------------------------------------+
+| bind_storage | variable=circ_buf type=ram_2p impl=BRAM | module4_fine_cfo_apply.cpp:78 in module4_fine_cfo_apply, circ_buf |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:90 in module4_fine_cfo_apply           |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:105 in module4_fine_cfo_apply          |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:139 in module4_fine_cfo_apply          |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:157 in module4_fine_cfo_apply          |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:185 in module4_fine_cfo_apply          |
+| pipeline     | II=1                                    | module4_fine_cfo_apply.cpp:205 in module4_fine_cfo_apply          |
++--------------+-----------------------------------------+-------------------------------------------------------------------+
+
+

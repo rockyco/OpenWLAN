@@ -43,6 +43,10 @@ dist/
 # HLS internal tool database (regenerable)
 **/.autopilot/db/
 
+# HLS co-simulation binaries and waveforms (large, regenerable)
+*.wdb
+**/xsim.dir/
+
 # HLS build logs and artifacts
 logs/
 debug_*

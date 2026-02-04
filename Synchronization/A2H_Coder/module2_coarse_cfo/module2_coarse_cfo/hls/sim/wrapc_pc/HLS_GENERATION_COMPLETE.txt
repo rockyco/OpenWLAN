@@ -1,0 +1,57 @@
+================================================================================
+HLS_GENERATION_COMPLETE
+================================================================================
+Created-By: validate_phase5.sh v5.0.0 (Framework 2.0.6)
+Timestamp: 2026-02-03T18:06:52+11:00
+Signature: 7acd54d9e33dfcfd6c6ec6d94275cb00cc245a6f25bd673c47805fb67023d009
+
+Phase 5: HLS Generation
+=======================
+
+=== Validation Status ===
+Upstream Marker: OPTIMIZATION_COMPLETE.txt (PASS)
+Architecture Context: architecture_context.md (PASS)
+HLS Files: 5 modules (PASS)
+P14 (No Interface Pragmas): PASS
+Check 6 - FSM Patterns: PASS (BLOCKING)
+Check 7 - DATAFLOW Structure: PASS (BLOCKING)
+Type Strategy: Float for correctness (Phase 6 converts to fixed-point)
+C Simulation: PASS
+
+=== Type Summary ===
+Float modules: 1
+Double modules: 0
+
+=== DATAFLOW Structural Validation (v5.0.0) ===
+CSR > 2 modules validated for:
+- #pragma HLS DATAFLOW present
+- Separate EXTRACT/COMPUTE functions
+- EXTRACT has FSM enum
+- COMPUTE has NO UNROLL (PIPELINE II=1 only)
+- COMPUTE uses direct indexing only
+
+=== Modules Generated ===
+- module2_coarse_cfo_tb.cpp
+- mapper_module2_coarse_cfo.cpp
+- apatb_module2_coarse_cfo.cpp
+- module2_coarse_cfo.pp.0.cpp
+- hls_design_meta.cpp
+- apatb_module2_coarse_cfo_util.cpp
+- module2_coarse_cfo.cpp
+- module0_prefilter_tb.cpp
+- debug_fir.cpp
+- module0_prefilter.cpp
+- apatb_module0_prefilter_util.cpp
+- module0_prefilter.pp.0.cpp
+- mapper_module0_prefilter.cpp
+- apatb_module0_prefilter.cpp
+- hls_design_meta.cpp
+- module3_fine_sync.cpp
+- module3_fine_sync.pp.0.cpp
+- mapper_module3_fine_sync.cpp
+- apatb_module3_fine_sync.cpp
+- apatb_module3_fine_sync_util.cpp
+
+Validation Command: validate_phase5.sh /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync
+Tool Reference: .claude/tools/dataflow_template.hpp
+================================================================================

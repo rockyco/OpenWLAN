@@ -1,0 +1,134 @@
+
+
+================================================================
+== Vitis HLS Report for 'forward_coarseFreqOff'
+================================================================
+* Date:           Wed Feb  4 21:04:52 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        system_top
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.111 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     27|    -|
+|Register         |        -|    -|       2|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       2|     29|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done                  |   9|          2|    1|          2|
+    |coarseFreqOff_out_blk_n  |   9|          2|    1|          2|
+    |m2_coarseFreqOff_blk_n   |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  27|          6|    3|          6|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+-----------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++---------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_continue                      |   in|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  forward_coarseFreqOff|  return value|
+|m2_coarseFreqOff_dout            |   in|   32|     ap_fifo|       m2_coarseFreqOff|       pointer|
+|m2_coarseFreqOff_empty_n         |   in|    1|     ap_fifo|       m2_coarseFreqOff|       pointer|
+|m2_coarseFreqOff_read            |  out|    1|     ap_fifo|       m2_coarseFreqOff|       pointer|
+|m2_coarseFreqOff_num_data_valid  |   in|    3|     ap_fifo|       m2_coarseFreqOff|       pointer|
+|m2_coarseFreqOff_fifo_cap        |   in|    3|     ap_fifo|       m2_coarseFreqOff|       pointer|
+|coarseFreqOff_out_din            |  out|   32|     ap_fifo|      coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_full_n         |   in|    1|     ap_fifo|      coarseFreqOff_out|       pointer|
+|coarseFreqOff_out_write          |  out|    1|     ap_fifo|      coarseFreqOff_out|       pointer|
++---------------------------------+-----+-----+------------+-----------------------+--------------+
+

@@ -1,0 +1,73 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 32706, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  7814, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  2476, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  2218, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  2044, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  2681, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  2075, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  2091, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  2279, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  2205, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  2076, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  2014, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  2006, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  2006, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  1981, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  2024, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="system_top" col1="system_top.cpp:29" col2="32706" col3="2044" col4="2205" col5="2006" col6="2024">
+                    <row id="20" col0="module0_prefilter" col1="module0_prefilter.cpp:20" col2="2667" col3="899" col4="619" col5="618" col6="612">
+                        <row id="11" col0="complex_t" col1="common_types_opt.hpp:24" col2="105" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="25" col0="consume_filteredLen" col1="system_top.cpp:9" col2="13" col3="2" col4="2" col5="2" col6="4"/>
+                    <row id="22" col0="module1_packet_detect" col1="module1_packet_detect.cpp:9" col2="6669" col3="344" col4="642" col5="462" col6="446">
+                        <row id="11" col0="complex_t" col1="common_types_opt.hpp:24" col2="210" col2_disp="  210 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="2" col0="module2_coarse_cfo" col1="module2_coarse_cfo.cpp:66" col2="9239" col3="257" col4="318" col5="312" col6="294">
+                        <row id="11" col0="complex_t" col1="common_types_opt.hpp:24" col2="210" col2_disp="  210 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="4" col0="fp_atan2_nco" col1="module2_coarse_cfo.cpp:32" col2="4077" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="24" col0="consume_searchBufferLen" col1="system_top.cpp:15" col2="13" col3="2" col4="2" col5="2" col6="4"/>
+                    <row id="5" col0="module3_fine_sync" col1="module3_fine_sync.cpp:83" col2="2637" col3="118" col4="133" col5="132" col6="173">
+                        <row id="29" col0="split_input" col1="module3_fine_sync.cpp:24" col2="387" col3="14" col4="28" col5="28" col6="31"/>
+                        <row id="9" col0="FIR" col1="hls_fir.h:529" col2="3" col2_disp="    3 (3 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="7" col0="run" col1="hls_fir.h:578" col2="285" col2_disp="  285 (3 calls)" col3="33" col3_disp="  33 (3 calls)" col4="33" col4_disp="  33 (3 calls)" col5="33" col5_disp="  33 (3 calls)" col6="57" col6_disp="  57 (3 calls)">
+                            <row id="14" col0="insert_fpga_ip" col1="hls_fir.h:271" col2="6" col2_disp="    6 (3 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="21" col0="combine_and_peak" col1="module3_fine_sync.cpp:45" col2="1887" col3="47" col4="48" col5="47" col6="59"/>
+                    </row>
+                    <row id="26" col0="module4_fine_cfo_apply" col1="module4_fine_cfo_apply.cpp:68" col2="11355" col3="379" col4="446" col5="435" col6="420">
+                        <row id="11" col0="complex_t" col1="common_types_opt.hpp:24" col2="315" col2_disp="  315 (3 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="19" col0="fp_atan2_nco" col1="module4_fine_cfo_apply.cpp:34" col2="4077" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="23" col0="forward_coarseFreqOff" col1="system_top.cpp:21" col2="18" col3="3" col4="3" col5="3" col6="8"/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

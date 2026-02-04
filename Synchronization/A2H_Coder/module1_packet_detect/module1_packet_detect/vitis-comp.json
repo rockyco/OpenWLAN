@@ -1,0 +1,9 @@
+{
+  "name": "module1_packet_detect",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["hls_config.cfg"],
+    "work_dir": "."
+  }
+}

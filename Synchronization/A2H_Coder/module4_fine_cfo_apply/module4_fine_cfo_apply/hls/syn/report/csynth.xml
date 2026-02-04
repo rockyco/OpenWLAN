@@ -1,0 +1,1166 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>module4_fine_cfo_apply</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>1.25</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>module4_fine_cfo_apply.cpp:68</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>19</BRAM_18K>
+            <DSP>23</DSP>
+            <FF>2830</FF>
+            <LUT>4687</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>module4_fine_cfo_apply</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_dout</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_empty_n</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in_read</name>
+            <Object>data_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_in_dout</name>
+            <Object>startOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_in_empty_n</name>
+            <Object>startOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>startOffset_in_read</name>
+            <Object>startOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineOffset_in_dout</name>
+            <Object>fineOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineOffset_in_empty_n</name>
+            <Object>fineOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineOffset_in_read</name>
+            <Object>fineOffset_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>corrected_out_din</name>
+            <Object>corrected_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>corrected_out_full_n</name>
+            <Object>corrected_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>corrected_out_write</name>
+            <Object>corrected_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineFreqOff_out_din</name>
+            <Object>fineFreqOff_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineFreqOff_out_full_n</name>
+            <Object>fineFreqOff_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>fineFreqOff_out_write</name>
+            <Object>fineFreqOff_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>num_samples</name>
+            <Object>num_samples</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>module4_fine_cfo_apply</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_POLL_START_fu_353</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_POLL_START</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>353</ID>
+                    <BindInstances>icmp_ln89_fu_160_p2 n_3_fu_165_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_POLL_FINE_fu_369</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_POLL_FINE</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>369</ID>
+                    <BindInstances>icmp_ln104_fu_168_p2 n_6_fu_173_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA_fu_386</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>386</ID>
+                    <BindInstances>icmp_ln138_fu_146_p2 icmp_ln140_fu_156_p2 write_cnt_2_fu_162_p2 n_8_fu_173_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE_fu_401</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>401</ID>
+                    <BindInstances>icmp_ln156_fu_160_p2 i_2_fu_166_p2 add_ln158_fu_180_p2 cx_idx_fu_190_p2 add_ln159_fu_196_p2 sx_idx_fu_206_p2 mac_muladd_16s_16s_32s_33_4_1_U25 mul_16s_16s_32_1_1_U23 mac_muladd_16s_16s_32s_33_4_1_U25 mac_muladd_16s_16s_32s_33_4_1_U25 C_re_1_fu_276_p2 mul_16s_16s_32_1_1_U24 mac_mulsub_16s_16s_32s_32_4_1_U26 mac_mulsub_16s_16s_32s_32_4_1_U26 C_im_1_fu_295_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP_fu_412</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>412</ID>
+                    <BindInstances>icmp_ln184_fu_277_p2 i_3_fu_282_p2 sample_idx_fu_295_p2 addr_cmp15_fu_390_p2 sample_re_fu_395_p3 addr_cmp_fu_409_p2 sample_im_fu_414_p3 write_cnt_3_fu_464_p2 icmp_ln192_fu_328_p2 add_ln192_fu_334_p2 select_ln192_fu_340_p3 ref_tmp_i_i648_0_fu_348_p3 mul_16s_16s_30_1_1_U35 mul_16s_16s_30_1_1_U36 sub_ln197_fu_519_p2 mul_16s_16s_30_1_1_U37 mul_16s_16s_30_1_1_U38 add_ln198_fu_567_p2 phase_acc_1_fu_362_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_module4_fine_cfo_apply_Pipeline_APPLY_DRAIN_fu_432</InstName>
+                    <ModuleName>module4_fine_cfo_apply_Pipeline_APPLY_DRAIN</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>432</ID>
+                    <BindInstances>icmp_ln204_fu_204_p2 i_5_fu_209_p2 icmp_ln209_fu_260_p2 add_ln209_fu_266_p2 select_ln209_fu_272_p3 ref_tmp_i_i_0_fu_280_p3 mul_16s_16s_30_1_1_U50 mul_16s_16s_30_1_1_U51 sub_ln214_fu_353_p2 mul_16s_16s_30_1_1_U52 mul_16s_16s_30_1_1_U53 add_ln215_fu_401_p2 phase_acc_2_fu_294_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>icmp_ln104_fu_476_p2 add_ln121_fu_503_p2 combined_offset_fu_509_p2 cfo_data_end_fu_518_p2 data_remaining_fu_581_p2 rxLen_fu_586_p2 icmp_ln149_fu_591_p2 overlap_len_fu_597_p3 drain_len_fu_609_p2 sub_ln38_fu_547_p2 ax_fu_553_p3 sub_ln39_fu_561_p2 ay_fu_567_p3 or_ln41_fu_615_p2 icmp_ln41_fu_619_p2 swap_fu_625_p2 den_fu_629_p3 select_ln46_fu_635_p3 sdiv_51ns_32s_51_55_seq_1_U67 sub_ln50_fu_669_p2 icmp_ln51_fu_713_p2 add_ln51_fu_719_p2 select_ln51_fu_725_p3 lut_idx_fu_733_p3 icmp_ln52_fu_741_p2 lut_idx_1_fu_746_p3 frac_fu_765_p2 add_ln56_fu_775_p2 sub_ln57_fu_810_p2 mul_28s_32s_54_1_1_U65 angle_fu_845_p2 angle_1_fu_850_p2 angle_2_fu_856_p3 sub_ln60_fu_870_p2 angle_4_fu_886_p3 angle_5_fu_892_p2 angle_6_fu_898_p3 icmp_ln62_fu_915_p2 angle_7_fu_920_p2 angle_8_fu_925_p3 add_ln63_fu_940_p2 select_ln63_fu_946_p3 icmp_ln169_fu_954_p2 signed_angle_1_fu_960_p2 signed_angle_2_fu_966_p3 mul_32s_26ns_48_1_1_U66 sub_ln175_fu_1013_p2 sub_ln175_1_fu_1036_p2 phase_inc_fu_1042_p3 icmp_ln184_fu_1050_p2 mul_27s_32s_32_1_1_U64 phase_acc_0_lcssa_sel_fu_1059_p3 circ_buf_re_U circ_buf_im_U atan_lut_U m4_cos_lut_U m4_sin_lut_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_POLL_START</Name>
+            <Loops>
+                <POLL_START/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>6.731</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <POLL_START>
+                        <Name>POLL_START</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </POLL_START>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:89</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <POLL_START>
+                            <Name>POLL_START</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:89</SourceLocation>
+                        </POLL_START>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>103</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>157</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="POLL_START" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln89_fu_160_p2" SOURCE="module4_fine_cfo_apply.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln89" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="POLL_START" OPTYPE="add" PRAGMA="" RTLNAME="n_3_fu_165_p2" SOURCE="module4_fine_cfo_apply.cpp:92" STORAGESUBTYPE="" URAM="0" VARIABLE="n_3" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_POLL_FINE</Name>
+            <Loops>
+                <POLL_FINE/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>6.731</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>4</Average-caseLatency>
+                    <Worst-caseLatency>4</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 4</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <POLL_FINE>
+                        <Name>POLL_FINE</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>0</TripCount>
+                        <Latency>1</Latency>
+                        <AbsoluteTimeLatency>10.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </POLL_FINE>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:104</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <POLL_FINE>
+                            <Name>POLL_FINE</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:104</SourceLocation>
+                        </POLL_FINE>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>106</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>158</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="POLL_FINE" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln104_fu_168_p2" SOURCE="module4_fine_cfo_apply.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln104" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="POLL_FINE" OPTYPE="add" PRAGMA="" RTLNAME="n_6_fu_173_p2" SOURCE="module4_fine_cfo_apply.cpp:107" STORAGESUBTYPE="" URAM="0" VARIABLE="n_6" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_ENSURE_CFO_DATA</Name>
+            <Loops>
+                <ENSURE_CFO_DATA/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>6.731</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ENSURE_CFO_DATA>
+                        <Name>ENSURE_CFO_DATA</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ENSURE_CFO_DATA>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:138</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <ENSURE_CFO_DATA>
+                            <Name>ENSURE_CFO_DATA</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:138</SourceLocation>
+                        </ENSURE_CFO_DATA>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>81</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>218</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ENSURE_CFO_DATA" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln138_fu_146_p2" SOURCE="module4_fine_cfo_apply.cpp:138" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln138" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ENSURE_CFO_DATA" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln140_fu_156_p2" SOURCE="module4_fine_cfo_apply.cpp:140" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln140" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ENSURE_CFO_DATA" OPTYPE="add" PRAGMA="" RTLNAME="write_cnt_2_fu_162_p2" SOURCE="module4_fine_cfo_apply.cpp:142" STORAGESUBTYPE="" URAM="0" VARIABLE="write_cnt_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ENSURE_CFO_DATA" OPTYPE="add" PRAGMA="" RTLNAME="n_8_fu_173_p2" SOURCE="module4_fine_cfo_apply.cpp:138" STORAGESUBTYPE="" URAM="0" VARIABLE="n_8" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_CFO_ESTIMATE</Name>
+            <Loops>
+                <CFO_ESTIMATE/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>8.437</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>69</Best-caseLatency>
+                    <Average-caseLatency>69</Average-caseLatency>
+                    <Worst-caseLatency>69</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.690 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.690 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.690 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>65</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <CFO_ESTIMATE>
+                        <Name>CFO_ESTIMATE</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>64</TripCount>
+                        <Latency>67</Latency>
+                        <AbsoluteTimeLatency>0.670 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </CFO_ESTIMATE>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:154</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <CFO_ESTIMATE>
+                            <Name>CFO_ESTIMATE</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:156</SourceLocation>
+                        </CFO_ESTIMATE>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>302</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>264</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_fu_160_p2" SOURCE="module4_fine_cfo_apply.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_166_p2" SOURCE="module4_fine_cfo_apply.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="i_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_fu_180_p2" SOURCE="module4_fine_cfo_apply.cpp:158" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln158" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="cx_idx_fu_190_p2" SOURCE="module4_fine_cfo_apply.cpp:158" STORAGESUBTYPE="" URAM="0" VARIABLE="cx_idx" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="add_ln159_fu_196_p2" SOURCE="module4_fine_cfo_apply.cpp:159" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln159" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="sx_idx_fu_206_p2" SOURCE="module4_fine_cfo_apply.cpp:159" STORAGESUBTYPE="" URAM="0" VARIABLE="sx_idx" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="CFO_ESTIMATE" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32s_33_4_1_U25" SOURCE="module4_fine_cfo_apply.cpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln162" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_32_1_1_U23" SOURCE="module4_fine_cfo_apply.cpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln162_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="CFO_ESTIMATE" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32s_33_4_1_U25" SOURCE="module4_fine_cfo_apply.cpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln162_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32s_33_4_1_U25" SOURCE="module4_fine_cfo_apply.cpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln162" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="C_re_1_fu_276_p2" SOURCE="module4_fine_cfo_apply.cpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="C_re_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_32_1_1_U24" SOURCE="module4_fine_cfo_apply.cpp:163" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln163" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="CFO_ESTIMATE" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_32s_32_4_1_U26" SOURCE="module4_fine_cfo_apply.cpp:163" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln163_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="CFO_ESTIMATE" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_32s_32_4_1_U26" SOURCE="module4_fine_cfo_apply.cpp:163" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln163" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CFO_ESTIMATE" OPTYPE="add" PRAGMA="" RTLNAME="C_im_1_fu_295_p2" SOURCE="module4_fine_cfo_apply.cpp:163" STORAGESUBTYPE="" URAM="0" VARIABLE="C_im_1" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_APPLY_OVERLAP</Name>
+            <Loops>
+                <APPLY_OVERLAP/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>7.954</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <APPLY_OVERLAP>
+                        <Name>APPLY_OVERLAP</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </APPLY_OVERLAP>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:182</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <APPLY_OVERLAP>
+                            <Name>APPLY_OVERLAP</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:184</SourceLocation>
+                        </APPLY_OVERLAP>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>405</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>605</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln184_fu_277_p2" SOURCE="module4_fine_cfo_apply.cpp:184" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln184" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="i_3_fu_282_p2" SOURCE="module4_fine_cfo_apply.cpp:184" STORAGESUBTYPE="" URAM="0" VARIABLE="i_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="sample_idx_fu_295_p2" SOURCE="module4_fine_cfo_apply.cpp:186" STORAGESUBTYPE="" URAM="0" VARIABLE="sample_idx" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="seteq" PRAGMA="" RTLNAME="addr_cmp15_fu_390_p2" SOURCE="module4_fine_cfo_apply.cpp:187" STORAGESUBTYPE="" URAM="0" VARIABLE="addr_cmp15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="select" PRAGMA="" RTLNAME="sample_re_fu_395_p3" SOURCE="module4_fine_cfo_apply.cpp:187" STORAGESUBTYPE="" URAM="0" VARIABLE="sample_re" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="seteq" PRAGMA="" RTLNAME="addr_cmp_fu_409_p2" SOURCE="module4_fine_cfo_apply.cpp:187" STORAGESUBTYPE="" URAM="0" VARIABLE="addr_cmp" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="select" PRAGMA="" RTLNAME="sample_im_fu_414_p3" SOURCE="module4_fine_cfo_apply.cpp:187" STORAGESUBTYPE="" URAM="0" VARIABLE="sample_im" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="write_cnt_3_fu_464_p2" SOURCE="module4_fine_cfo_apply.cpp:190" STORAGESUBTYPE="" URAM="0" VARIABLE="write_cnt_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln192_fu_328_p2" SOURCE="module4_fine_cfo_apply.cpp:192" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln192" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln192_fu_334_p2" SOURCE="module4_fine_cfo_apply.cpp:192" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln192" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="select" PRAGMA="" RTLNAME="select_ln192_fu_340_p3" SOURCE="module4_fine_cfo_apply.cpp:192" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln192" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="select" PRAGMA="" RTLNAME="ref_tmp_i_i648_0_fu_348_p3" SOURCE="module4_fine_cfo_apply.cpp:192" STORAGESUBTYPE="" URAM="0" VARIABLE="ref_tmp_i_i648_0" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U35" SOURCE="module4_fine_cfo_apply.cpp:197" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln197" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U36" SOURCE="module4_fine_cfo_apply.cpp:197" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln197_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln197_fu_519_p2" SOURCE="module4_fine_cfo_apply.cpp:197" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln197" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U37" SOURCE="module4_fine_cfo_apply.cpp:198" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln198" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U38" SOURCE="module4_fine_cfo_apply.cpp:198" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln198_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln198_fu_567_p2" SOURCE="module4_fine_cfo_apply.cpp:198" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln198" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_OVERLAP" OPTYPE="add" PRAGMA="" RTLNAME="phase_acc_1_fu_362_p2" SOURCE="module4_fine_cfo_apply.cpp:201" STORAGESUBTYPE="" URAM="0" VARIABLE="phase_acc_1" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply_Pipeline_APPLY_DRAIN</Name>
+            <Loops>
+                <APPLY_DRAIN/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>7.954</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <APPLY_DRAIN>
+                        <Name>APPLY_DRAIN</Name>
+                        <Slack>8.75</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </APPLY_DRAIN>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:182</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <APPLY_DRAIN>
+                            <Name>APPLY_DRAIN</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>module4_fine_cfo_apply.cpp:204</SourceLocation>
+                        </APPLY_DRAIN>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>199</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>346</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln204_fu_204_p2" SOURCE="module4_fine_cfo_apply.cpp:204" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln204" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="add" PRAGMA="" RTLNAME="i_5_fu_209_p2" SOURCE="module4_fine_cfo_apply.cpp:204" STORAGESUBTYPE="" URAM="0" VARIABLE="i_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln209_fu_260_p2" SOURCE="module4_fine_cfo_apply.cpp:209" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln209" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="add" PRAGMA="" RTLNAME="add_ln209_fu_266_p2" SOURCE="module4_fine_cfo_apply.cpp:209" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln209" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="select" PRAGMA="" RTLNAME="select_ln209_fu_272_p3" SOURCE="module4_fine_cfo_apply.cpp:209" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln209" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="select" PRAGMA="" RTLNAME="ref_tmp_i_i_0_fu_280_p3" SOURCE="module4_fine_cfo_apply.cpp:209" STORAGESUBTYPE="" URAM="0" VARIABLE="ref_tmp_i_i_0" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U50" SOURCE="module4_fine_cfo_apply.cpp:214" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln214" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U51" SOURCE="module4_fine_cfo_apply.cpp:214" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln214_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln214_fu_353_p2" SOURCE="module4_fine_cfo_apply.cpp:214" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln214" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U52" SOURCE="module4_fine_cfo_apply.cpp:215" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln215" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_30_1_1_U53" SOURCE="module4_fine_cfo_apply.cpp:215" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln215_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="add" PRAGMA="" RTLNAME="add_ln215_fu_401_p2" SOURCE="module4_fine_cfo_apply.cpp:215" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln215" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="APPLY_DRAIN" OPTYPE="add" PRAGMA="" RTLNAME="phase_acc_2_fu_294_p2" SOURCE="module4_fine_cfo_apply.cpp:218" STORAGESUBTYPE="" URAM="0" VARIABLE="phase_acc_2" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>module4_fine_cfo_apply</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.25</ClockUncertainty>
+                    <EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>module4_fine_cfo_apply.cpp:68</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>19</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>6</UTIL_BRAM>
+                    <DSP>23</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>10</UTIL_DSP>
+                    <FF>2830</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>4689</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>8</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln104_fu_476_p2" SOURCE="module4_fine_cfo_apply.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln104" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln121_fu_503_p2" SOURCE="module4_fine_cfo_apply.cpp:121" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln121" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="combined_offset_fu_509_p2" SOURCE="module4_fine_cfo_apply.cpp:121" STORAGESUBTYPE="" URAM="0" VARIABLE="combined_offset" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="cfo_data_end_fu_518_p2" SOURCE="module4_fine_cfo_apply.cpp:133" STORAGESUBTYPE="" URAM="0" VARIABLE="cfo_data_end" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="data_remaining_fu_581_p2" SOURCE="module4_fine_cfo_apply.cpp:148" STORAGESUBTYPE="" URAM="0" VARIABLE="data_remaining" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="rxLen_fu_586_p2" SOURCE="module4_fine_cfo_apply.cpp:147" STORAGESUBTYPE="" URAM="0" VARIABLE="rxLen" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln149_fu_591_p2" SOURCE="module4_fine_cfo_apply.cpp:149" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln149" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="overlap_len_fu_597_p3" SOURCE="module4_fine_cfo_apply.cpp:149" STORAGESUBTYPE="" URAM="0" VARIABLE="overlap_len" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="drain_len_fu_609_p2" SOURCE="module4_fine_cfo_apply.cpp:150" STORAGESUBTYPE="" URAM="0" VARIABLE="drain_len" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_fu_547_p2" SOURCE="module4_fine_cfo_apply.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln38" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="ax_fu_553_p3" SOURCE="module4_fine_cfo_apply.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="ax" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln39_fu_561_p2" SOURCE="module4_fine_cfo_apply.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln39" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="ay_fu_567_p3" SOURCE="module4_fine_cfo_apply.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="ay" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="or" PRAGMA="" RTLNAME="or_ln41_fu_615_p2" SOURCE="module4_fine_cfo_apply.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln41" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln41_fu_619_p2" SOURCE="module4_fine_cfo_apply.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln41" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="swap_fu_625_p2" SOURCE="module4_fine_cfo_apply.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="swap" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="den_fu_629_p3" SOURCE="module4_fine_cfo_apply.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="den" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln46_fu_635_p3" SOURCE="module4_fine_cfo_apply.cpp:46" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln46" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sdiv" DSP="0" ID="" IMPL="auto_seq" LATENCY="54" LOOP="" OPTYPE="sdiv" PRAGMA="" RTLNAME="sdiv_51ns_32s_51_55_seq_1_U67" SOURCE="module4_fine_cfo_apply.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="sdiv_ln49" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln50_fu_669_p2" SOURCE="module4_fine_cfo_apply.cpp:50" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln50" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln51_fu_713_p2" SOURCE="module4_fine_cfo_apply.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln51" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_719_p2" SOURCE="module4_fine_cfo_apply.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln51_fu_725_p3" SOURCE="module4_fine_cfo_apply.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln51" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="lut_idx_fu_733_p3" SOURCE="module4_fine_cfo_apply.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="lut_idx" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln52_fu_741_p2" SOURCE="module4_fine_cfo_apply.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln52" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="lut_idx_1_fu_746_p3" SOURCE="module4_fine_cfo_apply.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="lut_idx_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="frac_fu_765_p2" SOURCE="module4_fine_cfo_apply.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="frac" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_fu_775_p2" SOURCE="module4_fine_cfo_apply.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln57_fu_810_p2" SOURCE="module4_fine_cfo_apply.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln57" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_28s_32s_54_1_1_U65" SOURCE="module4_fine_cfo_apply.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln57" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="angle_fu_845_p2" SOURCE="module4_fine_cfo_apply.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="angle" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="angle_1_fu_850_p2" SOURCE="module4_fine_cfo_apply.cpp:59" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="angle_2_fu_856_p3" SOURCE="module4_fine_cfo_apply.cpp:59" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln60_fu_870_p2" SOURCE="module4_fine_cfo_apply.cpp:60" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln60" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="angle_4_fu_886_p3" SOURCE="module4_fine_cfo_apply.cpp:60" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="angle_5_fu_892_p2" SOURCE="module4_fine_cfo_apply.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="angle_6_fu_898_p3" SOURCE="module4_fine_cfo_apply.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln62_fu_915_p2" SOURCE="module4_fine_cfo_apply.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln62" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="angle_7_fu_920_p2" SOURCE="module4_fine_cfo_apply.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="angle_8_fu_925_p3" SOURCE="module4_fine_cfo_apply.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="angle_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln63_fu_940_p2" SOURCE="module4_fine_cfo_apply.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln63" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln63_fu_946_p3" SOURCE="module4_fine_cfo_apply.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln63" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln169_fu_954_p2" SOURCE="module4_fine_cfo_apply.cpp:169" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln169" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="signed_angle_1_fu_960_p2" SOURCE="module4_fine_cfo_apply.cpp:170" STORAGESUBTYPE="" URAM="0" VARIABLE="signed_angle_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="signed_angle_2_fu_966_p3" SOURCE="module4_fine_cfo_apply.cpp:169" STORAGESUBTYPE="" URAM="0" VARIABLE="signed_angle_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_26ns_48_1_1_U66" SOURCE="module4_fine_cfo_apply.cpp:174" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln174" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln175_fu_1013_p2" SOURCE="module4_fine_cfo_apply.cpp:175" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln175" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln175_1_fu_1036_p2" SOURCE="module4_fine_cfo_apply.cpp:175" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln175_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="phase_inc_fu_1042_p3" SOURCE="module4_fine_cfo_apply.cpp:175" STORAGESUBTYPE="" URAM="0" VARIABLE="phase_inc" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln184_fu_1050_p2" SOURCE="module4_fine_cfo_apply.cpp:184" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln184" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_27s_32s_32_1_1_U64" SOURCE="module4_fine_cfo_apply.cpp:184" STORAGESUBTYPE="" URAM="0" VARIABLE="phase_acc" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="phase_acc_0_lcssa_sel_fu_1059_p3" SOURCE="module4_fine_cfo_apply.cpp:184" STORAGESUBTYPE="" URAM="0" VARIABLE="phase_acc_0_lcssa_sel" VISIBLE="false"/>
+                <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="circ_buf_re_U" SOURCE="" STORAGESIZE="16 8192 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="circ_buf_re" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="circ_buf_im_U" SOURCE="" STORAGESIZE="16 8192 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="circ_buf_im" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="atan_lut_U" SOURCE="" STORAGESIZE="16 256 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="atan_lut" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="m4_cos_lut_U" SOURCE="" STORAGESIZE="16 1024 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="m4_cos_lut" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="m4_sin_lut_U" SOURCE="" STORAGESIZE="16 1024 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="m4_sin_lut" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="data_in" index="0" direction="in" srcType="stream&lt;complex_t, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="data_in" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="startOffset_in" index="1" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="startOffset_in" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="fineOffset_in" index="2" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="fineOffset_in" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="corrected_out" index="3" direction="out" srcType="stream&lt;complex_t, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="corrected_out" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="fineFreqOff_out" index="4" direction="out" srcType="stream&lt;ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="fineFreqOff_out" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="num_samples" index="5" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="num_samples" name="num_samples" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="data_in" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="data_in_">
+            <portMaps>
+                <portMap portMapName="data_in_dout">RD_DATA</portMap>
+                <portMap portMapName="data_in_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="data_in_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>data_in_dout</port>
+                <port>data_in_empty_n</port>
+                <port>data_in_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="data_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="startOffset_in" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="16" portPrefix="startOffset_in_">
+            <portMaps>
+                <portMap portMapName="startOffset_in_dout">RD_DATA</portMap>
+                <portMap portMapName="startOffset_in_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="startOffset_in_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>startOffset_in_dout</port>
+                <port>startOffset_in_empty_n</port>
+                <port>startOffset_in_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="startOffset_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="fineOffset_in" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="16" portPrefix="fineOffset_in_">
+            <portMaps>
+                <portMap portMapName="fineOffset_in_dout">RD_DATA</portMap>
+                <portMap portMapName="fineOffset_in_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="fineOffset_in_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>fineOffset_in_dout</port>
+                <port>fineOffset_in_empty_n</port>
+                <port>fineOffset_in_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="fineOffset_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="corrected_out" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="32" portPrefix="corrected_out_">
+            <portMaps>
+                <portMap portMapName="corrected_out_din">WR_DATA</portMap>
+                <portMap portMapName="corrected_out_full_n">FULL_N</portMap>
+                <portMap portMapName="corrected_out_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>corrected_out_din</port>
+                <port>corrected_out_full_n</port>
+                <port>corrected_out_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="corrected_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="fineFreqOff_out" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="32" portPrefix="fineFreqOff_out_">
+            <portMaps>
+                <portMap portMapName="fineFreqOff_out_din">WR_DATA</portMap>
+                <portMap portMapName="fineFreqOff_out_full_n">FULL_N</portMap>
+                <portMap portMapName="fineFreqOff_out_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>fineFreqOff_out_din</port>
+                <port>fineFreqOff_out_full_n</port>
+                <port>fineFreqOff_out_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="fineFreqOff_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="num_samples" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="num_samples">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>num_samples</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="num_samples"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table>
+                    <keys size="3">Interface, Direction, Data Width</keys>
+                    <column name="corrected_out">out, 32</column>
+                    <column name="data_in">in, 32</column>
+                    <column name="fineFreqOff_out">out, 32</column>
+                    <column name="fineOffset_in">in, 16</column>
+                    <column name="startOffset_in">in, 16</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="num_samples">ap_none, in, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="data_in">in, stream&lt;complex_t 0&gt;&amp;</column>
+                    <column name="startOffset_in">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="fineOffset_in">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="corrected_out">out, stream&lt;complex_t 0&gt;&amp;</column>
+                    <column name="fineFreqOff_out">out, stream&lt;ap_fixed&lt;32 16 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="num_samples">in, int</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="data_in">data_in, interface</column>
+                    <column name="startOffset_in">startOffset_in, interface</column>
+                    <column name="fineOffset_in">fineOffset_in, interface</column>
+                    <column name="corrected_out">corrected_out, interface</column>
+                    <column name="fineFreqOff_out">fineFreqOff_out, interface</column>
+                    <column name="num_samples">num_samples, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="bind_storage" location="module4_fine_cfo_apply.cpp:78" status="valid" parentFunction="module4_fine_cfo_apply" variable="circ_buf" isDirective="0" options="variable=circ_buf type=ram_2p impl=BRAM"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:90" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:105" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:139" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:157" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:185" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="module4_fine_cfo_apply.cpp:205" status="valid" parentFunction="module4_fine_cfo_apply" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

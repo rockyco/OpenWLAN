@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/amd/UTS/MATLAB2HLS_SKILL_fresh/projects/wlanSync/module4_fine_cfo_apply/module4_fine_cfo_apply/hls/./sim/autowrap/testbench/module4_fine_cfo_apply.cpp_pre.cpp.tb.cpp
