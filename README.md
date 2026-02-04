@@ -47,6 +47,8 @@ The HLS design trades LUT/FF fabric for DSP48E1 hardened multipliers (172 vs 112
 
 See [Doc/resource_comparison.md](Doc/resource_comparison.md) for the full analysis including per-module breakdown and primitives summary.
 
+![Resource Comparison](Doc/resource_comparison.png)
+
 ## System Architecture
 
 Five streaming HLS modules connected in series, all achieving II=1 (one sample per clock):
@@ -114,6 +116,8 @@ OpenWLAN/
 │       └── hdl_prj/                        # Generated Verilog + Vivado project
 └── Doc/
     ├── resource_comparison.md              # Quantitative comparison
+    ├── resource_comparison.png             # Resource comparison figure
+    ├── generate_comparison_figure.py       # Figure generation script
     └── wlan_sync_analysis.png              # Performance visualization
 ```
 
