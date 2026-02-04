@@ -37,13 +37,11 @@ dist/
 *.h
 *.inc
 
-# HLS tool-generated project directories
-**/module0_prefilter/module0_prefilter/
-**/module1_packet_detect/module1_packet_detect/
-**/module2_coarse_cfo/module2_coarse_cfo/
-**/module3_fine_sync/module3_fine_sync/
-**/module4_fine_cfo_apply/module4_fine_cfo_apply/
-**/system_wlanSync_integrated/system_top/
+# HLS Vivado implementation directories (large, regenerable)
+**/hls/impl/
+
+# HLS internal tool database (regenerable)
+**/.autopilot/db/
 
 # HLS build logs and artifacts
 logs/
