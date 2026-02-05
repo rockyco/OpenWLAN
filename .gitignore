@@ -37,6 +37,12 @@ dist/
 *.h
 *.inc
 
+# Exception: module0_prefilter HLS source is public
+!Synchronization/A2H_Coder/module0_prefilter/*.cpp
+!Synchronization/A2H_Coder/module0_prefilter/*.hpp
+!Synchronization/A2H_Coder/module0_prefilter/*.h
+!Synchronization/A2H_Coder/module0_prefilter/*.inc
+
 # HLS Vivado implementation directories (large, regenerable)
 **/hls/impl/
 
@@ -66,6 +72,9 @@ Synchronization/A2H_Coder/**/hdlsrc/
 
 # Drafts
 linkedin_post.md
+
+# Generated PNG from SVG (LinkedIn upload only)
+Doc/system_architecture.png
 
 # Playwright MCP screenshots
 .playwright-mcp/
